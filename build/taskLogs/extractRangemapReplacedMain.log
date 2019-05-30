@@ -1,0 +1,23 @@
+Symbol range map extraction starting
+Processing 6 files
+startProcessing "fr\flashback083\flashspec\Flashspec.java" md5: c344860e271a5223a4cb58301f7b4c28
+Cache Hit!
+endProcessing "fr\flashback083\flashspec\Flashspec.java"
+
+startProcessing "fr\flashback083\flashspec\HelpItemSpec.java" md5: fe11a72b42762ada00769aa8ff7d9120
+Cache Hit!
+endProcessing "fr\flashback083\flashspec\HelpItemSpec.java"
+
+startProcessing "fr\flashback083\flashspec\MoveSpec\Move1Spec.java" md5: 925fefe6ef1277e20a29b3061dbcbd08
+Cache Hit!
+endProcessing "fr\flashback083\flashspec\MoveSpec\Move1Spec.java"
+
+startProcessing "fr\flashback083\flashspec\MoveSpec\Move2Spec.java" md5: a8f03799afa476f95229864d5644fff5
+endProcessing "fr\flashback083\flashspec\MoveSpec\Move2Spec.java"
+
+startProcessing "fr\flashback083\flashspec\MoveSpec\Move3Spec.java" md5: 552a4ac994fb5810d432d9448ac899e3
+endProcessing "fr\flashback083\flashspec\MoveSpec\Move3Spec.java"
+
+startProcessing "fr\flashback083\flashspec\MoveSpec\Move4Spec.java" md5: fd7ca5d33bb3492fefa6b27022459160
+endProcessing "fr\flashback083\flashspec\MoveSpec\Move4Spec.java"
+

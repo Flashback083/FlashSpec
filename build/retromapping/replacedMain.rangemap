@@ -1,0 +1,989 @@
+Symbol range map extraction starting
+Processing 6 files
+startProcessing "fr\flashback083\flashspec\Flashspec.java" md5: c344860e271a5223a4cb58301f7b4c28
+Cache Hit!
+@|fr\flashback083\flashspec\Flashspec.java|8|33|fr.flashback083.flashspec|package|fr.flashback083.flashspec|(file)
+Class Start: fr.flashback083.flashspec.Flashspec
+   @|fr\flashback083\flashspec\Flashspec.java|729|732|Mod|class|net.minecraftforge.fml.common.Mod
+   @|fr\flashback083\flashspec\Flashspec.java|742|747|modid|method|net.minecraftforge.fml.common.Mod|modid|()Ljava/lang/String;
+   @|fr\flashback083\flashspec\Flashspec.java|750|759|Flashspec|class|fr.flashback083.flashspec.Flashspec
+   @|fr\flashback083\flashspec\Flashspec.java|760|766|MOD_ID|field|fr.flashback083.flashspec.Flashspec|MOD_ID
+   @|fr\flashback083\flashspec\Flashspec.java|776|780|name|method|net.minecraftforge.fml.common.Mod|name|()Ljava/lang/String;
+   @|fr\flashback083\flashspec\Flashspec.java|783|792|Flashspec|class|fr.flashback083.flashspec.Flashspec
+   @|fr\flashback083\flashspec\Flashspec.java|793|801|MOD_NAME|field|fr.flashback083.flashspec.Flashspec|MOD_NAME
+   @|fr\flashback083\flashspec\Flashspec.java|811|818|version|method|net.minecraftforge.fml.common.Mod|version|()Ljava/lang/String;
+   @|fr\flashback083\flashspec\Flashspec.java|821|830|Flashspec|class|fr.flashback083.flashspec.Flashspec
+   @|fr\flashback083\flashspec\Flashspec.java|831|838|VERSION|field|fr.flashback083.flashspec.Flashspec|VERSION
+   @|fr\flashback083\flashspec\Flashspec.java|848|862|serverSideOnly|method|net.minecraftforge.fml.common.Mod|serverSideOnly|()Z
+   @|fr\flashback083\flashspec\Flashspec.java|879|903|acceptableRemoteVersions|method|net.minecraftforge.fml.common.Mod|acceptableRemoteVersions|()Ljava/lang/String;
+   @|fr\flashback083\flashspec\Flashspec.java|925|934|Flashspec|class|fr.flashback083.flashspec.Flashspec
+   @|fr\flashback083\flashspec\Flashspec.java|962|968|String|class|java.lang.String
+   @|fr\flashback083\flashspec\Flashspec.java|962|968|String|class|java.lang.String
+   @|fr\flashback083\flashspec\Flashspec.java|969|975|MOD_ID|field|fr.flashback083.flashspec.Flashspec|MOD_ID|
+   @|fr\flashback083\flashspec\Flashspec.java|1015|1021|String|class|java.lang.String
+   @|fr\flashback083\flashspec\Flashspec.java|1015|1021|String|class|java.lang.String
+   @|fr\flashback083\flashspec\Flashspec.java|1022|1030|MOD_NAME|field|fr.flashback083.flashspec.Flashspec|MOD_NAME|
+   @|fr\flashback083\flashspec\Flashspec.java|1070|1076|String|class|java.lang.String
+   @|fr\flashback083\flashspec\Flashspec.java|1070|1076|String|class|java.lang.String
+   @|fr\flashback083\flashspec\Flashspec.java|1077|1084|VERSION|field|fr.flashback083.flashspec.Flashspec|VERSION|
+   @|fr\flashback083\flashspec\Flashspec.java|1239|1248|Flashspec|class|fr.flashback083.flashspec.Flashspec
+   @|fr\flashback083\flashspec\Flashspec.java|1200|1212|Mod.Instance|class|net.minecraftforge.fml.common.Mod.Instance
+   @|fr\flashback083\flashspec\Flashspec.java|1213|1219|MOD_ID|field|fr.flashback083.flashspec.Flashspec|MOD_ID
+   @|fr\flashback083\flashspec\Flashspec.java|1239|1248|Flashspec|class|fr.flashback083.flashspec.Flashspec
+   @|fr\flashback083\flashspec\Flashspec.java|1249|1257|INSTANCE|field|fr.flashback083.flashspec.Flashspec|INSTANCE|
+   Method Start: preinit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
+      @|fr\flashback083\flashspec\Flashspec.java|1504|1509|event|param|fr.flashback083.flashspec.Flashspec|preinit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V|event|0
+      @|fr\flashback083\flashspec\Flashspec.java|1437|1453|Mod.EventHandler|class|net.minecraftforge.fml.common.Mod.EventHandler
+      @|fr\flashback083\flashspec\Flashspec.java|1470|1477|preinit|method|fr.flashback083.flashspec.Flashspec|preinit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
+      @|fr\flashback083\flashspec\Flashspec.java|1478|1503|FMLPreInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPreInitializationEvent
+   Method End: preinit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
+   Method Start: init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+      @|fr\flashback083\flashspec\Flashspec.java|1675|1680|event|param|fr.flashback083.flashspec.Flashspec|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V|event|0
+      @|fr\flashback083\flashspec\Flashspec.java|1614|1630|Mod.EventHandler|class|net.minecraftforge.fml.common.Mod.EventHandler
+      @|fr\flashback083\flashspec\Flashspec.java|1647|1651|init|method|fr.flashback083.flashspec.Flashspec|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+      @|fr\flashback083\flashspec\Flashspec.java|1652|1674|FMLInitializationEvent|class|net.minecraftforge.fml.common.event.FMLInitializationEvent
+   Method End: init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+   Method Start: postinit(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
+      @|fr\flashback083\flashspec\Flashspec.java|1867|1872|event|param|fr.flashback083.flashspec.Flashspec|postinit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V|event|0
+      @|fr\flashback083\flashspec\Flashspec.java|1798|1814|Mod.EventHandler|class|net.minecraftforge.fml.common.Mod.EventHandler
+      @|fr\flashback083\flashspec\Flashspec.java|1831|1839|postinit|method|fr.flashback083.flashspec.Flashspec|postinit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
+      @|fr\flashback083\flashspec\Flashspec.java|1840|1866|FMLPostInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPostInitializationEvent
+   Method End: postinit(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
+   Method Start: serverStart(Lnet/minecraftforge/fml/common/event/FMLServerStartingEvent;)V
+      @|fr\flashback083\flashspec\Flashspec.java|1957|1962|event|param|fr.flashback083.flashspec.Flashspec|serverStart|(Lnet/minecraftforge/fml/common/event/FMLServerStartingEvent;)V|event|0
+      @|fr\flashback083\flashspec\Flashspec.java|1889|1905|Mod.EventHandler|class|net.minecraftforge.fml.common.Mod.EventHandler
+      @|fr\flashback083\flashspec\Flashspec.java|1922|1933|serverStart|method|fr.flashback083.flashspec.Flashspec|serverStart|(Lnet/minecraftforge/fml/common/event/FMLServerStartingEvent;)V
+      @|fr\flashback083\flashspec\Flashspec.java|1934|1956|FMLServerStartingEvent|class|net.minecraftforge.fml.common.event.FMLServerStartingEvent
+      @|fr\flashback083\flashspec\Flashspec.java|1971|1992|FileNotFoundException|class|java.io.FileNotFoundException
+      @|fr\flashback083\flashspec\Flashspec.java|2003|2010|Scanner|class|java.util.Scanner
+      @|fr\flashback083\flashspec\Flashspec.java|2025|2032|Scanner|class|java.util.Scanner
+      @|fr\flashback083\flashspec\Flashspec.java|2033|2038|event|param|fr.flashback083.flashspec.Flashspec|serverStart|(Lnet/minecraftforge/fml/common/event/FMLServerStartingEvent;)V|event|0
+      @|fr\flashback083\flashspec\Flashspec.java|2039|2048|getServer|method|net.minecraftforge.fml.common.event.FMLServerStartingEvent|getServer|()Lnet/minecraft/server/MinecraftServer;
+      @|fr\flashback083\flashspec\Flashspec.java|2051|2058|getFile|method|net.minecraft.server.MinecraftServer|getFile|(Ljava/lang/String;)Ljava/io/File;
+      @|fr\flashback083\flashspec\Flashspec.java|2135|2146|hasNextLine|method|java.util.Scanner|hasNextLine|()Z
+      @|fr\flashback083\flashspec\Flashspec.java|2192|2200|nextLine|method|java.util.Scanner|nextLine|()Ljava/lang/String;
+      @|fr\flashback083\flashspec\Flashspec.java|2203|2211|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|fr\flashback083\flashspec\Flashspec.java|2262|2267|close|method|java.lang.AutoCloseable|close|()V
+      @|fr\flashback083\flashspec\Flashspec.java|2306|2312|System|class|java.lang.System
+      @|fr\flashback083\flashspec\Flashspec.java|2313|2316|out|field|java.lang.System|out
+      @|fr\flashback083\flashspec\Flashspec.java|2317|2324|println|method|java.io.PrintStream|println|(Ljava/lang/String;)V
+      @|fr\flashback083\flashspec\Flashspec.java|2360|2371|PokemonSpec|class|com.pixelmonmod.pixelmon.api.pokemon.PokemonSpec
+      @|fr\flashback083\flashspec\Flashspec.java|2372|2386|extraSpecTypes|field|com.pixelmonmod.pixelmon.api.pokemon.PokemonSpec|extraSpecTypes
+      @|fr\flashback083\flashspec\Flashspec.java|2387|2390|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|fr\flashback083\flashspec\Flashspec.java|2395|2404|Move1Spec|class|fr.flashback083.flashspec.MoveSpec.Move1Spec
+      @|fr\flashback083\flashspec\Flashspec.java|2405|2410|Lists|class|com.google.common.collect.Lists
+      @|fr\flashback083\flashspec\Flashspec.java|2411|2423|newArrayList|method|com.google.common.collect.Lists|newArrayList|([Ljava/lang/Object;)Ljava/util/ArrayList;
+      @|fr\flashback083\flashspec\Flashspec.java|2459|2470|PokemonSpec|class|com.pixelmonmod.pixelmon.api.pokemon.PokemonSpec
+      @|fr\flashback083\flashspec\Flashspec.java|2471|2485|extraSpecTypes|field|com.pixelmonmod.pixelmon.api.pokemon.PokemonSpec|extraSpecTypes
+      @|fr\flashback083\flashspec\Flashspec.java|2486|2489|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|fr\flashback083\flashspec\Flashspec.java|2494|2503|Move2Spec|class|fr.flashback083.flashspec.MoveSpec.Move2Spec
+      @|fr\flashback083\flashspec\Flashspec.java|2504|2509|Lists|class|com.google.common.collect.Lists
+      @|fr\flashback083\flashspec\Flashspec.java|2510|2522|newArrayList|method|com.google.common.collect.Lists|newArrayList|([Ljava/lang/Object;)Ljava/util/ArrayList;
+      @|fr\flashback083\flashspec\Flashspec.java|2558|2569|PokemonSpec|class|com.pixelmonmod.pixelmon.api.pokemon.PokemonSpec
+      @|fr\flashback083\flashspec\Flashspec.java|2570|2584|extraSpecTypes|field|com.pixelmonmod.pixelmon.api.pokemon.PokemonSpec|extraSpecTypes
+      @|fr\flashback083\flashspec\Flashspec.java|2585|2588|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|fr\flashback083\flashspec\Flashspec.java|2593|2602|Move3Spec|class|fr.flashback083.flashspec.MoveSpec.Move3Spec
+      @|fr\flashback083\flashspec\Flashspec.java|2603|2608|Lists|class|com.google.common.collect.Lists
+      @|fr\flashback083\flashspec\Flashspec.java|2609|2621|newArrayList|method|com.google.common.collect.Lists|newArrayList|([Ljava/lang/Object;)Ljava/util/ArrayList;
+      @|fr\flashback083\flashspec\Flashspec.java|2657|2668|PokemonSpec|class|com.pixelmonmod.pixelmon.api.pokemon.PokemonSpec
+      @|fr\flashback083\flashspec\Flashspec.java|2669|2683|extraSpecTypes|field|com.pixelmonmod.pixelmon.api.pokemon.PokemonSpec|extraSpecTypes
+      @|fr\flashback083\flashspec\Flashspec.java|2684|2687|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|fr\flashback083\flashspec\Flashspec.java|2692|2701|Move4Spec|class|fr.flashback083.flashspec.MoveSpec.Move4Spec
+      @|fr\flashback083\flashspec\Flashspec.java|2702|2707|Lists|class|com.google.common.collect.Lists
+      @|fr\flashback083\flashspec\Flashspec.java|2708|2720|newArrayList|method|com.google.common.collect.Lists|newArrayList|([Ljava/lang/Object;)Ljava/util/ArrayList;
+      @|fr\flashback083\flashspec\Flashspec.java|2756|2767|PokemonSpec|class|com.pixelmonmod.pixelmon.api.pokemon.PokemonSpec
+      @|fr\flashback083\flashspec\Flashspec.java|2768|2782|extraSpecTypes|field|com.pixelmonmod.pixelmon.api.pokemon.PokemonSpec|extraSpecTypes
+      @|fr\flashback083\flashspec\Flashspec.java|2783|2786|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|fr\flashback083\flashspec\Flashspec.java|2791|2803|HelpItemSpec|class|fr.flashback083.flashspec.HelpItemSpec
+      @|fr\flashback083\flashspec\Flashspec.java|2804|2809|Lists|class|com.google.common.collect.Lists
+      @|fr\flashback083\flashspec\Flashspec.java|2810|2822|newArrayList|method|com.google.common.collect.Lists|newArrayList|([Ljava/lang/Object;)Ljava/util/ArrayList;
+   Method End: serverStart(Lnet/minecraftforge/fml/common/event/FMLServerStartingEvent;)V
+Class End  : fr.flashback083.flashspec.Flashspec
+endProcessing "fr\flashback083\flashspec\Flashspec.java"
+
+startProcessing "fr\flashback083\flashspec\HelpItemSpec.java" md5: fe11a72b42762ada00769aa8ff7d9120
+Cache Hit!
+@|fr\flashback083\flashspec\HelpItemSpec.java|8|33|fr.flashback083.flashspec|package|fr.flashback083.flashspec|(file)
+Class Start: fr.flashback083.flashspec.HelpItemSpec
+   @|fr\flashback083\flashspec\HelpItemSpec.java|503|515|HelpItemSpec|class|fr.flashback083.flashspec.HelpItemSpec
+   @|fr\flashback083\flashspec\HelpItemSpec.java|524|533|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+   @|fr\flashback083\flashspec\HelpItemSpec.java|534|540|String|class|java.lang.String
+   @|fr\flashback083\flashspec\HelpItemSpec.java|553|562|ISpecType|class|com.pixelmonmod.pixelmon.api.pokemon.ISpecType
+   @|fr\flashback083\flashspec\HelpItemSpec.java|578|584|String|class|java.lang.String
+   @|fr\flashback083\flashspec\HelpItemSpec.java|578|584|String|class|java.lang.String
+   @|fr\flashback083\flashspec\HelpItemSpec.java|585|590|value|field|fr.flashback083.flashspec.HelpItemSpec|value|
+   @|fr\flashback083\flashspec\HelpItemSpec.java|609|615|String|class|java.lang.String
+   @|fr\flashback083\flashspec\HelpItemSpec.java|604|608|List|class|java.util.List
+   @|fr\flashback083\flashspec\HelpItemSpec.java|604|608|List|class|java.util.List
+   @|fr\flashback083\flashspec\HelpItemSpec.java|609|615|String|class|java.lang.String
+   @|fr\flashback083\flashspec\HelpItemSpec.java|617|621|keys|field|fr.flashback083.flashspec.HelpItemSpec|keys|
+   Method Start: HelpItemSpec(Ljava/util/List;Ljava/lang/String;)V
+      @|fr\flashback083\flashspec\HelpItemSpec.java|661|665|keys|param|fr.flashback083.flashspec.HelpItemSpec|HelpItemSpec|(Ljava/util/List;Ljava/lang/String;)V|keys|0
+      @|fr\flashback083\flashspec\HelpItemSpec.java|674|679|value|param|fr.flashback083.flashspec.HelpItemSpec|HelpItemSpec|(Ljava/util/List;Ljava/lang/String;)V|value|1
+      @|fr\flashback083\flashspec\HelpItemSpec.java|635|647|HelpItemSpec|method|fr.flashback083.flashspec.HelpItemSpec|HelpItemSpec|(Ljava/util/List;Ljava/lang/String;)V
+      @|fr\flashback083\flashspec\HelpItemSpec.java|648|652|List|class|java.util.List
+      @|fr\flashback083\flashspec\HelpItemSpec.java|653|659|String|class|java.lang.String
+      @|fr\flashback083\flashspec\HelpItemSpec.java|667|673|String|class|java.lang.String
+      @|fr\flashback083\flashspec\HelpItemSpec.java|696|700|keys|param|fr.flashback083.flashspec.HelpItemSpec|HelpItemSpec|(Ljava/util/List;Ljava/lang/String;)V|keys|0
+      @|fr\flashback083\flashspec\HelpItemSpec.java|701|704|get|method|java.util.List|get|(I)Ljava/lang/Object;
+      @|fr\flashback083\flashspec\HelpItemSpec.java|709|714|value|param|fr.flashback083.flashspec.HelpItemSpec|HelpItemSpec|(Ljava/util/List;Ljava/lang/String;)V|value|1
+      @|fr\flashback083\flashspec\HelpItemSpec.java|730|734|keys|field|fr.flashback083.flashspec.HelpItemSpec|keys
+      @|fr\flashback083\flashspec\HelpItemSpec.java|737|741|keys|param|fr.flashback083.flashspec.HelpItemSpec|HelpItemSpec|(Ljava/util/List;Ljava/lang/String;)V|keys|0
+      @|fr\flashback083\flashspec\HelpItemSpec.java|756|761|value|field|fr.flashback083.flashspec.HelpItemSpec|value
+      @|fr\flashback083\flashspec\HelpItemSpec.java|764|769|value|param|fr.flashback083.flashspec.HelpItemSpec|HelpItemSpec|(Ljava/util/List;Ljava/lang/String;)V|value|1
+   Method End: HelpItemSpec(Ljava/util/List;Ljava/lang/String;)V
+   Method Start: getKeys()Ljava/util/List;
+      @|fr\flashback083\flashspec\HelpItemSpec.java|784|792|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\HelpItemSpec.java|804|808|List|class|java.util.List
+      @|fr\flashback083\flashspec\HelpItemSpec.java|809|815|String|class|java.lang.String
+      @|fr\flashback083\flashspec\HelpItemSpec.java|817|824|getKeys|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|getKeys|()Ljava/util/List;
+      @|fr\flashback083\flashspec\HelpItemSpec.java|849|853|keys|field|fr.flashback083.flashspec.HelpItemSpec|keys
+   Method End: getKeys()Ljava/util/List;
+   Method Start: parse(Ljava/lang/String;)Lfr/flashback083/flashspec/HelpItemSpec;
+      @|fr\flashback083\flashspec\HelpItemSpec.java|923|924|s|param|fr.flashback083.flashspec.HelpItemSpec|parse|(Ljava/lang/String;)Lfr/flashback083/flashspec/HelpItemSpec;|s|0
+      @|fr\flashback083\flashspec\HelpItemSpec.java|867|875|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\HelpItemSpec.java|887|899|HelpItemSpec|class|fr.flashback083.flashspec.HelpItemSpec
+      @|fr\flashback083\flashspec\HelpItemSpec.java|900|905|parse|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|parse|(Ljava/lang/String;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\HelpItemSpec.java|907|915|Nullable|class|javax.annotation.Nullable
+      @|fr\flashback083\flashspec\HelpItemSpec.java|916|922|String|class|java.lang.String
+      @|fr\flashback083\flashspec\HelpItemSpec.java|947|959|HelpItemSpec|class|fr.flashback083.flashspec.HelpItemSpec
+      @|fr\flashback083\flashspec\HelpItemSpec.java|965|969|keys|field|fr.flashback083.flashspec.HelpItemSpec|keys
+      @|fr\flashback083\flashspec\HelpItemSpec.java|971|972|s|param|fr.flashback083.flashspec.HelpItemSpec|parse|(Ljava/lang/String;)Lfr/flashback083/flashspec/HelpItemSpec;|s|0
+   Method End: parse(Ljava/lang/String;)Lfr/flashback083/flashspec/HelpItemSpec;
+   Method Start: readFromNBT(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1047|1061|nbtTagCompound|param|fr.flashback083.flashspec.HelpItemSpec|readFromNBT|(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;|nbtTagCompound|0
+      @|fr\flashback083\flashspec\HelpItemSpec.java|987|995|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1007|1016|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1020|1031|readFromNBT|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|readFromNBT|(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1032|1046|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1080|1085|parse|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|parse|(Ljava/lang/String;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1086|1100|nbtTagCompound|param|fr.flashback083.flashspec.HelpItemSpec|readFromNBT|(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;|nbtTagCompound|0
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1101|1110|getString|method|net.minecraft.nbt.NBTTagCompound|getString|(Ljava/lang/String;)Ljava/lang/String;
+   Method End: readFromNBT(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+   Method Start: writeToNBT(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1188|1202|nbtTagCompound|param|fr.flashback083.flashspec.HelpItemSpec|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V|nbtTagCompound|0
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1217|1226|specValue|param|fr.flashback083.flashspec.HelpItemSpec|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V|specValue|1
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1137|1145|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1162|1172|writeToNBT|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1173|1187|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1204|1213|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1238|1252|nbtTagCompound|param|fr.flashback083.flashspec.HelpItemSpec|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V|nbtTagCompound|0
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1253|1262|setString|method|net.minecraft.nbt.NBTTagCompound|setString|(Ljava/lang/String;Ljava/lang/String;)V
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1280|1285|value|field|fr.flashback083.flashspec.HelpItemSpec|value
+   Method End: writeToNBT(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V
+   Method Start: getSpecClass()Ljava/lang/Class;
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1300|1308|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1320|1325|Class|class|java.lang.Class
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1336|1345|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1350|1362|getSpecClass|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|getSpecClass|()Ljava/lang/Class;
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1382|1390|getClass|method|java.lang.Object|getClass|()Ljava/lang/Class;
+   Method End: getSpecClass()Ljava/lang/Class;
+   Method Start: toParameterForm(Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)Ljava/lang/String;
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1462|1471|specValue|param|fr.flashback083.flashspec.HelpItemSpec|toParameterForm|(Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)Ljava/lang/String;|specValue|0
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1406|1414|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1426|1432|String|class|java.lang.String
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1433|1448|toParameterForm|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|toParameterForm|(Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)Ljava/lang/String;
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1449|1458|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1490|1493|key|field|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|key
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1502|1507|value|field|fr.flashback083.flashspec.HelpItemSpec|value
+   Method End: toParameterForm(Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)Ljava/lang/String;
+   Method Start: getValueClass()Ljava/lang/Class;
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1521|1529|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1541|1546|Class|class|java.lang.Class
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1547|1553|String|class|java.lang.String
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1555|1568|getValueClass|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|getValueClass|()Ljava/lang/Class;
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1588|1594|String|class|java.lang.String
+   Method End: getValueClass()Ljava/lang/Class;
+   Method Start: apply(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)V
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1660|1674|entityPixelmon|param|fr.flashback083.flashspec.HelpItemSpec|apply|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)V|entityPixelmon|0
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1614|1622|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1639|1644|apply|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|apply|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)V
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1645|1659|EntityPixelmon|class|com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1686|1692|String|class|java.lang.String
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1719|1724|value|field|fr.flashback083.flashspec.HelpItemSpec|value
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1734|1743|ItemStack|class|net.minecraft.item.ItemStack
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1760|1769|ItemStack|class|net.minecraft.item.ItemStack
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1770|1774|Item|class|net.minecraft.item.Item
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1775|1788|getByNameOrId|method|net.minecraft.item.Item|getByNameOrId|(Ljava/lang/String;)Lnet/minecraft/item/Item;
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1805|1819|entityPixelmon|param|fr.flashback083.flashspec.HelpItemSpec|apply|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)V|entityPixelmon|0
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1820|1834|getPokemonData|method|com.pixelmonmod.pixelmon.entities.pixelmon.Entity1Base|getPokemonData|()Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1837|1848|setHeldItem|method|com.pixelmonmod.pixelmon.api.pokemon.Pokemon|setHeldItem|(Lnet/minecraft/item/ItemStack;)V
+   Method End: apply(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)V
+   Method Start: apply(Lnet/minecraft/nbt/NBTTagCompound;)V
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1919|1933|nbtTagCompound|param|fr.flashback083.flashspec.HelpItemSpec|apply|(Lnet/minecraft/nbt/NBTTagCompound;)V|nbtTagCompound|0
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1873|1881|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1898|1903|apply|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|apply|(Lnet/minecraft/nbt/NBTTagCompound;)V
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1904|1918|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+   Method End: apply(Lnet/minecraft/nbt/NBTTagCompound;)V
+   Method Start: apply(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)V
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1989|1996|pokemon|param|fr.flashback083.flashspec.HelpItemSpec|apply|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)V|pokemon|0
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1950|1958|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1975|1980|apply|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|apply|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)V
+      @|fr\flashback083\flashspec\HelpItemSpec.java|1981|1988|Pokemon|class|com.pixelmonmod.pixelmon.api.pokemon.Pokemon
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2008|2014|String|class|java.lang.String
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2041|2046|value|field|fr.flashback083.flashspec.HelpItemSpec|value
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2056|2065|ItemStack|class|net.minecraft.item.ItemStack
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2082|2091|ItemStack|class|net.minecraft.item.ItemStack
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2092|2096|Item|class|net.minecraft.item.Item
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2097|2110|getByNameOrId|method|net.minecraft.item.Item|getByNameOrId|(Ljava/lang/String;)Lnet/minecraft/item/Item;
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2127|2134|pokemon|param|fr.flashback083.flashspec.HelpItemSpec|apply|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)V|pokemon|0
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2135|2146|setHeldItem|method|com.pixelmonmod.pixelmon.api.pokemon.Pokemon|setHeldItem|(Lnet/minecraft/item/ItemStack;)V
+   Method End: apply(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)V
+   Method Start: matches(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)Z
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2222|2236|entityPixelmon|param|fr.flashback083.flashspec.HelpItemSpec|matches|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)Z|entityPixelmon|0
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2171|2179|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2199|2206|matches|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|matches|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)Z
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2207|2221|EntityPixelmon|class|com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2248|2254|String|class|java.lang.String
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2281|2286|value|field|fr.flashback083.flashspec.HelpItemSpec|value
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2296|2305|ItemStack|class|net.minecraft.item.ItemStack
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2322|2331|ItemStack|class|net.minecraft.item.ItemStack
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2332|2336|Item|class|net.minecraft.item.Item
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2337|2350|getByNameOrId|method|net.minecraft.item.Item|getByNameOrId|(Ljava/lang/String;)Lnet/minecraft/item/Item;
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2375|2389|entityPixelmon|param|fr.flashback083.flashspec.HelpItemSpec|matches|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)Z|entityPixelmon|0
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2390|2404|getPokemonData|method|com.pixelmonmod.pixelmon.entities.pixelmon.Entity1Base|getPokemonData|()Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2407|2418|getHeldItem|method|com.pixelmonmod.pixelmon.api.pokemon.Pokemon|getHeldItem|()Lnet/minecraft/item/ItemStack;
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2421|2448|isItemEqualIgnoreDurability|method|net.minecraft.item.ItemStack|isItemEqualIgnoreDurability|(Lnet/minecraft/item/ItemStack;)Z
+   Method End: matches(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)Z
+   Method Start: matches(Lnet/minecraft/nbt/NBTTagCompound;)Z
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2524|2538|nbtTagCompound|param|fr.flashback083.flashspec.HelpItemSpec|matches|(Lnet/minecraft/nbt/NBTTagCompound;)Z|nbtTagCompound|0
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2473|2481|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2501|2508|matches|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|matches|(Lnet/minecraft/nbt/NBTTagCompound;)Z
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2509|2523|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+   Method End: matches(Lnet/minecraft/nbt/NBTTagCompound;)Z
+   Method Start: matches(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)Z
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2724|2731|pokemon|param|fr.flashback083.flashspec.HelpItemSpec|matches|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)Z|pokemon|0
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2680|2688|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2708|2715|matches|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|matches|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)Z
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2716|2723|Pokemon|class|com.pixelmonmod.pixelmon.api.pokemon.Pokemon
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2743|2749|String|class|java.lang.String
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2776|2781|value|field|fr.flashback083.flashspec.HelpItemSpec|value
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2791|2800|ItemStack|class|net.minecraft.item.ItemStack
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2817|2826|ItemStack|class|net.minecraft.item.ItemStack
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2827|2831|Item|class|net.minecraft.item.Item
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2832|2845|getByNameOrId|method|net.minecraft.item.Item|getByNameOrId|(Ljava/lang/String;)Lnet/minecraft/item/Item;
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2869|2876|pokemon|param|fr.flashback083.flashspec.HelpItemSpec|matches|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)Z|pokemon|0
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2877|2888|getHeldItem|method|com.pixelmonmod.pixelmon.api.pokemon.Pokemon|getHeldItem|()Lnet/minecraft/item/ItemStack;
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2891|2918|isItemEqualIgnoreDurability|method|net.minecraft.item.ItemStack|isItemEqualIgnoreDurability|(Lnet/minecraft/item/ItemStack;)Z
+   Method End: matches(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)Z
+   Method Start: clone()Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2943|2951|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2963|2972|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2973|2979|String|class|java.lang.String
+      @|fr\flashback083\flashspec\HelpItemSpec.java|2981|2986|clone|method|fr.flashback083.flashspec.HelpItemSpec|clone|()Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\HelpItemSpec.java|3010|3022|HelpItemSpec|class|fr.flashback083.flashspec.HelpItemSpec
+      @|fr\flashback083\flashspec\HelpItemSpec.java|3028|3032|keys|field|fr.flashback083.flashspec.HelpItemSpec|keys
+      @|fr\flashback083\flashspec\HelpItemSpec.java|3038|3043|value|field|fr.flashback083.flashspec.HelpItemSpec|value
+   Method End: clone()Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+Class End  : fr.flashback083.flashspec.HelpItemSpec
+endProcessing "fr\flashback083\flashspec\HelpItemSpec.java"
+
+startProcessing "fr\flashback083\flashspec\MoveSpec\Move1Spec.java" md5: 925fefe6ef1277e20a29b3061dbcbd08
+Cache Hit!
+@|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|8|42|fr.flashback083.flashspec.MoveSpec|package|fr.flashback083.flashspec.MoveSpec|(file)
+Class Start: fr.flashback083.flashspec.MoveSpec.Move1Spec
+   @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|443|452|Move1Spec|class|fr.flashback083.flashspec.MoveSpec.Move1Spec
+   @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|461|470|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+   @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|471|477|String|class|java.lang.String
+   @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|490|499|ISpecType|class|com.pixelmonmod.pixelmon.api.pokemon.ISpecType
+   @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|515|521|String|class|java.lang.String
+   @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|515|521|String|class|java.lang.String
+   @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|522|527|value|field|fr.flashback083.flashspec.MoveSpec.Move1Spec|value|
+   @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|546|552|String|class|java.lang.String
+   @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|541|545|List|class|java.util.List
+   @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|541|545|List|class|java.util.List
+   @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|546|552|String|class|java.lang.String
+   @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|554|558|keys|field|fr.flashback083.flashspec.MoveSpec.Move1Spec|keys|
+   Method Start: Move1Spec(Ljava/util/List;Ljava/lang/String;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|595|599|keys|param|fr.flashback083.flashspec.MoveSpec.Move1Spec|Move1Spec|(Ljava/util/List;Ljava/lang/String;)V|keys|0
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|608|613|value|param|fr.flashback083.flashspec.MoveSpec.Move1Spec|Move1Spec|(Ljava/util/List;Ljava/lang/String;)V|value|1
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|572|581|Move1Spec|method|fr.flashback083.flashspec.MoveSpec.Move1Spec|Move1Spec|(Ljava/util/List;Ljava/lang/String;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|582|586|List|class|java.util.List
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|587|593|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|601|607|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|630|634|keys|param|fr.flashback083.flashspec.MoveSpec.Move1Spec|Move1Spec|(Ljava/util/List;Ljava/lang/String;)V|keys|0
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|635|638|get|method|java.util.List|get|(I)Ljava/lang/Object;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|643|648|value|param|fr.flashback083.flashspec.MoveSpec.Move1Spec|Move1Spec|(Ljava/util/List;Ljava/lang/String;)V|value|1
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|664|668|keys|field|fr.flashback083.flashspec.MoveSpec.Move1Spec|keys
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|671|675|keys|param|fr.flashback083.flashspec.MoveSpec.Move1Spec|Move1Spec|(Ljava/util/List;Ljava/lang/String;)V|keys|0
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|690|695|value|field|fr.flashback083.flashspec.MoveSpec.Move1Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|698|703|value|param|fr.flashback083.flashspec.MoveSpec.Move1Spec|Move1Spec|(Ljava/util/List;Ljava/lang/String;)V|value|1
+   Method End: Move1Spec(Ljava/util/List;Ljava/lang/String;)V
+   Method Start: getKeys()Ljava/util/List;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|718|726|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|738|742|List|class|java.util.List
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|743|749|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|751|758|getKeys|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|getKeys|()Ljava/util/List;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|783|787|keys|field|fr.flashback083.flashspec.MoveSpec.Move1Spec|keys
+   Method End: getKeys()Ljava/util/List;
+   Method Start: parse(Ljava/lang/String;)Lfr/flashback083/flashspec/MoveSpec/Move1Spec;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|854|855|s|param|fr.flashback083.flashspec.MoveSpec.Move1Spec|parse|(Ljava/lang/String;)Lfr/flashback083/flashspec/MoveSpec/Move1Spec;|s|0
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|801|809|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|821|830|Move1Spec|class|fr.flashback083.flashspec.MoveSpec.Move1Spec
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|831|836|parse|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|parse|(Ljava/lang/String;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|838|846|Nullable|class|javax.annotation.Nullable
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|847|853|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|878|887|Move1Spec|class|fr.flashback083.flashspec.MoveSpec.Move1Spec
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|893|897|keys|field|fr.flashback083.flashspec.MoveSpec.Move1Spec|keys
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|899|900|s|param|fr.flashback083.flashspec.MoveSpec.Move1Spec|parse|(Ljava/lang/String;)Lfr/flashback083/flashspec/MoveSpec/Move1Spec;|s|0
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|901|911|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   Method End: parse(Ljava/lang/String;)Lfr/flashback083/flashspec/MoveSpec/Move1Spec;
+   Method Start: readFromNBT(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|995|1009|nbtTagCompound|param|fr.flashback083.flashspec.MoveSpec.Move1Spec|readFromNBT|(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;|nbtTagCompound|0
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|935|943|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|955|964|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|968|979|readFromNBT|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|readFromNBT|(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|980|994|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1028|1033|parse|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|parse|(Ljava/lang/String;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1034|1048|nbtTagCompound|param|fr.flashback083.flashspec.MoveSpec.Move1Spec|readFromNBT|(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;|nbtTagCompound|0
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1049|1058|getString|method|net.minecraft.nbt.NBTTagCompound|getString|(Ljava/lang/String;)Ljava/lang/String;
+   Method End: readFromNBT(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+   Method Start: writeToNBT(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1133|1147|nbtTagCompound|param|fr.flashback083.flashspec.MoveSpec.Move1Spec|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V|nbtTagCompound|0
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1162|1171|specValue|param|fr.flashback083.flashspec.MoveSpec.Move1Spec|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V|specValue|1
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1082|1090|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1107|1117|writeToNBT|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1118|1132|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1149|1158|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1183|1197|nbtTagCompound|param|fr.flashback083.flashspec.MoveSpec.Move1Spec|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V|nbtTagCompound|0
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1198|1207|setString|method|net.minecraft.nbt.NBTTagCompound|setString|(Ljava/lang/String;Ljava/lang/String;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1222|1227|value|field|fr.flashback083.flashspec.MoveSpec.Move1Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1228|1238|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   Method End: writeToNBT(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V
+   Method Start: getSpecClass()Ljava/lang/Class;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1262|1270|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1282|1287|Class|class|java.lang.Class
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1298|1307|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1312|1324|getSpecClass|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|getSpecClass|()Ljava/lang/Class;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1344|1352|getClass|method|java.lang.Object|getClass|()Ljava/lang/Class;
+   Method End: getSpecClass()Ljava/lang/Class;
+   Method Start: toParameterForm(Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)Ljava/lang/String;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1424|1433|specValue|param|fr.flashback083.flashspec.MoveSpec.Move1Spec|toParameterForm|(Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)Ljava/lang/String;|specValue|0
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1368|1376|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1388|1394|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1395|1410|toParameterForm|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|toParameterForm|(Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)Ljava/lang/String;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1411|1420|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1452|1455|key|field|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|key
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1464|1469|value|field|fr.flashback083.flashspec.MoveSpec.Move1Spec|value
+   Method End: toParameterForm(Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)Ljava/lang/String;
+   Method Start: getValueClass()Ljava/lang/Class;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1483|1491|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1503|1508|Class|class|java.lang.Class
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1509|1515|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1517|1530|getValueClass|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|getValueClass|()Ljava/lang/Class;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1550|1556|String|class|java.lang.String
+   Method End: getValueClass()Ljava/lang/Class;
+   Method Start: apply(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1622|1636|entityPixelmon|param|fr.flashback083.flashspec.MoveSpec.Move1Spec|apply|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)V|entityPixelmon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1576|1584|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1601|1606|apply|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|apply|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1607|1621|EntityPixelmon|class|com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1648|1654|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1666|1671|value|field|fr.flashback083.flashspec.MoveSpec.Move1Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1672|1682|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1721|1727|Attack|class|com.pixelmonmod.pixelmon.battles.attacks.Attack
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1728|1737|hasAttack|method|com.pixelmonmod.pixelmon.battles.attacks.Attack|hasAttack|(Ljava/lang/String;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1779|1793|entityPixelmon|param|fr.flashback083.flashspec.MoveSpec.Move1Spec|apply|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)V|entityPixelmon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1794|1808|getPokemonData|method|com.pixelmonmod.pixelmon.entities.pixelmon.Entity1Base|getPokemonData|()Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1811|1821|getMoveset|method|com.pixelmonmod.pixelmon.api.pokemon.Pokemon|getMoveset|()Lcom/pixelmonmod/pixelmon/entities/pixelmon/stats/Moveset;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1824|1827|set|method|java.util.List|set|(ILjava/lang/Object;)Ljava/lang/Object;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1835|1841|Attack|class|com.pixelmonmod.pixelmon.battles.attacks.Attack
+   Method End: apply(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)V
+   Method Start: apply(Lnet/minecraft/nbt/NBTTagCompound;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1917|1931|nbtTagCompound|param|fr.flashback083.flashspec.MoveSpec.Move1Spec|apply|(Lnet/minecraft/nbt/NBTTagCompound;)V|nbtTagCompound|0
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1871|1879|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1896|1901|apply|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|apply|(Lnet/minecraft/nbt/NBTTagCompound;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1902|1916|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+   Method End: apply(Lnet/minecraft/nbt/NBTTagCompound;)V
+   Method Start: apply(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1987|1994|pokemon|param|fr.flashback083.flashspec.MoveSpec.Move1Spec|apply|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)V|pokemon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1948|1956|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1973|1978|apply|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|apply|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|1979|1986|Pokemon|class|com.pixelmonmod.pixelmon.api.pokemon.Pokemon
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2006|2012|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2024|2029|value|field|fr.flashback083.flashspec.MoveSpec.Move1Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2030|2040|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2079|2085|Attack|class|com.pixelmonmod.pixelmon.battles.attacks.Attack
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2086|2095|hasAttack|method|com.pixelmonmod.pixelmon.battles.attacks.Attack|hasAttack|(Ljava/lang/String;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2137|2144|pokemon|param|fr.flashback083.flashspec.MoveSpec.Move1Spec|apply|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)V|pokemon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2145|2155|getMoveset|method|com.pixelmonmod.pixelmon.api.pokemon.Pokemon|getMoveset|()Lcom/pixelmonmod/pixelmon/entities/pixelmon/stats/Moveset;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2158|2161|set|method|java.util.List|set|(ILjava/lang/Object;)Ljava/lang/Object;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2169|2175|Attack|class|com.pixelmonmod.pixelmon.battles.attacks.Attack
+   Method End: apply(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)V
+   Method Start: matches(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2258|2272|entityPixelmon|param|fr.flashback083.flashspec.MoveSpec.Move1Spec|matches|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)Z|entityPixelmon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2207|2215|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2235|2242|matches|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|matches|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2243|2257|EntityPixelmon|class|com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2292|2306|entityPixelmon|param|fr.flashback083.flashspec.MoveSpec.Move1Spec|matches|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)Z|entityPixelmon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2307|2321|getPokemonData|method|com.pixelmonmod.pixelmon.entities.pixelmon.Entity1Base|getPokemonData|()Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2324|2334|getMoveset|method|com.pixelmonmod.pixelmon.api.pokemon.Pokemon|getMoveset|()Lcom/pixelmonmod/pixelmon/entities/pixelmon/stats/Moveset;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2337|2340|get|method|java.util.List|get|(I)Ljava/lang/Object;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2344|2352|toString|method|java.lang.Object|toString|()Ljava/lang/String;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2355|2371|equalsIgnoreCase|method|java.lang.String|equalsIgnoreCase|(Ljava/lang/String;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2377|2382|value|field|fr.flashback083.flashspec.MoveSpec.Move1Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2383|2393|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   Method End: matches(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)Z
+   Method Start: matches(Lnet/minecraft/nbt/NBTTagCompound;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2468|2482|nbtTagCompound|param|fr.flashback083.flashspec.MoveSpec.Move1Spec|matches|(Lnet/minecraft/nbt/NBTTagCompound;)Z|nbtTagCompound|0
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2417|2425|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2445|2452|matches|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|matches|(Lnet/minecraft/nbt/NBTTagCompound;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2453|2467|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+   Method End: matches(Lnet/minecraft/nbt/NBTTagCompound;)Z
+   Method Start: matches(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2668|2675|pokemon|param|fr.flashback083.flashspec.MoveSpec.Move1Spec|matches|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)Z|pokemon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2624|2632|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2652|2659|matches|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|matches|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2660|2667|Pokemon|class|com.pixelmonmod.pixelmon.api.pokemon.Pokemon
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2694|2701|pokemon|param|fr.flashback083.flashspec.MoveSpec.Move1Spec|matches|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)Z|pokemon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2702|2712|getMoveset|method|com.pixelmonmod.pixelmon.api.pokemon.Pokemon|getMoveset|()Lcom/pixelmonmod/pixelmon/entities/pixelmon/stats/Moveset;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2715|2718|get|method|java.util.List|get|(I)Ljava/lang/Object;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2722|2730|toString|method|java.lang.Object|toString|()Ljava/lang/String;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2733|2749|equalsIgnoreCase|method|java.lang.String|equalsIgnoreCase|(Ljava/lang/String;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2755|2760|value|field|fr.flashback083.flashspec.MoveSpec.Move1Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2761|2771|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   Method End: matches(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)Z
+   Method Start: clone()Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2795|2803|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2815|2824|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2825|2831|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2833|2838|clone|method|fr.flashback083.flashspec.MoveSpec.Move1Spec|clone|()Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2862|2871|Move1Spec|class|fr.flashback083.flashspec.MoveSpec.Move1Spec
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2877|2881|keys|field|fr.flashback083.flashspec.MoveSpec.Move1Spec|keys
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2887|2892|value|field|fr.flashback083.flashspec.MoveSpec.Move1Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move1Spec.java|2893|2903|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   Method End: clone()Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+Class End  : fr.flashback083.flashspec.MoveSpec.Move1Spec
+endProcessing "fr\flashback083\flashspec\MoveSpec\Move1Spec.java"
+
+startProcessing "fr\flashback083\flashspec\MoveSpec\Move2Spec.java" md5: a8f03799afa476f95229864d5644fff5
+@|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|8|42|fr.flashback083.flashspec.MoveSpec|package|fr.flashback083.flashspec.MoveSpec|(file)
+Class Start: fr.flashback083.flashspec.MoveSpec.Move2Spec
+   @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|443|452|Move2Spec|class|fr.flashback083.flashspec.MoveSpec.Move2Spec
+   @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|461|470|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+   @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|471|477|String|class|java.lang.String
+   @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|490|499|ISpecType|class|com.pixelmonmod.pixelmon.api.pokemon.ISpecType
+   @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|515|521|String|class|java.lang.String
+   @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|515|521|String|class|java.lang.String
+   @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|522|527|value|field|fr.flashback083.flashspec.MoveSpec.Move2Spec|value|
+   @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|546|552|String|class|java.lang.String
+   @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|541|545|List|class|java.util.List
+   @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|541|545|List|class|java.util.List
+   @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|546|552|String|class|java.lang.String
+   @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|554|558|keys|field|fr.flashback083.flashspec.MoveSpec.Move2Spec|keys|
+   Method Start: Move2Spec(Ljava/util/List;Ljava/lang/String;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|595|599|keys|param|fr.flashback083.flashspec.MoveSpec.Move2Spec|Move2Spec|(Ljava/util/List;Ljava/lang/String;)V|keys|0
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|608|613|value|param|fr.flashback083.flashspec.MoveSpec.Move2Spec|Move2Spec|(Ljava/util/List;Ljava/lang/String;)V|value|1
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|572|581|Move2Spec|method|fr.flashback083.flashspec.MoveSpec.Move2Spec|Move2Spec|(Ljava/util/List;Ljava/lang/String;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|582|586|List|class|java.util.List
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|587|593|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|601|607|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|630|634|keys|param|fr.flashback083.flashspec.MoveSpec.Move2Spec|Move2Spec|(Ljava/util/List;Ljava/lang/String;)V|keys|0
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|635|638|get|method|java.util.List|get|(I)Ljava/lang/Object;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|643|648|value|param|fr.flashback083.flashspec.MoveSpec.Move2Spec|Move2Spec|(Ljava/util/List;Ljava/lang/String;)V|value|1
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|664|668|keys|field|fr.flashback083.flashspec.MoveSpec.Move2Spec|keys
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|671|675|keys|param|fr.flashback083.flashspec.MoveSpec.Move2Spec|Move2Spec|(Ljava/util/List;Ljava/lang/String;)V|keys|0
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|690|695|value|field|fr.flashback083.flashspec.MoveSpec.Move2Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|698|703|value|param|fr.flashback083.flashspec.MoveSpec.Move2Spec|Move2Spec|(Ljava/util/List;Ljava/lang/String;)V|value|1
+   Method End: Move2Spec(Ljava/util/List;Ljava/lang/String;)V
+   Method Start: getKeys()Ljava/util/List;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|719|727|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|739|743|List|class|java.util.List
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|744|750|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|752|759|getKeys|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|getKeys|()Ljava/util/List;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|784|788|keys|field|fr.flashback083.flashspec.MoveSpec.Move2Spec|keys
+   Method End: getKeys()Ljava/util/List;
+   Method Start: parse(Ljava/lang/String;)Lfr/flashback083/flashspec/MoveSpec/Move2Spec;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|855|856|s|param|fr.flashback083.flashspec.MoveSpec.Move2Spec|parse|(Ljava/lang/String;)Lfr/flashback083/flashspec/MoveSpec/Move2Spec;|s|0
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|802|810|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|822|831|Move2Spec|class|fr.flashback083.flashspec.MoveSpec.Move2Spec
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|832|837|parse|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|parse|(Ljava/lang/String;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|839|847|Nullable|class|javax.annotation.Nullable
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|848|854|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|879|888|Move2Spec|class|fr.flashback083.flashspec.MoveSpec.Move2Spec
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|894|898|keys|field|fr.flashback083.flashspec.MoveSpec.Move2Spec|keys
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|900|901|s|param|fr.flashback083.flashspec.MoveSpec.Move2Spec|parse|(Ljava/lang/String;)Lfr/flashback083/flashspec/MoveSpec/Move2Spec;|s|0
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|902|912|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   Method End: parse(Ljava/lang/String;)Lfr/flashback083/flashspec/MoveSpec/Move2Spec;
+   Method Start: readFromNBT(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|996|1010|nbtTagCompound|param|fr.flashback083.flashspec.MoveSpec.Move2Spec|readFromNBT|(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;|nbtTagCompound|0
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|936|944|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|956|965|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|969|980|readFromNBT|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|readFromNBT|(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|981|995|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1029|1034|parse|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|parse|(Ljava/lang/String;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1035|1049|nbtTagCompound|param|fr.flashback083.flashspec.MoveSpec.Move2Spec|readFromNBT|(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;|nbtTagCompound|0
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1050|1059|getString|method|net.minecraft.nbt.NBTTagCompound|getString|(Ljava/lang/String;)Ljava/lang/String;
+   Method End: readFromNBT(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+   Method Start: writeToNBT(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1134|1148|nbtTagCompound|param|fr.flashback083.flashspec.MoveSpec.Move2Spec|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V|nbtTagCompound|0
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1163|1172|specValue|param|fr.flashback083.flashspec.MoveSpec.Move2Spec|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V|specValue|1
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1083|1091|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1108|1118|writeToNBT|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1119|1133|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1150|1159|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1184|1198|nbtTagCompound|param|fr.flashback083.flashspec.MoveSpec.Move2Spec|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V|nbtTagCompound|0
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1199|1208|setString|method|net.minecraft.nbt.NBTTagCompound|setString|(Ljava/lang/String;Ljava/lang/String;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1223|1228|value|field|fr.flashback083.flashspec.MoveSpec.Move2Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1229|1239|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   Method End: writeToNBT(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V
+   Method Start: getSpecClass()Ljava/lang/Class;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1263|1271|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1283|1288|Class|class|java.lang.Class
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1299|1308|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1313|1325|getSpecClass|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|getSpecClass|()Ljava/lang/Class;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1345|1353|getClass|method|java.lang.Object|getClass|()Ljava/lang/Class;
+   Method End: getSpecClass()Ljava/lang/Class;
+   Method Start: toParameterForm(Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)Ljava/lang/String;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1425|1434|specValue|param|fr.flashback083.flashspec.MoveSpec.Move2Spec|toParameterForm|(Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)Ljava/lang/String;|specValue|0
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1369|1377|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1389|1395|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1396|1411|toParameterForm|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|toParameterForm|(Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)Ljava/lang/String;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1412|1421|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1453|1456|key|field|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|key
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1465|1470|value|field|fr.flashback083.flashspec.MoveSpec.Move2Spec|value
+   Method End: toParameterForm(Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)Ljava/lang/String;
+   Method Start: getValueClass()Ljava/lang/Class;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1484|1492|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1504|1509|Class|class|java.lang.Class
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1510|1516|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1518|1531|getValueClass|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|getValueClass|()Ljava/lang/Class;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1551|1557|String|class|java.lang.String
+   Method End: getValueClass()Ljava/lang/Class;
+   Method Start: apply(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1623|1637|entityPixelmon|param|fr.flashback083.flashspec.MoveSpec.Move2Spec|apply|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)V|entityPixelmon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1577|1585|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1602|1607|apply|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|apply|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1608|1622|EntityPixelmon|class|com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1649|1655|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1667|1672|value|field|fr.flashback083.flashspec.MoveSpec.Move2Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1673|1683|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1722|1728|Attack|class|com.pixelmonmod.pixelmon.battles.attacks.Attack
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1729|1738|hasAttack|method|com.pixelmonmod.pixelmon.battles.attacks.Attack|hasAttack|(Ljava/lang/String;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1780|1794|entityPixelmon|param|fr.flashback083.flashspec.MoveSpec.Move2Spec|apply|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)V|entityPixelmon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1795|1809|getPokemonData|method|com.pixelmonmod.pixelmon.entities.pixelmon.Entity1Base|getPokemonData|()Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1812|1822|getMoveset|method|com.pixelmonmod.pixelmon.api.pokemon.Pokemon|getMoveset|()Lcom/pixelmonmod/pixelmon/entities/pixelmon/stats/Moveset;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1825|1828|set|method|java.util.List|set|(ILjava/lang/Object;)Ljava/lang/Object;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1836|1842|Attack|class|com.pixelmonmod.pixelmon.battles.attacks.Attack
+   Method End: apply(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)V
+   Method Start: apply(Lnet/minecraft/nbt/NBTTagCompound;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1918|1932|nbtTagCompound|param|fr.flashback083.flashspec.MoveSpec.Move2Spec|apply|(Lnet/minecraft/nbt/NBTTagCompound;)V|nbtTagCompound|0
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1872|1880|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1897|1902|apply|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|apply|(Lnet/minecraft/nbt/NBTTagCompound;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1903|1917|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+   Method End: apply(Lnet/minecraft/nbt/NBTTagCompound;)V
+   Method Start: apply(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1988|1995|pokemon|param|fr.flashback083.flashspec.MoveSpec.Move2Spec|apply|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)V|pokemon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1949|1957|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1974|1979|apply|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|apply|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|1980|1987|Pokemon|class|com.pixelmonmod.pixelmon.api.pokemon.Pokemon
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2007|2013|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2025|2030|value|field|fr.flashback083.flashspec.MoveSpec.Move2Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2031|2041|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2080|2086|Attack|class|com.pixelmonmod.pixelmon.battles.attacks.Attack
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2087|2096|hasAttack|method|com.pixelmonmod.pixelmon.battles.attacks.Attack|hasAttack|(Ljava/lang/String;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2138|2145|pokemon|param|fr.flashback083.flashspec.MoveSpec.Move2Spec|apply|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)V|pokemon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2146|2156|getMoveset|method|com.pixelmonmod.pixelmon.api.pokemon.Pokemon|getMoveset|()Lcom/pixelmonmod/pixelmon/entities/pixelmon/stats/Moveset;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2159|2162|set|method|java.util.List|set|(ILjava/lang/Object;)Ljava/lang/Object;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2170|2176|Attack|class|com.pixelmonmod.pixelmon.battles.attacks.Attack
+   Method End: apply(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)V
+   Method Start: matches(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2257|2271|entityPixelmon|param|fr.flashback083.flashspec.MoveSpec.Move2Spec|matches|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)Z|entityPixelmon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2206|2214|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2234|2241|matches|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|matches|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2242|2256|EntityPixelmon|class|com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2291|2305|entityPixelmon|param|fr.flashback083.flashspec.MoveSpec.Move2Spec|matches|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)Z|entityPixelmon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2306|2320|getPokemonData|method|com.pixelmonmod.pixelmon.entities.pixelmon.Entity1Base|getPokemonData|()Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2323|2333|getMoveset|method|com.pixelmonmod.pixelmon.api.pokemon.Pokemon|getMoveset|()Lcom/pixelmonmod/pixelmon/entities/pixelmon/stats/Moveset;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2336|2339|get|method|java.util.List|get|(I)Ljava/lang/Object;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2343|2351|toString|method|java.lang.Object|toString|()Ljava/lang/String;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2354|2370|equalsIgnoreCase|method|java.lang.String|equalsIgnoreCase|(Ljava/lang/String;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2376|2381|value|field|fr.flashback083.flashspec.MoveSpec.Move2Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2382|2392|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   Method End: matches(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)Z
+   Method Start: matches(Lnet/minecraft/nbt/NBTTagCompound;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2467|2481|nbtTagCompound|param|fr.flashback083.flashspec.MoveSpec.Move2Spec|matches|(Lnet/minecraft/nbt/NBTTagCompound;)Z|nbtTagCompound|0
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2416|2424|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2444|2451|matches|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|matches|(Lnet/minecraft/nbt/NBTTagCompound;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2452|2466|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+   Method End: matches(Lnet/minecraft/nbt/NBTTagCompound;)Z
+   Method Start: matches(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2667|2674|pokemon|param|fr.flashback083.flashspec.MoveSpec.Move2Spec|matches|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)Z|pokemon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2623|2631|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2651|2658|matches|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|matches|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2659|2666|Pokemon|class|com.pixelmonmod.pixelmon.api.pokemon.Pokemon
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2693|2700|pokemon|param|fr.flashback083.flashspec.MoveSpec.Move2Spec|matches|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)Z|pokemon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2701|2711|getMoveset|method|com.pixelmonmod.pixelmon.api.pokemon.Pokemon|getMoveset|()Lcom/pixelmonmod/pixelmon/entities/pixelmon/stats/Moveset;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2714|2717|get|method|java.util.List|get|(I)Ljava/lang/Object;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2721|2729|toString|method|java.lang.Object|toString|()Ljava/lang/String;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2732|2748|equalsIgnoreCase|method|java.lang.String|equalsIgnoreCase|(Ljava/lang/String;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2754|2759|value|field|fr.flashback083.flashspec.MoveSpec.Move2Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2760|2770|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   Method End: matches(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)Z
+   Method Start: clone()Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2794|2802|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2814|2823|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2824|2830|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2832|2837|clone|method|fr.flashback083.flashspec.MoveSpec.Move2Spec|clone|()Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2861|2870|Move2Spec|class|fr.flashback083.flashspec.MoveSpec.Move2Spec
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2876|2880|keys|field|fr.flashback083.flashspec.MoveSpec.Move2Spec|keys
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2886|2891|value|field|fr.flashback083.flashspec.MoveSpec.Move2Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move2Spec.java|2892|2902|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   Method End: clone()Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+Class End  : fr.flashback083.flashspec.MoveSpec.Move2Spec
+endProcessing "fr\flashback083\flashspec\MoveSpec\Move2Spec.java"
+
+startProcessing "fr\flashback083\flashspec\MoveSpec\Move3Spec.java" md5: 552a4ac994fb5810d432d9448ac899e3
+@|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|8|42|fr.flashback083.flashspec.MoveSpec|package|fr.flashback083.flashspec.MoveSpec|(file)
+Class Start: fr.flashback083.flashspec.MoveSpec.Move3Spec
+   @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|443|452|Move3Spec|class|fr.flashback083.flashspec.MoveSpec.Move3Spec
+   @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|461|470|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+   @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|471|477|String|class|java.lang.String
+   @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|490|499|ISpecType|class|com.pixelmonmod.pixelmon.api.pokemon.ISpecType
+   @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|515|521|String|class|java.lang.String
+   @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|515|521|String|class|java.lang.String
+   @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|522|527|value|field|fr.flashback083.flashspec.MoveSpec.Move3Spec|value|
+   @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|546|552|String|class|java.lang.String
+   @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|541|545|List|class|java.util.List
+   @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|541|545|List|class|java.util.List
+   @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|546|552|String|class|java.lang.String
+   @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|554|558|keys|field|fr.flashback083.flashspec.MoveSpec.Move3Spec|keys|
+   Method Start: Move3Spec(Ljava/util/List;Ljava/lang/String;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|595|599|keys|param|fr.flashback083.flashspec.MoveSpec.Move3Spec|Move3Spec|(Ljava/util/List;Ljava/lang/String;)V|keys|0
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|608|613|value|param|fr.flashback083.flashspec.MoveSpec.Move3Spec|Move3Spec|(Ljava/util/List;Ljava/lang/String;)V|value|1
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|572|581|Move3Spec|method|fr.flashback083.flashspec.MoveSpec.Move3Spec|Move3Spec|(Ljava/util/List;Ljava/lang/String;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|582|586|List|class|java.util.List
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|587|593|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|601|607|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|630|634|keys|param|fr.flashback083.flashspec.MoveSpec.Move3Spec|Move3Spec|(Ljava/util/List;Ljava/lang/String;)V|keys|0
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|635|638|get|method|java.util.List|get|(I)Ljava/lang/Object;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|643|648|value|param|fr.flashback083.flashspec.MoveSpec.Move3Spec|Move3Spec|(Ljava/util/List;Ljava/lang/String;)V|value|1
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|664|668|keys|field|fr.flashback083.flashspec.MoveSpec.Move3Spec|keys
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|671|675|keys|param|fr.flashback083.flashspec.MoveSpec.Move3Spec|Move3Spec|(Ljava/util/List;Ljava/lang/String;)V|keys|0
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|690|695|value|field|fr.flashback083.flashspec.MoveSpec.Move3Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|698|703|value|param|fr.flashback083.flashspec.MoveSpec.Move3Spec|Move3Spec|(Ljava/util/List;Ljava/lang/String;)V|value|1
+   Method End: Move3Spec(Ljava/util/List;Ljava/lang/String;)V
+   Method Start: getKeys()Ljava/util/List;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|719|727|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|739|743|List|class|java.util.List
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|744|750|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|752|759|getKeys|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|getKeys|()Ljava/util/List;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|784|788|keys|field|fr.flashback083.flashspec.MoveSpec.Move3Spec|keys
+   Method End: getKeys()Ljava/util/List;
+   Method Start: parse(Ljava/lang/String;)Lfr/flashback083/flashspec/MoveSpec/Move3Spec;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|855|856|s|param|fr.flashback083.flashspec.MoveSpec.Move3Spec|parse|(Ljava/lang/String;)Lfr/flashback083/flashspec/MoveSpec/Move3Spec;|s|0
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|802|810|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|822|831|Move3Spec|class|fr.flashback083.flashspec.MoveSpec.Move3Spec
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|832|837|parse|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|parse|(Ljava/lang/String;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|839|847|Nullable|class|javax.annotation.Nullable
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|848|854|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|879|888|Move3Spec|class|fr.flashback083.flashspec.MoveSpec.Move3Spec
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|894|898|keys|field|fr.flashback083.flashspec.MoveSpec.Move3Spec|keys
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|900|901|s|param|fr.flashback083.flashspec.MoveSpec.Move3Spec|parse|(Ljava/lang/String;)Lfr/flashback083/flashspec/MoveSpec/Move3Spec;|s|0
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|902|912|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   Method End: parse(Ljava/lang/String;)Lfr/flashback083/flashspec/MoveSpec/Move3Spec;
+   Method Start: readFromNBT(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|996|1010|nbtTagCompound|param|fr.flashback083.flashspec.MoveSpec.Move3Spec|readFromNBT|(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;|nbtTagCompound|0
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|936|944|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|956|965|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|969|980|readFromNBT|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|readFromNBT|(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|981|995|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1029|1034|parse|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|parse|(Ljava/lang/String;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1035|1049|nbtTagCompound|param|fr.flashback083.flashspec.MoveSpec.Move3Spec|readFromNBT|(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;|nbtTagCompound|0
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1050|1059|getString|method|net.minecraft.nbt.NBTTagCompound|getString|(Ljava/lang/String;)Ljava/lang/String;
+   Method End: readFromNBT(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+   Method Start: writeToNBT(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1134|1148|nbtTagCompound|param|fr.flashback083.flashspec.MoveSpec.Move3Spec|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V|nbtTagCompound|0
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1163|1172|specValue|param|fr.flashback083.flashspec.MoveSpec.Move3Spec|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V|specValue|1
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1083|1091|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1108|1118|writeToNBT|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1119|1133|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1150|1159|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1184|1198|nbtTagCompound|param|fr.flashback083.flashspec.MoveSpec.Move3Spec|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V|nbtTagCompound|0
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1199|1208|setString|method|net.minecraft.nbt.NBTTagCompound|setString|(Ljava/lang/String;Ljava/lang/String;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1223|1228|value|field|fr.flashback083.flashspec.MoveSpec.Move3Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1229|1239|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   Method End: writeToNBT(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V
+   Method Start: getSpecClass()Ljava/lang/Class;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1263|1271|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1283|1288|Class|class|java.lang.Class
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1299|1308|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1313|1325|getSpecClass|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|getSpecClass|()Ljava/lang/Class;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1345|1353|getClass|method|java.lang.Object|getClass|()Ljava/lang/Class;
+   Method End: getSpecClass()Ljava/lang/Class;
+   Method Start: toParameterForm(Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)Ljava/lang/String;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1425|1434|specValue|param|fr.flashback083.flashspec.MoveSpec.Move3Spec|toParameterForm|(Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)Ljava/lang/String;|specValue|0
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1369|1377|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1389|1395|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1396|1411|toParameterForm|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|toParameterForm|(Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)Ljava/lang/String;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1412|1421|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1453|1456|key|field|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|key
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1465|1470|value|field|fr.flashback083.flashspec.MoveSpec.Move3Spec|value
+   Method End: toParameterForm(Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)Ljava/lang/String;
+   Method Start: getValueClass()Ljava/lang/Class;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1484|1492|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1504|1509|Class|class|java.lang.Class
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1510|1516|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1518|1531|getValueClass|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|getValueClass|()Ljava/lang/Class;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1551|1557|String|class|java.lang.String
+   Method End: getValueClass()Ljava/lang/Class;
+   Method Start: apply(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1623|1637|entityPixelmon|param|fr.flashback083.flashspec.MoveSpec.Move3Spec|apply|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)V|entityPixelmon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1577|1585|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1602|1607|apply|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|apply|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1608|1622|EntityPixelmon|class|com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1649|1655|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1667|1672|value|field|fr.flashback083.flashspec.MoveSpec.Move3Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1673|1683|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1722|1728|Attack|class|com.pixelmonmod.pixelmon.battles.attacks.Attack
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1729|1738|hasAttack|method|com.pixelmonmod.pixelmon.battles.attacks.Attack|hasAttack|(Ljava/lang/String;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1780|1794|entityPixelmon|param|fr.flashback083.flashspec.MoveSpec.Move3Spec|apply|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)V|entityPixelmon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1795|1809|getPokemonData|method|com.pixelmonmod.pixelmon.entities.pixelmon.Entity1Base|getPokemonData|()Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1812|1822|getMoveset|method|com.pixelmonmod.pixelmon.api.pokemon.Pokemon|getMoveset|()Lcom/pixelmonmod/pixelmon/entities/pixelmon/stats/Moveset;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1825|1828|set|method|java.util.List|set|(ILjava/lang/Object;)Ljava/lang/Object;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1836|1842|Attack|class|com.pixelmonmod.pixelmon.battles.attacks.Attack
+   Method End: apply(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)V
+   Method Start: apply(Lnet/minecraft/nbt/NBTTagCompound;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1918|1932|nbtTagCompound|param|fr.flashback083.flashspec.MoveSpec.Move3Spec|apply|(Lnet/minecraft/nbt/NBTTagCompound;)V|nbtTagCompound|0
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1872|1880|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1897|1902|apply|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|apply|(Lnet/minecraft/nbt/NBTTagCompound;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1903|1917|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+   Method End: apply(Lnet/minecraft/nbt/NBTTagCompound;)V
+   Method Start: apply(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1988|1995|pokemon|param|fr.flashback083.flashspec.MoveSpec.Move3Spec|apply|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)V|pokemon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1949|1957|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1974|1979|apply|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|apply|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|1980|1987|Pokemon|class|com.pixelmonmod.pixelmon.api.pokemon.Pokemon
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2007|2013|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2025|2030|value|field|fr.flashback083.flashspec.MoveSpec.Move3Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2031|2041|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2080|2086|Attack|class|com.pixelmonmod.pixelmon.battles.attacks.Attack
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2087|2096|hasAttack|method|com.pixelmonmod.pixelmon.battles.attacks.Attack|hasAttack|(Ljava/lang/String;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2138|2145|pokemon|param|fr.flashback083.flashspec.MoveSpec.Move3Spec|apply|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)V|pokemon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2146|2156|getMoveset|method|com.pixelmonmod.pixelmon.api.pokemon.Pokemon|getMoveset|()Lcom/pixelmonmod/pixelmon/entities/pixelmon/stats/Moveset;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2159|2162|set|method|java.util.List|set|(ILjava/lang/Object;)Ljava/lang/Object;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2170|2176|Attack|class|com.pixelmonmod.pixelmon.battles.attacks.Attack
+   Method End: apply(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)V
+   Method Start: matches(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2257|2271|entityPixelmon|param|fr.flashback083.flashspec.MoveSpec.Move3Spec|matches|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)Z|entityPixelmon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2206|2214|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2234|2241|matches|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|matches|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2242|2256|EntityPixelmon|class|com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2291|2305|entityPixelmon|param|fr.flashback083.flashspec.MoveSpec.Move3Spec|matches|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)Z|entityPixelmon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2306|2320|getPokemonData|method|com.pixelmonmod.pixelmon.entities.pixelmon.Entity1Base|getPokemonData|()Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2323|2333|getMoveset|method|com.pixelmonmod.pixelmon.api.pokemon.Pokemon|getMoveset|()Lcom/pixelmonmod/pixelmon/entities/pixelmon/stats/Moveset;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2336|2339|get|method|java.util.List|get|(I)Ljava/lang/Object;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2343|2351|toString|method|java.lang.Object|toString|()Ljava/lang/String;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2354|2370|equalsIgnoreCase|method|java.lang.String|equalsIgnoreCase|(Ljava/lang/String;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2376|2381|value|field|fr.flashback083.flashspec.MoveSpec.Move3Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2382|2392|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   Method End: matches(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)Z
+   Method Start: matches(Lnet/minecraft/nbt/NBTTagCompound;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2467|2481|nbtTagCompound|param|fr.flashback083.flashspec.MoveSpec.Move3Spec|matches|(Lnet/minecraft/nbt/NBTTagCompound;)Z|nbtTagCompound|0
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2416|2424|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2444|2451|matches|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|matches|(Lnet/minecraft/nbt/NBTTagCompound;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2452|2466|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+   Method End: matches(Lnet/minecraft/nbt/NBTTagCompound;)Z
+   Method Start: matches(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2667|2674|pokemon|param|fr.flashback083.flashspec.MoveSpec.Move3Spec|matches|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)Z|pokemon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2623|2631|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2651|2658|matches|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|matches|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2659|2666|Pokemon|class|com.pixelmonmod.pixelmon.api.pokemon.Pokemon
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2693|2700|pokemon|param|fr.flashback083.flashspec.MoveSpec.Move3Spec|matches|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)Z|pokemon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2701|2711|getMoveset|method|com.pixelmonmod.pixelmon.api.pokemon.Pokemon|getMoveset|()Lcom/pixelmonmod/pixelmon/entities/pixelmon/stats/Moveset;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2714|2717|get|method|java.util.List|get|(I)Ljava/lang/Object;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2721|2729|toString|method|java.lang.Object|toString|()Ljava/lang/String;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2732|2748|equalsIgnoreCase|method|java.lang.String|equalsIgnoreCase|(Ljava/lang/String;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2754|2759|value|field|fr.flashback083.flashspec.MoveSpec.Move3Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2760|2770|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   Method End: matches(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)Z
+   Method Start: clone()Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2794|2802|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2814|2823|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2824|2830|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2832|2837|clone|method|fr.flashback083.flashspec.MoveSpec.Move3Spec|clone|()Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2861|2870|Move3Spec|class|fr.flashback083.flashspec.MoveSpec.Move3Spec
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2876|2880|keys|field|fr.flashback083.flashspec.MoveSpec.Move3Spec|keys
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2886|2891|value|field|fr.flashback083.flashspec.MoveSpec.Move3Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move3Spec.java|2892|2902|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   Method End: clone()Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+Class End  : fr.flashback083.flashspec.MoveSpec.Move3Spec
+endProcessing "fr\flashback083\flashspec\MoveSpec\Move3Spec.java"
+
+startProcessing "fr\flashback083\flashspec\MoveSpec\Move4Spec.java" md5: fd7ca5d33bb3492fefa6b27022459160
+@|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|8|42|fr.flashback083.flashspec.MoveSpec|package|fr.flashback083.flashspec.MoveSpec|(file)
+Class Start: fr.flashback083.flashspec.MoveSpec.Move4Spec
+   @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|443|452|Move4Spec|class|fr.flashback083.flashspec.MoveSpec.Move4Spec
+   @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|461|470|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+   @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|471|477|String|class|java.lang.String
+   @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|490|499|ISpecType|class|com.pixelmonmod.pixelmon.api.pokemon.ISpecType
+   @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|515|521|String|class|java.lang.String
+   @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|515|521|String|class|java.lang.String
+   @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|522|527|value|field|fr.flashback083.flashspec.MoveSpec.Move4Spec|value|
+   @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|546|552|String|class|java.lang.String
+   @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|541|545|List|class|java.util.List
+   @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|541|545|List|class|java.util.List
+   @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|546|552|String|class|java.lang.String
+   @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|554|558|keys|field|fr.flashback083.flashspec.MoveSpec.Move4Spec|keys|
+   Method Start: Move4Spec(Ljava/util/List;Ljava/lang/String;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|595|599|keys|param|fr.flashback083.flashspec.MoveSpec.Move4Spec|Move4Spec|(Ljava/util/List;Ljava/lang/String;)V|keys|0
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|608|613|value|param|fr.flashback083.flashspec.MoveSpec.Move4Spec|Move4Spec|(Ljava/util/List;Ljava/lang/String;)V|value|1
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|572|581|Move4Spec|method|fr.flashback083.flashspec.MoveSpec.Move4Spec|Move4Spec|(Ljava/util/List;Ljava/lang/String;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|582|586|List|class|java.util.List
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|587|593|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|601|607|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|630|634|keys|param|fr.flashback083.flashspec.MoveSpec.Move4Spec|Move4Spec|(Ljava/util/List;Ljava/lang/String;)V|keys|0
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|635|638|get|method|java.util.List|get|(I)Ljava/lang/Object;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|643|648|value|param|fr.flashback083.flashspec.MoveSpec.Move4Spec|Move4Spec|(Ljava/util/List;Ljava/lang/String;)V|value|1
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|664|668|keys|field|fr.flashback083.flashspec.MoveSpec.Move4Spec|keys
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|671|675|keys|param|fr.flashback083.flashspec.MoveSpec.Move4Spec|Move4Spec|(Ljava/util/List;Ljava/lang/String;)V|keys|0
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|690|695|value|field|fr.flashback083.flashspec.MoveSpec.Move4Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|698|703|value|param|fr.flashback083.flashspec.MoveSpec.Move4Spec|Move4Spec|(Ljava/util/List;Ljava/lang/String;)V|value|1
+   Method End: Move4Spec(Ljava/util/List;Ljava/lang/String;)V
+   Method Start: getKeys()Ljava/util/List;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|719|727|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|739|743|List|class|java.util.List
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|744|750|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|752|759|getKeys|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|getKeys|()Ljava/util/List;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|784|788|keys|field|fr.flashback083.flashspec.MoveSpec.Move4Spec|keys
+   Method End: getKeys()Ljava/util/List;
+   Method Start: parse(Ljava/lang/String;)Lfr/flashback083/flashspec/MoveSpec/Move4Spec;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|855|856|s|param|fr.flashback083.flashspec.MoveSpec.Move4Spec|parse|(Ljava/lang/String;)Lfr/flashback083/flashspec/MoveSpec/Move4Spec;|s|0
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|802|810|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|822|831|Move4Spec|class|fr.flashback083.flashspec.MoveSpec.Move4Spec
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|832|837|parse|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|parse|(Ljava/lang/String;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|839|847|Nullable|class|javax.annotation.Nullable
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|848|854|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|879|888|Move4Spec|class|fr.flashback083.flashspec.MoveSpec.Move4Spec
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|894|898|keys|field|fr.flashback083.flashspec.MoveSpec.Move4Spec|keys
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|900|901|s|param|fr.flashback083.flashspec.MoveSpec.Move4Spec|parse|(Ljava/lang/String;)Lfr/flashback083/flashspec/MoveSpec/Move4Spec;|s|0
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|902|912|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   Method End: parse(Ljava/lang/String;)Lfr/flashback083/flashspec/MoveSpec/Move4Spec;
+   Method Start: readFromNBT(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|996|1010|nbtTagCompound|param|fr.flashback083.flashspec.MoveSpec.Move4Spec|readFromNBT|(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;|nbtTagCompound|0
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|936|944|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|956|965|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|969|980|readFromNBT|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|readFromNBT|(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|981|995|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1029|1034|parse|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|parse|(Ljava/lang/String;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1035|1049|nbtTagCompound|param|fr.flashback083.flashspec.MoveSpec.Move4Spec|readFromNBT|(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;|nbtTagCompound|0
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1050|1059|getString|method|net.minecraft.nbt.NBTTagCompound|getString|(Ljava/lang/String;)Ljava/lang/String;
+   Method End: readFromNBT(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+   Method Start: writeToNBT(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1134|1148|nbtTagCompound|param|fr.flashback083.flashspec.MoveSpec.Move4Spec|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V|nbtTagCompound|0
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1163|1172|specValue|param|fr.flashback083.flashspec.MoveSpec.Move4Spec|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V|specValue|1
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1083|1091|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1108|1118|writeToNBT|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1119|1133|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1150|1159|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1184|1198|nbtTagCompound|param|fr.flashback083.flashspec.MoveSpec.Move4Spec|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V|nbtTagCompound|0
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1199|1208|setString|method|net.minecraft.nbt.NBTTagCompound|setString|(Ljava/lang/String;Ljava/lang/String;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1223|1228|value|field|fr.flashback083.flashspec.MoveSpec.Move4Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1229|1239|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   Method End: writeToNBT(Lnet/minecraft/nbt/NBTTagCompound;Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)V
+   Method Start: getSpecClass()Ljava/lang/Class;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1263|1271|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1283|1288|Class|class|java.lang.Class
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1299|1308|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1313|1325|getSpecClass|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|getSpecClass|()Ljava/lang/Class;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1345|1353|getClass|method|java.lang.Object|getClass|()Ljava/lang/Class;
+   Method End: getSpecClass()Ljava/lang/Class;
+   Method Start: toParameterForm(Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)Ljava/lang/String;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1425|1434|specValue|param|fr.flashback083.flashspec.MoveSpec.Move4Spec|toParameterForm|(Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)Ljava/lang/String;|specValue|0
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1369|1377|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1389|1395|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1396|1411|toParameterForm|method|com.pixelmonmod.pixelmon.api.pokemon.ISpecType|toParameterForm|(Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)Ljava/lang/String;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1412|1421|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1453|1456|key|field|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|key
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1465|1470|value|field|fr.flashback083.flashspec.MoveSpec.Move4Spec|value
+   Method End: toParameterForm(Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;)Ljava/lang/String;
+   Method Start: getValueClass()Ljava/lang/Class;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1484|1492|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1504|1509|Class|class|java.lang.Class
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1510|1516|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1518|1531|getValueClass|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|getValueClass|()Ljava/lang/Class;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1551|1557|String|class|java.lang.String
+   Method End: getValueClass()Ljava/lang/Class;
+   Method Start: apply(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1623|1637|entityPixelmon|param|fr.flashback083.flashspec.MoveSpec.Move4Spec|apply|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)V|entityPixelmon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1577|1585|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1602|1607|apply|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|apply|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1608|1622|EntityPixelmon|class|com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1649|1655|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1667|1672|value|field|fr.flashback083.flashspec.MoveSpec.Move4Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1673|1683|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1722|1728|Attack|class|com.pixelmonmod.pixelmon.battles.attacks.Attack
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1729|1738|hasAttack|method|com.pixelmonmod.pixelmon.battles.attacks.Attack|hasAttack|(Ljava/lang/String;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1780|1794|entityPixelmon|param|fr.flashback083.flashspec.MoveSpec.Move4Spec|apply|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)V|entityPixelmon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1795|1809|getPokemonData|method|com.pixelmonmod.pixelmon.entities.pixelmon.Entity1Base|getPokemonData|()Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1812|1822|getMoveset|method|com.pixelmonmod.pixelmon.api.pokemon.Pokemon|getMoveset|()Lcom/pixelmonmod/pixelmon/entities/pixelmon/stats/Moveset;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1825|1828|set|method|java.util.List|set|(ILjava/lang/Object;)Ljava/lang/Object;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1836|1842|Attack|class|com.pixelmonmod.pixelmon.battles.attacks.Attack
+   Method End: apply(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)V
+   Method Start: apply(Lnet/minecraft/nbt/NBTTagCompound;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1918|1932|nbtTagCompound|param|fr.flashback083.flashspec.MoveSpec.Move4Spec|apply|(Lnet/minecraft/nbt/NBTTagCompound;)V|nbtTagCompound|0
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1872|1880|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1897|1902|apply|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|apply|(Lnet/minecraft/nbt/NBTTagCompound;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1903|1917|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+   Method End: apply(Lnet/minecraft/nbt/NBTTagCompound;)V
+   Method Start: apply(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1988|1995|pokemon|param|fr.flashback083.flashspec.MoveSpec.Move4Spec|apply|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)V|pokemon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1949|1957|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1974|1979|apply|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|apply|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)V
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|1980|1987|Pokemon|class|com.pixelmonmod.pixelmon.api.pokemon.Pokemon
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2007|2013|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2025|2030|value|field|fr.flashback083.flashspec.MoveSpec.Move4Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2031|2041|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2080|2086|Attack|class|com.pixelmonmod.pixelmon.battles.attacks.Attack
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2087|2096|hasAttack|method|com.pixelmonmod.pixelmon.battles.attacks.Attack|hasAttack|(Ljava/lang/String;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2138|2145|pokemon|param|fr.flashback083.flashspec.MoveSpec.Move4Spec|apply|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)V|pokemon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2146|2156|getMoveset|method|com.pixelmonmod.pixelmon.api.pokemon.Pokemon|getMoveset|()Lcom/pixelmonmod/pixelmon/entities/pixelmon/stats/Moveset;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2159|2162|set|method|java.util.List|set|(ILjava/lang/Object;)Ljava/lang/Object;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2170|2176|Attack|class|com.pixelmonmod.pixelmon.battles.attacks.Attack
+   Method End: apply(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)V
+   Method Start: matches(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2257|2271|entityPixelmon|param|fr.flashback083.flashspec.MoveSpec.Move4Spec|matches|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)Z|entityPixelmon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2206|2214|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2234|2241|matches|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|matches|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2242|2256|EntityPixelmon|class|com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2291|2305|entityPixelmon|param|fr.flashback083.flashspec.MoveSpec.Move4Spec|matches|(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)Z|entityPixelmon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2306|2320|getPokemonData|method|com.pixelmonmod.pixelmon.entities.pixelmon.Entity1Base|getPokemonData|()Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2323|2333|getMoveset|method|com.pixelmonmod.pixelmon.api.pokemon.Pokemon|getMoveset|()Lcom/pixelmonmod/pixelmon/entities/pixelmon/stats/Moveset;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2336|2339|get|method|java.util.List|get|(I)Ljava/lang/Object;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2343|2351|toString|method|java.lang.Object|toString|()Ljava/lang/String;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2354|2370|equalsIgnoreCase|method|java.lang.String|equalsIgnoreCase|(Ljava/lang/String;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2376|2381|value|field|fr.flashback083.flashspec.MoveSpec.Move4Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2382|2392|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   Method End: matches(Lcom/pixelmonmod/pixelmon/entities/pixelmon/EntityPixelmon;)Z
+   Method Start: matches(Lnet/minecraft/nbt/NBTTagCompound;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2467|2481|nbtTagCompound|param|fr.flashback083.flashspec.MoveSpec.Move4Spec|matches|(Lnet/minecraft/nbt/NBTTagCompound;)Z|nbtTagCompound|0
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2416|2424|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2444|2451|matches|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|matches|(Lnet/minecraft/nbt/NBTTagCompound;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2452|2466|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+   Method End: matches(Lnet/minecraft/nbt/NBTTagCompound;)Z
+   Method Start: matches(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2667|2674|pokemon|param|fr.flashback083.flashspec.MoveSpec.Move4Spec|matches|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)Z|pokemon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2623|2631|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2651|2658|matches|method|com.pixelmonmod.pixelmon.api.pokemon.SpecValue|matches|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2659|2666|Pokemon|class|com.pixelmonmod.pixelmon.api.pokemon.Pokemon
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2693|2700|pokemon|param|fr.flashback083.flashspec.MoveSpec.Move4Spec|matches|(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)Z|pokemon|0
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2701|2711|getMoveset|method|com.pixelmonmod.pixelmon.api.pokemon.Pokemon|getMoveset|()Lcom/pixelmonmod/pixelmon/entities/pixelmon/stats/Moveset;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2714|2717|get|method|java.util.List|get|(I)Ljava/lang/Object;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2721|2729|toString|method|java.lang.Object|toString|()Ljava/lang/String;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2732|2748|equalsIgnoreCase|method|java.lang.String|equalsIgnoreCase|(Ljava/lang/String;)Z
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2754|2759|value|field|fr.flashback083.flashspec.MoveSpec.Move4Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2760|2770|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   Method End: matches(Lcom/pixelmonmod/pixelmon/api/pokemon/Pokemon;)Z
+   Method Start: clone()Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2794|2802|Override|class|java.lang.Override
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2814|2823|SpecValue|class|com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2824|2830|String|class|java.lang.String
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2832|2837|clone|method|fr.flashback083.flashspec.MoveSpec.Move4Spec|clone|()Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2861|2870|Move4Spec|class|fr.flashback083.flashspec.MoveSpec.Move4Spec
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2876|2880|keys|field|fr.flashback083.flashspec.MoveSpec.Move4Spec|keys
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2886|2891|value|field|fr.flashback083.flashspec.MoveSpec.Move4Spec|value
+      @|fr\flashback083\flashspec\MoveSpec\Move4Spec.java|2892|2902|replaceAll|method|java.lang.String|replaceAll|(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   Method End: clone()Lcom/pixelmonmod/pixelmon/api/pokemon/SpecValue;
+Class End  : fr.flashback083.flashspec.MoveSpec.Move4Spec
+endProcessing "fr\flashback083\flashspec\MoveSpec\Move4Spec.java"
+
