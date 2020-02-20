@@ -85,7 +85,7 @@ public class LegUbSpec extends SpecValue<Boolean> implements ISpecType {
     }
 
     public SpecValue clone() {
-        return new LegUbSpec((Boolean)this.value);
+        return new LegUbSpec(this.value);
     }
 
     private EnumSpecies randomPokeNonLegNonUB(){

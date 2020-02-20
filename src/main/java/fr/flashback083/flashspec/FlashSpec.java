@@ -2,6 +2,7 @@ package fr.flashback083.flashspec;
 
 import com.google.common.collect.Lists;
 import com.pixelmonmod.pixelmon.Pixelmon;
+import com.pixelmonmod.pixelmon.api.events.PokedexEvent;
 import com.pixelmonmod.pixelmon.api.pokemon.PokemonSpec;
 import com.pixelmonmod.pixelmon.api.pokemon.SpecFlag;
 import fr.flashback083.flashspec.Specs.*;
@@ -18,6 +19,7 @@ import fr.flashback083.flashspec.Specs.MoveSpec.Move4Spec;
 import fr.flashback083.flashspec.Specs.TypeSpec.Type1Spec;
 import fr.flashback083.flashspec.Specs.TypeSpec.Type2Spec;
 import fr.flashback083.flashspec.Specs.TypeSpec.TypeSpec;
+import fr.flashback083.flashspec.Specs.UndeleteSpec.TrashListener;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.MinecraftServer;
 import net.minecraftforge.common.MinecraftForge;
@@ -42,13 +44,16 @@ public class FlashSpec {
 
     public static final String MOD_ID = "flashspec";
     public static final String MOD_NAME = "FlashSpec";
-    public static final String VERSION = "2.2.9";
+    public static final String VERSION = "2.2.12";
 
     //Boolean spec
-    public static PokemonSpec UNCATCHABLE;
-    public static PokemonSpec UNBATTLEABLE;
-    public static PokemonSpec UNEVO;
-    public static PokemonSpec UNLEVEL;
+    //public static PokemonSpec UNCATCHABLE;
+    //public static PokemonSpec UNBATTLEABLE;
+    //public static PokemonSpec UNEVO;
+    //public static PokemonSpec UNLEVEL;
+    //public static PokemonSpec AGGRO;
+    //public static PokemonSpec UNTRASHABLE;
+    //public static PokemonSpec UNDELETEABLE;
 
     private static MinecraftServer server;
     //public static PokemonSpec NICKNAME;
@@ -70,7 +75,6 @@ public class FlashSpec {
         PokemonSpec.extraSpecTypes.add(new Move3Spec(Lists.newArrayList("move3","m3"), null));
         PokemonSpec.extraSpecTypes.add(new Move4Spec(Lists.newArrayList("move4","m4"), null));
         PokemonSpec.extraSpecTypes.add(new HelpItemSpec(Lists.newArrayList("helditem","hi"), null));
-        //PokemonSpec.extraSpecTypes.add(new UltrabeastSpec(false));
         PokemonSpec.extraSpecTypes.add(new LegUbSpec(false));
         PokemonSpec.extraSpecTypes.add(new Type1Spec(Lists.newArrayList("type1"), null));
         PokemonSpec.extraSpecTypes.add(new TypeSpec(Lists.newArrayList("type"), null));
@@ -79,42 +83,46 @@ public class FlashSpec {
         PokemonSpec.extraSpecTypes.add(new SpecFlag("unbattleable"));
         PokemonSpec.extraSpecTypes.add(new NumIVs(0));
         PokemonSpec.extraSpecTypes.add(new AISpec(Lists.newArrayList("ai"), null));
-        PokemonSpec.extraSpecTypes.add(new SpecialTextureSpec(Lists.newArrayList("sptexture"), null));
+        //PokemonSpec.extraSpecTypes.add(new SpecialTextureSpec(Lists.newArrayList("sptexture"), null));
         PokemonSpec.extraSpecTypes.add(new LegSpec(false));
         PokemonSpec.extraSpecTypes.add(new UbSpec(false));
         PokemonSpec.extraSpecTypes.add(new SpecFlag("unevo"));
         PokemonSpec.extraSpecTypes.add(new SpecFlag("unlevel"));
         PokemonSpec.extraSpecTypes.add(new UncatchableSpec(false));
-
+        PokemonSpec.extraSpecTypes.add(new SpecFlag("aggro"));
+        PokemonSpec.extraSpecTypes.add(new LevelSpec(Lists.newArrayList("lvlc","levelc"), null));
+        PokemonSpec.extraSpecTypes.add(new SpecFlag("untrashable"));
+        PokemonSpec.extraSpecTypes.add(new SpecFlag("undeleteable"));
+        PokemonSpec.extraSpecTypes.add(new SpecFlag("unmega"));
+        PokemonSpec.extraSpecTypes.add(new SpecFlag("unmegabattle"));
 
         //CustomSpec import
         PokemonSpec.extraSpecTypes.add(new TextureSpec(Lists.newArrayList("texture"), null));
-        //PokemonSpec.extraSpecTypes.add(new SpecFlag("uncatchable"));
         PokemonSpec.extraSpecTypes.add(new OTSpec(Lists.newArrayList("ot", "originaltrainer"), null));
         PokemonSpec.extraSpecTypes.add(new NicknameSpec(null));
         PokemonSpec.extraSpecTypes.add(new MinIVPercent(0));
         PokemonSpec.extraSpecTypes.add(new NumMaxIVs(0));
+        PokemonSpec.extraSpecTypes.add(new AuraSpec(null));
 
         //Variable
-        UNCATCHABLE = new PokemonSpec("uncatchable");
-        UNBATTLEABLE = new PokemonSpec("unbattleable");
-        UNEVO = new PokemonSpec("unevo");
-        UNLEVEL = new PokemonSpec("unlevel");
+        //UNCATCHABLE = new PokemonSpec("uncatchable");
+
+        //UNBATTLEABLE = new PokemonSpec("unbattleable");
+        //UNEVO = new PokemonSpec("unevo");
+        //UNLEVEL = new PokemonSpec("unlevel");
+        //AGGRO = new PokemonSpec("aggro");
+        //UNTRASHABLE = new PokemonSpec("untrashable");
+        //UNDELETEABLE = new PokemonSpec("undeleteable");
+
     }
 
-    /**
-     * This is the second initialization event. Register custom recipes
-     */
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         Pixelmon.EVENT_BUS.register(new PixelmonEvent());
         MinecraftForge.EVENT_BUS.register(new PixelmonEvent());
-
     }
 
-    /**
-     * This is the final initialization event. Register actions from other mods here
-     */
+
     @Mod.EventHandler
     public void postinit(FMLPostInitializationEvent event) {
 

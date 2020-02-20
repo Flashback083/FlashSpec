@@ -18,7 +18,7 @@ public class TextureSpec extends SpecValue<String> implements ISpecType {
                 super(keys.get(0), value);
                 this.keys = keys;
                 this.value = value;
-                }
+        }
 
 
         public List<String> getKeys() {
@@ -47,11 +47,11 @@ public class TextureSpec extends SpecValue<String> implements ISpecType {
                 }
 
         public SpecValue<?> readFromNBT(NBTTagCompound nbt) {
-                return this.parse(nbt.getString("CustomTexture"));
+                return this.parse(nbt.getString(this.key));
          }
 
         public void writeToNBT(NBTTagCompound nbt, SpecValue value) {
-                nbt.setString("CustomTexture", (String) value.value);
+                nbt.setString(this.key, (String) value.value);
         }
 
         public boolean matches(EntityPixelmon pixelmon) {
@@ -62,9 +62,6 @@ public class TextureSpec extends SpecValue<String> implements ISpecType {
                 return pokemon.getCustomTexture().equalsIgnoreCase(this.value);
                 }
 
-        public boolean matches(NBTTagCompound nbt) {
-                return nbt.getString("CustomTexture").equalsIgnoreCase(this.value);
-                }
 
         public void apply(EntityPixelmon pixelmon) {
                 pixelmon.getPokemonData().setCustomTexture(this.value);
@@ -75,7 +72,4 @@ public class TextureSpec extends SpecValue<String> implements ISpecType {
                 //pokemon.getPersistentData().setString("CustomTexture",this.value);
         }
 
-        public void apply(NBTTagCompound nbt) {
-                nbt.setString("CustomTexture", this.value);
-                }
 }

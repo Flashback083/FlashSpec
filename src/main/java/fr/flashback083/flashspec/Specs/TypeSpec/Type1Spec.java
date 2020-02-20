@@ -4,6 +4,7 @@ import com.pixelmonmod.pixelmon.api.pokemon.ISpecType;
 import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
 import com.pixelmonmod.pixelmon.api.pokemon.SpecValue;
 import com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon;
+import com.pixelmonmod.pixelmon.enums.EnumSpecies;
 import net.minecraft.nbt.NBTTagCompound;
 
 import javax.annotation.Nullable;
@@ -58,8 +59,7 @@ public class Type1Spec extends SpecValue<String> implements ISpecType {
 
     @Override
     public void apply(EntityPixelmon entityPixelmon) {
-            /*EnumType type = EnumType.valueOf(this.value);
-            entityPixelmon.getPokemonData().getBaseStats().types.set(0,type);*/
+        apply(entityPixelmon.getPokemonData());
     }
 
     @Override
@@ -69,13 +69,16 @@ public class Type1Spec extends SpecValue<String> implements ISpecType {
 
     @Override
     public void apply(Pokemon pokemon) {
+
+        pokemon.setSpecies(randomPokeType(this.value));
        /* EnumType type = EnumType.valueOf(this.value);
         pokemon.getBaseStats().types.set(0,type);*/
+
     }
 
     @Override
     public boolean matches(EntityPixelmon entityPixelmon) {
-        return  entityPixelmon.getPokemonData().getBaseStats().getType1().getName().equalsIgnoreCase(this.value);
+        return entityPixelmon.getPokemonData().getBaseStats().getType1().getName().equalsIgnoreCase(this.value);
     }
 
     @Override
@@ -92,4 +95,18 @@ public class Type1Spec extends SpecValue<String> implements ISpecType {
     public SpecValue<String> clone() {
         return new Type1Spec(this.keys,this.value);
     }
+
+    private EnumSpecies randomPokeType(String value){
+        EnumSpecies s = EnumSpecies.randomPoke();
+        boolean isValid = false;
+        while(!isValid) {
+            if (!s.getBaseStats().getType1().getName().equalsIgnoreCase(value)) {
+                s = EnumSpecies.randomPoke();
+            }else {
+                isValid = true;
+            }
+        }
+        return s;
+    }
+
 }

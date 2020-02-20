@@ -2,26 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="494ac352-152a-4662-8b78-a10f8b07edc4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/Pixelmon-1.12.2-7.1.1-server.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/PixelmonEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/AISpec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/AbsSpec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/IvsSpec/MinIVPercent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/IvsSpec/NumIVs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/IvsSpec/NumMaxIVs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/LegUbSpec/LegSpec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/LegUbSpec/LegUbSpec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/LegUbSpec/UbSpec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/NicknameSpec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/OTSpec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/SpecialTextureSpec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/TextureSpec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/TypeSpec/Type1Spec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/TypeSpec/Type2Spec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/TypeSpec/TypeSpec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/UncatchableSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/AuraSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/LevelSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/UndeleteSpec/TrashListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/annotation-processors.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -30,10 +13,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/gradle.log" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/gradle.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/fr.flashback083.FlashSpec.api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/fr.flashback083.FlashSpec.api.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/fr.flashback083.FlashSpec.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/fr.flashback083.FlashSpec.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/fr.flashback083.FlashSpec.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/fr.flashback083.FlashSpec.main.iml" afterDir="false" />
@@ -41,42 +21,31 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Flashspec.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Flashspec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/HelpItemSpec.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/MoveSpec/Move1Spec.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/MoveSpec/Move2Spec.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/MoveSpec/Move3Spec.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/MoveSpec/Move4Spec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/PixelmonEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/PixelmonEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/TextureSpec.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/TextureSpec.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/TypeSpec/Type1Spec.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/TypeSpec/Type1Spec.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/TypeSpec/Type2Spec.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/TypeSpec/Type2Spec.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/TypeSpec/TypeSpec.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/TypeSpec/TypeSpec.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/mcmod.info" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/mcmod.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/retromapping/replacedMain.rangemap" beforeDir="false" afterPath="$PROJECT_DIR$/build/retromapping/replacedMain.rangemap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/retromapping/retromappedReplacedMain.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/retromapping/retromappedReplacedMain.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Flashspec.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Flashspec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/HelpItemSpec.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/MoveSpec/Move1Spec.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/MoveSpec/Move2Spec.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/MoveSpec/Move3Spec.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/MoveSpec/Move4Spec.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/PixelmonEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/PixelmonEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/LegUbSpec/LegUbSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/LegUbSpec/LegUbSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/TextureSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/TextureSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/TypeSpec/Type1Spec.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/TypeSpec/Type1Spec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/TypeSpec/Type2Spec.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/TypeSpec/Type2Spec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/TypeSpec/TypeSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/TypeSpec/TypeSpec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/taskLogs/extractRangemapReplacedMain.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/taskLogs/extractRangemapReplacedMain.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/taskLogs/retromapReplacedMain.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/taskLogs/retromapReplacedMain.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/makeStart/extracted/GradleStart.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/makeStart/extracted/GradleStartServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/makeStart/extracted/net/minecraftforge/gradle/GradleForgeHacks.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/makeStart/extracted/net/minecraftforge/gradle/GradleStartCommon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/makeStart/extracted/net/minecraftforge/gradle/tweakers/AccessTransformerTweaker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/makeStart/extracted/net/minecraftforge/gradle/tweakers/CoremodTweaker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/retromapReplacedMain/rangelog1059247169636306053.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/retromapReplacedMain/rangelog1870375395012424593.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/retromapReplacedMain/rangelog2590039567069788451.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/retromapReplacedMain/rangelog3633801521142880442.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/retromapReplacedMain/rangelog3767712238586455963.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/retromapReplacedMain/rangelog476430014522216185.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/retromapReplacedMain/rangelog6483393666286663315.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/Pixelmon-1.12.2-7.0.6-server.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Flashspec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/FlashSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/HelpItemSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/HelpItemSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/MoveSpec/Move1Spec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MoveSpec/Move1Spec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/MoveSpec/Move2Spec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MoveSpec/Move2Spec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/MoveSpec/Move3Spec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MoveSpec/Move3Spec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/MoveSpec/Move4Spec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MoveSpec/Move4Spec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/Pixelmon-1.12.2-7.1.1-server.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/FlashSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/FlashSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/PixelmonEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/PixelmonEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/LegUbSpec/LegUbSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/LegUbSpec/LegUbSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/TextureSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/TextureSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/TypeSpec/Type1Spec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/TypeSpec/Type1Spec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/TypeSpec/Type2Spec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/TypeSpec/Type2Spec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/TypeSpec/TypeSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/TypeSpec/TypeSpec.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,9 +106,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560910201899" />
-    <property name="last_opened_file_path" value="D:/Github/Wondertrade/build.gradle" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TraderCycle/build.gradle" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -148,11 +118,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="fr.flashback083.flashspec.Specs.LegUbSpec" />
+      <recent name="fr.flashback083.flashspec.Specs.MoveSpec" />
       <recent name="fr.flashback083.flashspec.Specs" />
+      <recent name="fr.flashback083.flashspec.Specs.LegUbSpec" />
       <recent name="fr.flashback083.flashspec.Specs.IvsSpec" />
       <recent name="fr.flashback083.flashspec.TypeSpec" />
-      <recent name="fr.flashback083.flashspec" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.FlashSpec build">
@@ -269,43 +239,57 @@
     </state>
     <state x="-1092" y="358" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1366.323.1366.728@-1366.323.1366.728" timestamp="1578102912601" />
     <state x="651" y="155" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1577562049721" />
+    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1578148884963">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1578148884963" />
     <state x="690" y="265" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1577746277388">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="265" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1577746277388" />
-    <state x="-1216" y="323" key="CommitChangelistDialog2" timestamp="1578103031673">
-      <screen x="-1366" y="323" width="1366" height="728" />
+    <state x="211" y="0" key="CommitChangelistDialog2" timestamp="1582186940249">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1216" y="323" key="CommitChangelistDialog2/0.0.1920.1040/-1366.323.1366.728@-1366.323.1366.728" timestamp="1578103031673" />
-    <state x="-837" y="514" key="FileChooserDialogImpl" timestamp="1577744033491">
+    <state x="211" y="0" key="CommitChangelistDialog2/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1582186940249" />
+    <state x="-837" y="514" key="FileChooserDialogImpl" timestamp="1580999027058">
       <screen x="-1366" y="323" width="1366" height="728" />
     </state>
-    <state x="-837" y="514" key="FileChooserDialogImpl/0.0.1920.1040/-1366.323.1366.728@-1366.323.1366.728" timestamp="1577744033491" />
-    <state x="744" y="273" key="FileChooserDialogImpl/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1577572663013" />
-    <state width="1322" height="257" key="GridCell.Tab.0.bottom" timestamp="1578103068125">
-      <screen x="-1366" y="323" width="1366" height="728" />
+    <state x="-837" y="514" key="FileChooserDialogImpl/0.0.1920.1040/-1366.323.1366.728@-1366.323.1366.728" timestamp="1580999027058" />
+    <state x="744" y="273" key="FileChooserDialogImpl/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1578173373361" />
+    <state width="1876" height="72" key="GridCell.Tab.0.bottom" timestamp="1582187206845">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1322" height="257" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1366.323.1366.728@-1366.323.1366.728" timestamp="1578103068125" />
-    <state width="1876" height="257" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1578102434897" />
-    <state width="1322" height="257" key="GridCell.Tab.0.center" timestamp="1578103068125">
-      <screen x="-1366" y="323" width="1366" height="728" />
+    <state width="1322" height="2" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1366.323.1366.728@-1366.323.1366.728" timestamp="1582131212928" />
+    <state width="1876" height="72" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1582187206845" />
+    <state width="1876" height="72" key="GridCell.Tab.0.center" timestamp="1582187206845">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1322" height="257" key="GridCell.Tab.0.center/0.0.1920.1040/-1366.323.1366.728@-1366.323.1366.728" timestamp="1578103068125" />
-    <state width="1876" height="257" key="GridCell.Tab.0.center/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1578102434897" />
-    <state width="1322" height="257" key="GridCell.Tab.0.left" timestamp="1578103068125">
-      <screen x="-1366" y="323" width="1366" height="728" />
+    <state width="1322" height="2" key="GridCell.Tab.0.center/0.0.1920.1040/-1366.323.1366.728@-1366.323.1366.728" timestamp="1582131212928" />
+    <state width="1876" height="72" key="GridCell.Tab.0.center/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1582187206845" />
+    <state width="1876" height="72" key="GridCell.Tab.0.left" timestamp="1582187206845">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1322" height="257" key="GridCell.Tab.0.left/0.0.1920.1040/-1366.323.1366.728@-1366.323.1366.728" timestamp="1578103068125" />
-    <state width="1876" height="257" key="GridCell.Tab.0.left/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1578102434896" />
-    <state width="1322" height="257" key="GridCell.Tab.0.right" timestamp="1578103068125">
-      <screen x="-1366" y="323" width="1366" height="728" />
+    <state width="1322" height="2" key="GridCell.Tab.0.left/0.0.1920.1040/-1366.323.1366.728@-1366.323.1366.728" timestamp="1582131212928" />
+    <state width="1876" height="72" key="GridCell.Tab.0.left/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1582187206845" />
+    <state width="1876" height="72" key="GridCell.Tab.0.right" timestamp="1582187206845">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1322" height="257" key="GridCell.Tab.0.right/0.0.1920.1040/-1366.323.1366.728@-1366.323.1366.728" timestamp="1578103068125" />
-    <state width="1876" height="257" key="GridCell.Tab.0.right/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1578102434897" />
-    <state x="-1091" y="418" key="Vcs.Push.Dialog.v2" timestamp="1578103210697">
-      <screen x="-1366" y="323" width="1366" height="728" />
+    <state width="1322" height="2" key="GridCell.Tab.0.right/0.0.1920.1040/-1366.323.1366.728@-1366.323.1366.728" timestamp="1582131212928" />
+    <state width="1876" height="72" key="GridCell.Tab.0.right/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1582187206845" />
+    <state x="387" y="136" key="Vcs.Push.Dialog.v2" timestamp="1582186922042">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1091" y="418" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1366.323.1366.728@-1366.323.1366.728" timestamp="1578103210697" />
+    <state x="-1091" y="418" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1366.323.1366.728@-1366.323.1366.728" timestamp="1578104388266" />
+    <state x="387" y="136" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1582186922042" />
+    <state x="342" y="188" key="new project wizard" timestamp="1578105503872">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="188" key="new project wizard/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1578105503872" />
+    <state x="616" y="235" key="run.anything.popup" timestamp="1578660250303">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="235" key="run.anything.popup/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1578660250303" />
   </component>
   <component name="masterDetails">
     <states>
