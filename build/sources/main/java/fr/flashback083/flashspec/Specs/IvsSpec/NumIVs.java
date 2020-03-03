@@ -12,7 +12,6 @@ import net.minecraft.nbt.NBTTagCompound;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 
 public class NumIVs extends SpecValue implements ISpecType {
     public NumIVs(Integer value) {
@@ -33,11 +32,11 @@ public class NumIVs extends SpecValue implements ISpecType {
     }
 
     public SpecValue readFromNBT(NBTTagCompound nbt) {
-        return new NumIVs(nbt.getInteger("numivs"));
+        return new NumIVs(nbt.getInteger(this.key));
     }
 
     public void writeToNBT(NBTTagCompound nbt, SpecValue value) {
-        nbt.setByte("numivs", Byte.parseByte(value.value.toString()));
+        nbt.setByte(this.key, Byte.parseByte(value.value.toString()));
     }
 
     public Class getSpecClass() {
@@ -93,8 +92,6 @@ public class NumIVs extends SpecValue implements ISpecType {
     }
 
     private int[] getIVsWithMax31(int num) {
-
-
 
         int[] ivs = new int[6];
         int count = 0;

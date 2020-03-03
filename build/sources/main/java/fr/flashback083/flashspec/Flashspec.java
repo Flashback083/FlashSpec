@@ -44,7 +44,7 @@ public class FlashSpec {
 
     public static final String MOD_ID = "flashspec";
     public static final String MOD_NAME = "FlashSpec";
-    public static final String VERSION = "2.2.12";
+    public static final String VERSION = "2.2.14";
 
     //Boolean spec
     //public static PokemonSpec UNCATCHABLE;
@@ -95,6 +95,10 @@ public class FlashSpec {
         PokemonSpec.extraSpecTypes.add(new SpecFlag("undeleteable"));
         PokemonSpec.extraSpecTypes.add(new SpecFlag("unmega"));
         PokemonSpec.extraSpecTypes.add(new SpecFlag("unmegabattle"));
+        PokemonSpec.extraSpecTypes.add(new SpecFlag("undropable"));
+        PokemonSpec.extraSpecTypes.add(new DropSpec(Lists.newArrayList("dropitem","di"), null));
+        PokemonSpec.extraSpecTypes.add(new DropChanceSpec(Lists.newArrayList("dropchance","dc"), null));
+        PokemonSpec.extraSpecTypes.add(new DropISSpec(Lists.newArrayList("dropitemsaver","dis"), null));
 
         //CustomSpec import
         PokemonSpec.extraSpecTypes.add(new TextureSpec(Lists.newArrayList("texture"), null));

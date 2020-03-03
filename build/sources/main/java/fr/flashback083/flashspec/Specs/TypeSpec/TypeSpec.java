@@ -35,12 +35,12 @@ public class TypeSpec extends SpecValue<String> implements ISpecType {
 
     @Override
     public SpecValue<?> readFromNBT(NBTTagCompound nbtTagCompound) {
-        return parse(nbtTagCompound.getString("type"));
+        return parse(nbtTagCompound.getString(this.key));
     }
 
     @Override
     public void writeToNBT(NBTTagCompound nbtTagCompound, SpecValue<?> specValue) {
-       // nbtTagCompound.setString("type", this.value);
+        nbtTagCompound.setString(this.key, this.value);
     }
 
     @Override
@@ -63,10 +63,6 @@ public class TypeSpec extends SpecValue<String> implements ISpecType {
         apply(entityPixelmon.getPokemonData());
     }
 
-    @Override
-    public void apply(NBTTagCompound nbtTagCompound) {
-
-    }
 
     @Override
     public void apply(Pokemon pokemon) {
@@ -76,11 +72,6 @@ public class TypeSpec extends SpecValue<String> implements ISpecType {
     @Override
     public boolean matches(EntityPixelmon entityPixelmon) {
         return entityPixelmon.getPokemonData().getBaseStats().getTypeList().contains(EnumType.parseType(this.value));
-    }
-
-    @Override
-    public boolean matches(NBTTagCompound nbtTagCompound) {
-        return false;
     }
 
     @Override

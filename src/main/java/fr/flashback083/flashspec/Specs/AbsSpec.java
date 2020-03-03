@@ -35,12 +35,12 @@ public class AbsSpec extends SpecValue<String> implements ISpecType {
 
     @Override
     public SpecValue<?> readFromNBT(NBTTagCompound nbtTagCompound) {
-        return parse(nbtTagCompound.getString("abs"));
+        return parse(nbtTagCompound.getString(this.key));
     }
 
     @Override
     public void writeToNBT(NBTTagCompound nbtTagCompound, SpecValue<?> specValue) {
-        nbtTagCompound.setString("abs", this.value);
+        nbtTagCompound.setString(this.key, this.value);
     }
 
     @Override

@@ -1,9 +1,8 @@
 package fr.flashback083.flashspec.Specs.LegUbSpec;
 
 import com.google.common.collect.Lists;
-import com.pixelmonmod.pixelmon.api.pokemon.ISpecType;
-import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
-import com.pixelmonmod.pixelmon.api.pokemon.SpecValue;
+import com.pixelmonmod.pixelmon.Pixelmon;
+import com.pixelmonmod.pixelmon.api.pokemon.*;
 import com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon;
 import com.pixelmonmod.pixelmon.enums.EnumSpecies;
 import com.pixelmonmod.pixelmon.util.helpers.CollectionHelper;
@@ -49,7 +48,7 @@ public class LegSpec extends SpecValue<Boolean> implements ISpecType
 	@Override
 	public SpecValue<?> readFromNBT(NBTTagCompound nbt)
 	{
-		return new LegSpec(nbt.getBoolean("leg"));
+		return new LegSpec(nbt.getBoolean(this.key));
 	}
 
 	@Override
@@ -61,7 +60,7 @@ public class LegSpec extends SpecValue<Boolean> implements ISpecType
 	@Override
 	public void writeToNBT(NBTTagCompound nbt, SpecValue<?> spec)
 	{
-		nbt.setBoolean("leg", spec.value == Boolean.TRUE);
+		nbt.setBoolean(this.key, spec.value == Boolean.TRUE);
 	}
 
 	@Override
@@ -81,6 +80,7 @@ public class LegSpec extends SpecValue<Boolean> implements ISpecType
 	{
 		if (this.value){
 			pokemon.setSpecies(EnumSpecies.getFromName(CollectionHelper.getRandomElement(EnumSpecies.legendaries)).get(), true);
+			//pokemon.setSpecies(EnumSpecies.getFromName(CollectionHelper.getRandomElement(EnumSpecies.legendaries)).get(), true);
 		}else {
 			pokemon.setSpecies(EnumSpecies.randomPoke(false), true);
 		}

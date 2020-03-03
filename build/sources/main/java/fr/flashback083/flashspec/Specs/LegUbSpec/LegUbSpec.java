@@ -1,6 +1,8 @@
 package fr.flashback083.flashspec.Specs.LegUbSpec;
 
 import com.google.common.collect.Lists;
+import com.pixelmonmod.pixelmon.Pixelmon;
+import com.pixelmonmod.pixelmon.api.pokemon.EnumInitializeCategory;
 import com.pixelmonmod.pixelmon.api.pokemon.ISpecType;
 import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
 import com.pixelmonmod.pixelmon.api.pokemon.SpecValue;
@@ -69,6 +71,8 @@ public class LegUbSpec extends SpecValue<Boolean> implements ISpecType {
             list.addAll(EnumSpecies.ultrabeasts);
             list.addAll(EnumSpecies.legendaries);
             String p = CollectionHelper.getRandomElement(list);
+            //pokemon = Pixelmon.pokemonFactory.create(EnumSpecies.getFromName(p).get());
+            //pokemon.initialize(EnumInitializeCategory.SPECIES);
             pokemon.setSpecies(EnumSpecies.getFromName(p).get());
         } else {
             pokemon.setSpecies(randomPokeNonLegNonUB(), true);

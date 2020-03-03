@@ -49,7 +49,7 @@ public class UncatchableSpec extends SpecValue<Boolean> implements ISpecType
 	@Override
 	public SpecValue<?> readFromNBT(NBTTagCompound nbt)
 	{
-		return new UncatchableSpec(nbt.getBoolean("uncatchable"));
+		return new UncatchableSpec(nbt.getBoolean(this.key));
 	}
 
 	@Override
@@ -61,7 +61,7 @@ public class UncatchableSpec extends SpecValue<Boolean> implements ISpecType
 	@Override
 	public void writeToNBT(NBTTagCompound nbt, SpecValue<?> spec)
 	{
-		nbt.setBoolean("uncatchable", spec.value == Boolean.TRUE);
+		nbt.setBoolean(this.key, spec.value == Boolean.TRUE);
 	}
 
 	@Override
@@ -70,11 +70,6 @@ public class UncatchableSpec extends SpecValue<Boolean> implements ISpecType
 		apply(pixelmon.getPokemonData());
 	}
 
-	@Override
-	public void apply(NBTTagCompound arg)
-	{
-		// We don't care about this anymore. I'm not offering support to this as it's going to be deprecated and phased out.
-	}
 
 	@Override
 	public void apply(Pokemon pokemon)

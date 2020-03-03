@@ -4,18 +4,17 @@ import com.pixelmonmod.pixelmon.api.pokemon.ISpecType;
 import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
 import com.pixelmonmod.pixelmon.api.pokemon.SpecValue;
 import com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon;
-import com.pixelmonmod.pixelmon.entities.pixelmon.EnumAggression;
 import net.minecraft.nbt.NBTTagCompound;
 
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class AISpec extends SpecValue<String> implements ISpecType {
+public class DropSpec extends SpecValue<String> implements ISpecType {
 
     private String value;
     private List<String> keys;
 
-    public AISpec(List<String> keys, String value){
+    public DropSpec(List<String> keys, String value){
         super(keys.get(0), value);
         this.keys = keys;
         this.value = value;
@@ -28,8 +27,8 @@ public class AISpec extends SpecValue<String> implements ISpecType {
     }
 
     @Override
-    public AISpec parse(@Nullable String s) {
-        return new AISpec(this.keys, s);
+    public DropSpec parse(@Nullable String s) {
+        return new DropSpec(this.keys, s);
     }
 
     @Override
@@ -38,8 +37,8 @@ public class AISpec extends SpecValue<String> implements ISpecType {
     }
 
     @Override
-    public void writeToNBT(NBTTagCompound nbtTagCompound, SpecValue<?> specValue) {
-        nbtTagCompound.setString(this.key, this.value);
+    public void writeToNBT(NBTTagCompound nbtTagCompound, SpecValue specValue) {
+        nbtTagCompound.setString(this.key, specValue.value.toString().replaceFirst("_",":"));
     }
 
     @Override
@@ -57,38 +56,30 @@ public class AISpec extends SpecValue<String> implements ISpecType {
         return String.class;
     }
 
+
+
     @Override
-    public void apply(EntityPixelmon entityPixelmon) {
-        entityPixelmon.setAggression(EnumAggression.valueOf(this.value));
+    public boolean matches(EntityPixelmon pixelmon) {
+        return this.matches(pixelmon.getPokemonData());
     }
 
-    @Override
-    public void apply(NBTTagCompound nbtTagCompound) {
 
-    }
 
-    @Override
-    public void apply(Pokemon pokemon) {
-    }
-
-    @Override
-    public boolean matches(EntityPixelmon entityPixelmon) {
-        return  entityPixelmon.getAggression() == EnumAggression.valueOf(this.value);
-    }
-
-    @Override
-    public boolean matches(NBTTagCompound nbtTagCompound) {
-        return false;
-        // return nbtTagCompound.getTagList("Moveset",10).get(0).toString().equalsIgnoreCase("MoveID");
-    }
-
-    @Override
     public boolean matches(Pokemon pokemon) {
-        return false;
+        return pokemon.getPersistentData().hasKey("custom-drop") && pokemon.getPersistentData().getString("custom-drop").equals(this.value.replaceFirst("_",":"));
+    }
+
+
+    public void apply(EntityPixelmon pixelmon) {
+        pixelmon.getPokemonData().getPersistentData().setString("custom-drop", this.value.replaceFirst("_",":"));
+    }
+
+    public void apply(Pokemon pokemon) {
+        pokemon.getPersistentData().setString("custom-drop", this.value.replaceFirst("_",":"));
     }
 
     @Override
     public SpecValue<String> clone() {
-        return new AISpec(this.keys,this.value);
+        return new DropSpec(this.keys,this.value);
     }
 }

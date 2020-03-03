@@ -1,56 +1,65 @@
 Unsupposrted library path: D:\GitLab\FlashSpec\build\classes\java\api
 Unsupposrted library path: D:\GitLab\FlashSpec\build\resources\api
 Symbol range map extraction starting
-Processing 26 files
-startProcessing "fr/flashback083/flashspec/FlashSpec.java" md5: a25dad4025c38411c52ac0ff0d5d8c45
+Processing 29 files
+startProcessing "fr/flashback083/flashspec/FlashSpec.java" md5: 06aa4abd6d1ae4fe78286264a42d5f3b
 endProcessing "fr/flashback083/flashspec/FlashSpec.java"
 
-startProcessing "fr/flashback083/flashspec/PixelmonEvent.java" md5: de2e8b842c7dc0defc71e6e677490db1
+startProcessing "fr/flashback083/flashspec/PixelmonEvent.java" md5: 8be3d7f92c192ad835b4c336c8fa9e16
 endProcessing "fr/flashback083/flashspec/PixelmonEvent.java"
 
-startProcessing "fr/flashback083/flashspec/Specs/AISpec.java" md5: 69d5f7890f781c4597b5c8c04f329cb6
+startProcessing "fr/flashback083/flashspec/Specs/AISpec.java" md5: 05e9fbd52a8b8ca7f40b57181209da09
 endProcessing "fr/flashback083/flashspec/Specs/AISpec.java"
 
-startProcessing "fr/flashback083/flashspec/Specs/AbsSpec.java" md5: 3ac329537a0d9b0f18f60b7558d4f87e
+startProcessing "fr/flashback083/flashspec/Specs/AbsSpec.java" md5: 4afa01cb6be5d37cd2202c70f5dbc6ba
 endProcessing "fr/flashback083/flashspec/Specs/AbsSpec.java"
 
 startProcessing "fr/flashback083/flashspec/Specs/AuraSpec.java" md5: 192284bcd45d058e9418bdf6cd0e26eb
 endProcessing "fr/flashback083/flashspec/Specs/AuraSpec.java"
 
-startProcessing "fr/flashback083/flashspec/Specs/HelpItemSpec.java" md5: 9d31fce6b1417013741dc06ee270c565
+startProcessing "fr/flashback083/flashspec/Specs/DropChanceSpec.java" md5: 5e4ae45db819625db4283c5f93bc8667
+endProcessing "fr/flashback083/flashspec/Specs/DropChanceSpec.java"
+
+startProcessing "fr/flashback083/flashspec/Specs/DropISSpec.java" md5: 8cd54ecfc43e902098ea3e37d6dd229e
+endProcessing "fr/flashback083/flashspec/Specs/DropISSpec.java"
+
+startProcessing "fr/flashback083/flashspec/Specs/DropSpec.java" md5: 323c05376ec2f673919bc88a78e83223
+endProcessing "fr/flashback083/flashspec/Specs/DropSpec.java"
+
+startProcessing "fr/flashback083/flashspec/Specs/HelpItemSpec.java" md5: 4c674a998d65703003a52196e83f8caf
 endProcessing "fr/flashback083/flashspec/Specs/HelpItemSpec.java"
 
-startProcessing "fr/flashback083/flashspec/Specs/IvsSpec/MinIVPercent.java" md5: 520fd720d7dbf54d4011e53d2856483c
+startProcessing "fr/flashback083/flashspec/Specs/IvsSpec/MinIVPercent.java" md5: 14d3d7e336b84ab29695b4a532182d42
 endProcessing "fr/flashback083/flashspec/Specs/IvsSpec/MinIVPercent.java"
 
-startProcessing "fr/flashback083/flashspec/Specs/IvsSpec/NumIVs.java" md5: 215837f26440f7f457d782c5419f6354
+startProcessing "fr/flashback083/flashspec/Specs/IvsSpec/NumIVs.java" md5: a275fd4fcc9a5fe51dc5d9cad952983f
 endProcessing "fr/flashback083/flashspec/Specs/IvsSpec/NumIVs.java"
 
-startProcessing "fr/flashback083/flashspec/Specs/IvsSpec/NumMaxIVs.java" md5: 2aae3d23807215a231416e052b1bb2bd
+startProcessing "fr/flashback083/flashspec/Specs/IvsSpec/NumMaxIVs.java" md5: c4ac6a3d0c0d12f483584ece716c0d65
 endProcessing "fr/flashback083/flashspec/Specs/IvsSpec/NumMaxIVs.java"
 
-startProcessing "fr/flashback083/flashspec/Specs/LegUbSpec/LegSpec.java" md5: abb129b2e0049f6e79717c0189ad4520
+startProcessing "fr/flashback083/flashspec/Specs/LegUbSpec/LegSpec.java" md5: d2cb7e24860f7c38038a1bda4da19b3f
 endProcessing "fr/flashback083/flashspec/Specs/LegUbSpec/LegSpec.java"
 
-startProcessing "fr/flashback083/flashspec/Specs/LegUbSpec/LegUbSpec.java" md5: 94398737fcb0428deea02c60a2c8dd6c
+startProcessing "fr/flashback083/flashspec/Specs/LegUbSpec/LegUbSpec.java" md5: 065afd6a52eba05f054ed8d7957fe258
 endProcessing "fr/flashback083/flashspec/Specs/LegUbSpec/LegUbSpec.java"
 
-startProcessing "fr/flashback083/flashspec/Specs/LegUbSpec/UbSpec.java" md5: a15dc186bcc0e6fdaec280c562bdad93
+startProcessing "fr/flashback083/flashspec/Specs/LegUbSpec/UbSpec.java" md5: 095298ee30c7999361fd0600926dce6e
 endProcessing "fr/flashback083/flashspec/Specs/LegUbSpec/UbSpec.java"
 
-startProcessing "fr/flashback083/flashspec/Specs/LevelSpec.java" md5: cbaf2daf16e6d42dce0c262369d7dea6
+startProcessing "fr/flashback083/flashspec/Specs/LevelSpec.java" md5: 8e49b695cd11163e9973134e6264f249
 endProcessing "fr/flashback083/flashspec/Specs/LevelSpec.java"
 
-startProcessing "fr/flashback083/flashspec/Specs/MoveSpec/Move1Spec.java" md5: 312b3bd20ab89b4a3998cad27e633160
+startProcessing "fr/flashback083/flashspec/Specs/MoveSpec/Move1Spec.java" md5: 1195535951f6b0a41607f141cd74270c
 endProcessing "fr/flashback083/flashspec/Specs/MoveSpec/Move1Spec.java"
 
-startProcessing "fr/flashback083/flashspec/Specs/MoveSpec/Move2Spec.java" md5: 495ced3bf23a1678f3760a034825b8e2
+startProcessing "fr/flashback083/flashspec/Specs/MoveSpec/Move2Spec.java" md5: 096ad12ec0b8b6ac24bfe8ae0ad118e6
 endProcessing "fr/flashback083/flashspec/Specs/MoveSpec/Move2Spec.java"
 
-startProcessing "fr/flashback083/flashspec/Specs/MoveSpec/Move3Spec.java" md5: 125555e52f90352e6199250df806542b
+startProcessing "fr/flashback083/flashspec/Specs/MoveSpec/Move3Spec.java" md5: 5459c2789b53ad37f17ac76dba536d05
 endProcessing "fr/flashback083/flashspec/Specs/MoveSpec/Move3Spec.java"
 
-startProcessing "fr/flashback083/flashspec/Specs/MoveSpec/Move4Spec.java" md5: ec0098580229224af66717db73d9f029
+startProcessing "fr/flashback083/flashspec/Specs/MoveSpec/Move4Spec.java" md5: 4c0963cccc29eb7ac4dfb41a3a20b10b
 endProcessing "fr/flashback083/flashspec/Specs/MoveSpec/Move4Spec.java"
 
 startProcessing "fr/flashback083/flashspec/Specs/NicknameSpec.java" md5: 8ab29e01107f190c1e094700e52210a7
@@ -65,16 +74,16 @@ endProcessing "fr/flashback083/flashspec/Specs/SpecialTextureSpec.java"
 startProcessing "fr/flashback083/flashspec/Specs/TextureSpec.java" md5: 67f4c81a41bb1ec24cb743c2c7f7eef0
 endProcessing "fr/flashback083/flashspec/Specs/TextureSpec.java"
 
-startProcessing "fr/flashback083/flashspec/Specs/TypeSpec/Type1Spec.java" md5: 5570bbccc559ebfab9b4cd6befffb817
+startProcessing "fr/flashback083/flashspec/Specs/TypeSpec/Type1Spec.java" md5: 419a2cb7bd2ea5947e907fb54d625ff3
 endProcessing "fr/flashback083/flashspec/Specs/TypeSpec/Type1Spec.java"
 
-startProcessing "fr/flashback083/flashspec/Specs/TypeSpec/Type2Spec.java" md5: 7befe563b2b6ab3512e7a1c2c79c4b0a
+startProcessing "fr/flashback083/flashspec/Specs/TypeSpec/Type2Spec.java" md5: 3b32d9aa9b0433d08b1e48c8152af9ba
 endProcessing "fr/flashback083/flashspec/Specs/TypeSpec/Type2Spec.java"
 
-startProcessing "fr/flashback083/flashspec/Specs/TypeSpec/TypeSpec.java" md5: 6f70452185c025dfdd483fdf702e1a79
+startProcessing "fr/flashback083/flashspec/Specs/TypeSpec/TypeSpec.java" md5: 054ae34714211deb84a08b6fff27f8c2
 endProcessing "fr/flashback083/flashspec/Specs/TypeSpec/TypeSpec.java"
 
-startProcessing "fr/flashback083/flashspec/Specs/UncatchableSpec.java" md5: 4631dda00a08557bcf3bbea8a385187a
+startProcessing "fr/flashback083/flashspec/Specs/UncatchableSpec.java" md5: e48bec7d8f1205f22feed7c44135e26b
 endProcessing "fr/flashback083/flashspec/Specs/UncatchableSpec.java"
 
 startProcessing "fr/flashback083/flashspec/Specs/UndeleteSpec/TrashListener.java" md5: 31f8d5bb4a24ffbaf0080607b1d62688

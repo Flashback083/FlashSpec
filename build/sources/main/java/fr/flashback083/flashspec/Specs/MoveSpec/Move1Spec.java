@@ -34,12 +34,12 @@ public class Move1Spec extends SpecValue<String> implements ISpecType {
 
     @Override
     public SpecValue<?> readFromNBT(NBTTagCompound nbtTagCompound) {
-        return parse(nbtTagCompound.getString("move1"));
+        return parse(nbtTagCompound.getString(this.key));
     }
 
     @Override
     public void writeToNBT(NBTTagCompound nbtTagCompound, SpecValue<?> specValue) {
-        nbtTagCompound.setString("move1", this.value.replaceAll("_"," "));
+        nbtTagCompound.setString(this.key, this.value.replaceAll("_"," "));
     }
 
     @Override

@@ -29,11 +29,11 @@ public class MinIVPercent extends SpecValue implements ISpecType {
     }
 
     public SpecValue readFromNBT(NBTTagCompound nbt) {
-        return new MinIVPercent(nbt.getInteger("minimumiv%"));
+        return new MinIVPercent(nbt.getInteger(this.key));
     }
 
     public void writeToNBT(NBTTagCompound nbt, SpecValue value) {
-        nbt.setByte("minimumiv%", Byte.parseByte(value.value.toString()));
+        nbt.setByte(this.key, Byte.parseByte(value.value.toString()));
     }
 
     public Class getSpecClass() {

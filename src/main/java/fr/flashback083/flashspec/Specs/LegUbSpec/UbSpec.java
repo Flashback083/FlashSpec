@@ -1,6 +1,8 @@
 package fr.flashback083.flashspec.Specs.LegUbSpec;
 
 import com.google.common.collect.Lists;
+import com.pixelmonmod.pixelmon.Pixelmon;
+import com.pixelmonmod.pixelmon.api.pokemon.EnumInitializeCategory;
 import com.pixelmonmod.pixelmon.api.pokemon.ISpecType;
 import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
 import com.pixelmonmod.pixelmon.api.pokemon.SpecValue;
@@ -51,7 +53,7 @@ public class UbSpec extends SpecValue<Boolean> implements ISpecType
 	@Override
 	public SpecValue<?> readFromNBT(NBTTagCompound nbt)
 	{
-		return new UbSpec(nbt.getBoolean("ub"));
+		return new UbSpec(nbt.getBoolean(this.key));
 	}
 
 	@Override
@@ -63,7 +65,7 @@ public class UbSpec extends SpecValue<Boolean> implements ISpecType
 	@Override
 	public void writeToNBT(NBTTagCompound nbt, SpecValue<?> spec)
 	{
-		nbt.setBoolean("ub", spec.value == Boolean.TRUE);
+		nbt.setBoolean(this.key, spec.value == Boolean.TRUE);
 	}
 
 	@Override

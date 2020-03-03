@@ -31,11 +31,11 @@ public class NumMaxIVs extends SpecValue implements ISpecType {
     }
 
     public SpecValue readFromNBT(NBTTagCompound nbt) {
-        return new NumMaxIVs(nbt.getInteger("nummaxivs"));
+        return new NumMaxIVs(nbt.getInteger(this.key));
     }
 
     public void writeToNBT(NBTTagCompound nbt, SpecValue value) {
-        nbt.setByte("nummaxivs", Byte.parseByte(value.value.toString()));
+        nbt.setByte(this.key, Byte.parseByte(value.value.toString()));
     }
 
     public Class getSpecClass() {

@@ -12,7 +12,10 @@ import com.pixelmonmod.pixelmon.config.PixelmonItems;
 import com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon;
 import com.pixelmonmod.pixelmon.enums.EnumSpecies;
 import fr.flashback083.flashspec.Specs.UndeleteSpec.TrashListener;
+import fr.pokepixel.itemsaver.GsonMethods;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextFormatting;
@@ -20,8 +23,7 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
-import java.util.HashMap;
-import java.util.Iterator;
+import java.util.*;
 
 
 public class PixelmonEvent {
@@ -148,7 +150,6 @@ public class PixelmonEvent {
     public void onServerTick(TickEvent.ServerTickEvent event){
         if (event.phase.equals(TickEvent.ServerTickEvent.Phase.START)){
             if (!playertime.isEmpty()) {
-
                 for (Iterator<String> keys = playertime.keySet().iterator(); keys.hasNext();) {
                     String key = keys.next();
                     int value = playertime.get(key);
@@ -159,17 +160,6 @@ public class PixelmonEvent {
                         playertime.replace(key,cooldown);
                     }
                 }
-
-                /*playertime.entrySet().iterator().forEachRemaining(entrySet -> {
-                    String key = entrySet.getKey();
-                    Integer value = entrySet.getValue();
-                    if (value == 1){
-                        playertime.remove(key);
-                    }else {
-                        int cooldown = value - 1;
-                        playertime.replace(key,cooldown);
-                    }
-                });*/
             }
         }
     }
@@ -189,24 +179,54 @@ public class PixelmonEvent {
         }
     }
 
-    //Unmega & unmega battle spec
-    /*@SubscribeEvent
-    public void onMegaEvo(UseMoveSkillEvent event){
-        EntityPixelmon p = event.pixelmon;
-        if (p.getOwner() instanceof EntityPlayerMP){
-            EntityPlayerMP playerowner = (EntityPlayerMP) p.getOwner();
-            if (BattleRegistry.getBattle(playerowner) != null){
-                if (p.getPokemonData().hasSpecFlag("unmegabattle")){
-                    playerowner.sendMessage(new TextComponentString(TextFormatting.RED + "Yu can't Mega evolve this pokemon in battle!"));
-                    event.setCanceled(true);
+    //undropable
+    @SubscribeEvent
+    public void onUndrop(DropEvent event){
+        if (event.isPokemon()){
+            EntityPixelmon pokemon = (EntityPixelmon) event.entity;
+            if (pokemon.getPokemonData().hasSpecFlag("undropable")){
+                event.setCanceled(true);
+            }
+        }
+    }
+
+    //Dropitem + dropchance + dropis
+    @SubscribeEvent
+    public void onDropItem(DropEvent event){
+        if (event.isPokemon()){
+            EntityPixelmon pokemon = (EntityPixelmon) event.entity;
+            if (pokemon.getEntityData().hasKey("custom-drop")){
+                if (pokemon.getEntityData().hasKey("drop-chance")){
+                    int chance = Integer.parseInt(pokemon.getEntityData().getString("drop-chance"));
+                    Random r = new Random();
+                    int choose = r.nextInt((100 - 1) + 1) + 1;
+                    if (choose <= chance){
+                        ItemStack item = new ItemStack(Objects.requireNonNull(Item.getByNameOrId(pokemon.getEntityData().getString("custom-drop"))));
+                        event.addDrop(item);
+                    }
+                }else {
+                    ItemStack item = new ItemStack(Objects.requireNonNull(Item.getByNameOrId(pokemon.getEntityData().getString("custom-drop"))));
+                    event.addDrop(item);
                 }
-            }else {
-                if (p.getPokemonData().hasSpecFlag("unmega")){
-                    playerowner.sendMessage(new TextComponentString(TextFormatting.RED + "Yu can't Mega evolve this pokemon!"));
-                    event.setCanceled(true);
+            }
+            if (pokemon.getEntityData().hasKey("drop-itemsaver")){
+                String key = pokemon.getEntityData().getString("drop-itemsaver");
+                if (pokemon.getEntityData().hasKey("drop-chance")){
+                    int chance = Integer.parseInt(pokemon.getEntityData().getString("drop-chance"));
+                    Random r = new Random();
+                    int choose = r.nextInt((100 - 1) + 1) + 1;
+                    if (choose <= chance){
+                        ArrayList<ItemStack> items;
+                        items = GsonMethods.getItems(key);
+                        items.forEach(event::addDrop);
+                    }
+                }else {
+                    ArrayList<ItemStack> items;
+                    items = GsonMethods.getItems(key);
+                    items.forEach(event::addDrop);
                 }
             }
         }
-    }*/
+    }
 
 }

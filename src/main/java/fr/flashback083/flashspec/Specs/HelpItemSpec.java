@@ -1,5 +1,6 @@
 package fr.flashback083.flashspec.Specs;
 
+import com.pixelmonmod.pixelmon.api.events.DropEvent;
 import com.pixelmonmod.pixelmon.api.pokemon.ISpecType;
 import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
 import com.pixelmonmod.pixelmon.api.pokemon.SpecValue;
@@ -35,12 +36,12 @@ public class HelpItemSpec extends SpecValue<String> implements ISpecType {
 
     @Override
     public SpecValue<?> readFromNBT(NBTTagCompound nbtTagCompound) {
-        return parse(nbtTagCompound.getString("helditem"));
+        return parse(nbtTagCompound.getString(this.key));
     }
 
     @Override
-    public void writeToNBT(NBTTagCompound nbtTagCompound, SpecValue<?> specValue) {
-        nbtTagCompound.setString("helditem", this.value);
+    public void writeToNBT(NBTTagCompound nbtTagCompound, SpecValue specValue) {
+        nbtTagCompound.setString(this.key, (String) specValue.value);
     }
 
     @Override
