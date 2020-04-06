@@ -92,7 +92,6 @@ public class MinIVPercent extends SpecValue implements ISpecType {
         byte[] ivs = new byte[]{0, 0, 0, 0, 0, 0};
         if (percentage == 100) {
             ivs = new byte[]{31, 31, 31, 31, 31, 31};
-            return ivs;
         } else {
             int minTotal = Math.round(186.0F * ((float)percentage / 100.0F));
             int chosenTotal = RandomHelper.getRandomNumberBetween(minTotal, 186);
@@ -109,8 +108,8 @@ public class MinIVPercent extends SpecValue implements ISpecType {
                 ivs[slot] = (byte)(ivs[slot] + addable);
             }
 
-            return ivs;
         }
+        return ivs;
     }
 
     private int randomSlot() {

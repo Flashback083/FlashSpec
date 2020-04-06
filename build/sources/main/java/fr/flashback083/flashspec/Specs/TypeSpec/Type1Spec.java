@@ -1,10 +1,9 @@
 package fr.flashback083.flashspec.Specs.TypeSpec;
 
-import com.pixelmonmod.pixelmon.api.pokemon.ISpecType;
-import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
-import com.pixelmonmod.pixelmon.api.pokemon.SpecValue;
+import com.pixelmonmod.pixelmon.api.pokemon.*;
 import com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon;
 import com.pixelmonmod.pixelmon.enums.EnumSpecies;
+import com.pixelmonmod.pixelmon.util.helpers.CollectionHelper;
 import net.minecraft.nbt.NBTTagCompound;
 
 import javax.annotation.Nullable;
@@ -69,11 +68,11 @@ public class Type1Spec extends SpecValue<String> implements ISpecType {
 
     @Override
     public void apply(Pokemon pokemon) {
-
-        pokemon.setSpecies(randomPokeType(this.value));
-       /* EnumType type = EnumType.valueOf(this.value);
-        pokemon.getBaseStats().types.set(0,type);*/
-
+        PokemonSpec spec = PokemonSpec.from(randomPokeType(this.value).getPokemonName());
+        /*Pokemon newpokemon = spec.create();
+        pokemon.readFromNBT(newpokemon.writeToNBT(new NBTTagCompound()));*/
+        spec.apply(pokemon);
+        pokemon.initialize(EnumInitializeCategory.INTRINSIC_FORCEFUL);
     }
 
     @Override
@@ -101,6 +100,19 @@ public class Type1Spec extends SpecValue<String> implements ISpecType {
         boolean isValid = false;
         while(!isValid) {
             if (!s.getBaseStats().getType1().getName().equalsIgnoreCase(value)) {
+                s = EnumSpecies.randomPoke();
+            }else {
+                isValid = true;
+            }
+        }
+        return s;
+    }
+
+    private EnumSpecies randomPokeTypeLeg(String value){
+        EnumSpecies s = EnumSpecies.randomPoke();
+        boolean isValid = false;
+        while(!isValid) {
+            if (!s.getBaseStats().getType1().getName().equalsIgnoreCase(value) && !EnumSpecies.legendaries.contains(s.getPokemonName())) {
                 s = EnumSpecies.randomPoke();
             }else {
                 isValid = true;

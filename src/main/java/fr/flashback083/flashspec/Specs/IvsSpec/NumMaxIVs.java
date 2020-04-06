@@ -93,7 +93,7 @@ public class NumMaxIVs extends SpecValue implements ISpecType {
     private int[] getIVsWithMax31(int num) {
         int[] ivs = new int[6];
 
-        for(ArrayList slots = Lists.newArrayList((Object[])(new Integer[]{0, 1, 2, 3, 4, 5})); !slots.isEmpty(); --num) {
+        for(ArrayList slots = Lists.newArrayList(0, 1, 2, 3, 4, 5); !slots.isEmpty(); --num) {
             int slot = (Integer)slots.get(RandomHelper.getRandomNumberBetween(0, slots.size() - 1));
             ivs[slot] = num > 0 ? 31 : RandomHelper.getRandomNumberBetween(0, 31);
             int slottoremove = slots.indexOf(slot);

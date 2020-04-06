@@ -3,6 +3,7 @@ package fr.flashback083.flashspec.Specs.LegUbSpec;
 import com.google.common.collect.Lists;
 import com.pixelmonmod.pixelmon.Pixelmon;
 import com.pixelmonmod.pixelmon.api.pokemon.*;
+import com.pixelmonmod.pixelmon.comm.EnumUpdateType;
 import com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon;
 import com.pixelmonmod.pixelmon.enums.EnumSpecies;
 import com.pixelmonmod.pixelmon.util.helpers.CollectionHelper;
@@ -69,20 +70,21 @@ public class LegSpec extends SpecValue<Boolean> implements ISpecType
 		apply(pixelmon.getPokemonData());
 	}
 
-	@Override
-	public void apply(NBTTagCompound arg)
-	{
-		// We don't care about this anymore. I'm not offering support to this as it's going to be deprecated and phased out.
-	}
 
 	@Override
 	public void apply(Pokemon pokemon)
 	{
 		if (this.value){
-			pokemon.setSpecies(EnumSpecies.getFromName(CollectionHelper.getRandomElement(EnumSpecies.legendaries)).get(), true);
-			//pokemon.setSpecies(EnumSpecies.getFromName(CollectionHelper.getRandomElement(EnumSpecies.legendaries)).get(), true);
+			PokemonSpec spec = PokemonSpec.from(CollectionHelper.getRandomElement(EnumSpecies.legendaries));
+			spec.apply(pokemon);
+			pokemon.initialize(EnumInitializeCategory.INTRINSIC_FORCEFUL);
+			//Pokemon newpokemon = spec.create();
+			//pokemon.readFromNBT(newpokemon.writeToNBT(new NBTTagCompound()));
+
 		}else {
-			pokemon.setSpecies(EnumSpecies.randomPoke(false), true);
+			PokemonSpec spec = PokemonSpec.from(EnumSpecies.randomPoke(false).getPokemonName());
+			spec.apply(pokemon);
+			pokemon.initialize(EnumInitializeCategory.INTRINSIC_FORCEFUL);
 		}
 	}
 
@@ -104,12 +106,6 @@ public class LegSpec extends SpecValue<Boolean> implements ISpecType
 		return matches(pixelmon);
 	}
 
-	@Override
-	public boolean matches(NBTTagCompound nbt)
-	{
-		// Don't offer support for this anymore.
-		return false;
-	}
 
 	@Override
 	public boolean matches(Pokemon pokemon)

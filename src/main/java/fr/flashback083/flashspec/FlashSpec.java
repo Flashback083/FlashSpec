@@ -2,16 +2,18 @@ package fr.flashback083.flashspec;
 
 import com.google.common.collect.Lists;
 import com.pixelmonmod.pixelmon.Pixelmon;
-import com.pixelmonmod.pixelmon.api.events.PokedexEvent;
 import com.pixelmonmod.pixelmon.api.pokemon.PokemonSpec;
 import com.pixelmonmod.pixelmon.api.pokemon.SpecFlag;
 import fr.flashback083.flashspec.Specs.*;
+import fr.flashback083.flashspec.Specs.IvsSpec.Ivs31AndMinPercent;
 import fr.flashback083.flashspec.Specs.IvsSpec.MinIVPercent;
 import fr.flashback083.flashspec.Specs.IvsSpec.NumIVs;
 import fr.flashback083.flashspec.Specs.IvsSpec.NumMaxIVs;
 import fr.flashback083.flashspec.Specs.LegUbSpec.LegSpec;
 import fr.flashback083.flashspec.Specs.LegUbSpec.LegUbSpec;
 import fr.flashback083.flashspec.Specs.LegUbSpec.UbSpec;
+import fr.flashback083.flashspec.Specs.LevelSpec.LevelRangeSpec;
+import fr.flashback083.flashspec.Specs.LevelSpec.LevelSpec;
 import fr.flashback083.flashspec.Specs.MoveSpec.Move1Spec;
 import fr.flashback083.flashspec.Specs.MoveSpec.Move2Spec;
 import fr.flashback083.flashspec.Specs.MoveSpec.Move3Spec;
@@ -19,7 +21,6 @@ import fr.flashback083.flashspec.Specs.MoveSpec.Move4Spec;
 import fr.flashback083.flashspec.Specs.TypeSpec.Type1Spec;
 import fr.flashback083.flashspec.Specs.TypeSpec.Type2Spec;
 import fr.flashback083.flashspec.Specs.TypeSpec.TypeSpec;
-import fr.flashback083.flashspec.Specs.UndeleteSpec.TrashListener;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.MinecraftServer;
 import net.minecraftforge.common.MinecraftForge;
@@ -44,7 +45,7 @@ public class FlashSpec {
 
     public static final String MOD_ID = "flashspec";
     public static final String MOD_NAME = "FlashSpec";
-    public static final String VERSION = "2.2.14";
+    public static final String VERSION = "2.2.17";
 
     //Boolean spec
     //public static PokemonSpec UNCATCHABLE;
@@ -88,7 +89,8 @@ public class FlashSpec {
         PokemonSpec.extraSpecTypes.add(new UbSpec(false));
         PokemonSpec.extraSpecTypes.add(new SpecFlag("unevo"));
         PokemonSpec.extraSpecTypes.add(new SpecFlag("unlevel"));
-        PokemonSpec.extraSpecTypes.add(new UncatchableSpec(false));
+        PokemonSpec.extraSpecTypes.add(new SpecFlag("uncatchable"));
+        //PokemonSpec.extraSpecTypes.add(new UncatchableSpec(false));
         PokemonSpec.extraSpecTypes.add(new SpecFlag("aggro"));
         PokemonSpec.extraSpecTypes.add(new LevelSpec(Lists.newArrayList("lvlc","levelc"), null));
         PokemonSpec.extraSpecTypes.add(new SpecFlag("untrashable"));
@@ -99,6 +101,11 @@ public class FlashSpec {
         PokemonSpec.extraSpecTypes.add(new DropSpec(Lists.newArrayList("dropitem","di"), null));
         PokemonSpec.extraSpecTypes.add(new DropChanceSpec(Lists.newArrayList("dropchance","dc"), null));
         PokemonSpec.extraSpecTypes.add(new DropISSpec(Lists.newArrayList("dropitemsaver","dis"), null));
+        PokemonSpec.extraSpecTypes.add(new SpecFlag("unmegaout"));
+        //PokemonSpec.extraSpecTypes.add(new SpecFlag("unmegain"));
+        PokemonSpec.extraSpecTypes.add(new LevelRangeSpec(Lists.newArrayList("lvlr","levelr"), null));
+        PokemonSpec.extraSpecTypes.add(new SpecFlag("unnickable"));
+        PokemonSpec.extraSpecTypes.add(new Ivs31AndMinPercent(Lists.newArrayList("iv31&min%"), null));
 
         //CustomSpec import
         PokemonSpec.extraSpecTypes.add(new TextureSpec(Lists.newArrayList("texture"), null));

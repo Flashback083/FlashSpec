@@ -1,12 +1,11 @@
-package fr.flashback083.flashspec.Specs;
+package fr.flashback083.flashspec.Specs.LevelSpec;
 
 import com.pixelmonmod.pixelmon.api.pokemon.ISpecType;
 import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
 import com.pixelmonmod.pixelmon.api.pokemon.SpecValue;
+import com.pixelmonmod.pixelmon.comm.EnumUpdateType;
 import com.pixelmonmod.pixelmon.config.PixelmonConfig;
 import com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 
 import javax.annotation.Nullable;
@@ -41,7 +40,7 @@ public class LevelSpec extends SpecValue<String> implements ISpecType {
 
     @Override
     public void writeToNBT(NBTTagCompound nbtTagCompound, SpecValue<?> specValue) {
-        nbtTagCompound.setString(this.key, this.value);
+        nbtTagCompound.setString(this.key, (String) specValue.value);
     }
 
     @Override
@@ -77,6 +76,7 @@ public class LevelSpec extends SpecValue<String> implements ISpecType {
                 entityPixelmon.getPokemonData().setLevel(entityPixelmon.getPokemonData().getLevel() - lvl);
             }
         }
+        entityPixelmon.update(EnumUpdateType.Stats);
     }
 
     @Override
@@ -102,6 +102,7 @@ public class LevelSpec extends SpecValue<String> implements ISpecType {
                 pokemon.setLevel(pokemon.getLevel() - lvl);
             }
         }
+        pokemon.markDirty(EnumUpdateType.Stats);
     }
 
     @Override

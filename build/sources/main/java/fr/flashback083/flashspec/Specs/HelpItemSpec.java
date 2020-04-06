@@ -40,8 +40,8 @@ public class HelpItemSpec extends SpecValue<String> implements ISpecType {
     }
 
     @Override
-    public void writeToNBT(NBTTagCompound nbtTagCompound, SpecValue<?> specValue) {
-        nbtTagCompound.setString(this.key, value);
+    public void writeToNBT(NBTTagCompound nbtTagCompound, SpecValue specValue) {
+        nbtTagCompound.setString(this.key, (String) specValue.value);
     }
 
     @Override

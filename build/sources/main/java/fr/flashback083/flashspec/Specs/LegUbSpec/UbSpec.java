@@ -2,10 +2,7 @@ package fr.flashback083.flashspec.Specs.LegUbSpec;
 
 import com.google.common.collect.Lists;
 import com.pixelmonmod.pixelmon.Pixelmon;
-import com.pixelmonmod.pixelmon.api.pokemon.EnumInitializeCategory;
-import com.pixelmonmod.pixelmon.api.pokemon.ISpecType;
-import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
-import com.pixelmonmod.pixelmon.api.pokemon.SpecValue;
+import com.pixelmonmod.pixelmon.api.pokemon.*;
 import com.pixelmonmod.pixelmon.config.PixelmonConfig;
 import com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon;
 import com.pixelmonmod.pixelmon.enums.EnumSpecies;
@@ -84,9 +81,17 @@ public class UbSpec extends SpecValue<Boolean> implements ISpecType
 	public void apply(Pokemon pokemon)
 	{
 		if (this.value){
-			pokemon.setSpecies(EnumSpecies.getFromName(CollectionHelper.getRandomElement(EnumSpecies.ultrabeasts)).get(), true);
+
+
+			PokemonSpec spec = PokemonSpec.from(CollectionHelper.getRandomElement(EnumSpecies.ultrabeasts));
+			spec.apply(pokemon);
+			pokemon.initialize(EnumInitializeCategory.INTRINSIC_FORCEFUL);
+			//pokemon.setSpecies(EnumSpecies.getFromName(CollectionHelper.getRandomElement(EnumSpecies.ultrabeasts)).get(), true);
 		}else {
-			pokemon.setSpecies(randomPokeNoUb(),true);
+			PokemonSpec spec = PokemonSpec.from(randomPokeNoUb().getPokemonName());
+			spec.apply(pokemon);
+			pokemon.initialize(EnumInitializeCategory.INTRINSIC_FORCEFUL);
+			//pokemon.setSpecies(randomPokeNoUb(),true);
 		}
 	}
 

@@ -6,8 +6,12 @@ import com.pixelmonmod.pixelmon.api.enums.ExperienceGainType;
 import com.pixelmonmod.pixelmon.api.events.*;
 import com.pixelmonmod.pixelmon.api.events.battles.BattleEndEvent;
 import com.pixelmonmod.pixelmon.api.events.moveskills.UseMoveSkillEvent;
+import com.pixelmonmod.pixelmon.api.events.pokemon.SetNicknameEvent;
 import com.pixelmonmod.pixelmon.battles.BattleRegistry;
-import com.pixelmonmod.pixelmon.battles.controller.participants.*;
+import com.pixelmonmod.pixelmon.battles.controller.participants.BattleParticipant;
+import com.pixelmonmod.pixelmon.battles.controller.participants.ParticipantType;
+import com.pixelmonmod.pixelmon.battles.controller.participants.PlayerParticipant;
+import com.pixelmonmod.pixelmon.battles.controller.participants.WildPixelmonParticipant;
 import com.pixelmonmod.pixelmon.config.PixelmonItems;
 import com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon;
 import com.pixelmonmod.pixelmon.enums.EnumSpecies;
@@ -47,11 +51,23 @@ public class PixelmonEvent {
         if (event.phase.equals(TickEvent.Phase.START)) {
             EntityPixelmon pixelmon = event.pokemon;
             if (pixelmon.getPokemonData().hasSpecFlag("uncatchable")){
+                if (!event.pokemon.getPokemonData().getBonusStats().preventsCapture()){
+                    event.pokemon.getPokemonData().getBonusStats().setPreventsCapture(true);
+                }
                 event.pokemon.getPokemonData().setNickname(pixelmon.getPokemonName() + TextFormatting.RED + " (Uncatchable)");
             }
             if (pixelmon.getPokemonData().hasSpecFlag("unbattleable")){
                 event.pokemon.getPokemonData().setNickname(pixelmon.getName() + TextFormatting.RED + " (Unbattleable)");
             }
+        }
+    }
+
+    //Uncatchable spec
+    @SubscribeEvent
+    public void onCapture(CaptureEvent.StartCapture event){
+        if (event.getPokemon().getPokemonData().hasSpecFlag("uncatchable")){
+            event.getPokemon().getPokemonData().getBonusStats().setPreventsCapture(true);
+            event.setCanceled(true);
         }
     }
 
@@ -228,5 +244,30 @@ public class PixelmonEvent {
             }
         }
     }
+
+    //Mega evolve spec
+    @SubscribeEvent
+    public void onMegaEvolve(UseMoveSkillEvent event){
+        if (event.pixelmon.getPokemonData().hasSpecFlag("unmegaout") && event.moveSkill.name.equalsIgnoreCase("pixelmon.moveskill.mega_evolve.name")){
+            event.pixelmon.getOwner().sendMessage(new TextComponentString("§cYou can't Mega evolve this pokemon outside a battle!"));
+            event.setCanceled(true);
+        }
+    }
+
+    //Unnickable
+    @SubscribeEvent
+    public void onNick(SetNicknameEvent event){
+        if (event.pokemon.hasSpecFlag("unnickable")){
+            event.player.sendMessage(new TextComponentString("§cYou can't change the name of this pokemon!"));
+            event.setCanceled(true);
+        }
+    }
+
+    //fix intrasec spec
+    @SubscribeEvent
+    public void onHatch(EggHatchEvent event){
+        event.pokemon.setLevel(1);
+    }
+
 
 }
