@@ -6,6 +6,8 @@ import com.pixelmonmod.pixelmon.api.pokemon.SpecValue;
 import com.pixelmonmod.pixelmon.battles.attacks.Attack;
 import com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
+import net.minecraft.nbt.NBTTagString;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -40,7 +42,15 @@ public class Move2Spec extends SpecValue<String> implements ISpecType {
 
     @Override
     public void writeToNBT(NBTTagCompound nbtTagCompound, SpecValue<?> specValue) {
-        nbtTagCompound.setString(this.key, this.value.replaceAll("_"," "));
+        String atk = ((String) specValue.value).replaceAll("_", " ");
+        if (atk.equalsIgnoreCase("None")){
+            nbtTagCompound.setString(this.key, ((String) specValue.value));
+            return;
+        }
+        boolean isattack = Attack.hasAttack(atk);
+        if (isattack){
+            nbtTagCompound.setString(this.key, ((String) specValue.value).replaceAll("_"," "));
+        }
     }
 
     @Override
@@ -60,36 +70,30 @@ public class Move2Spec extends SpecValue<String> implements ISpecType {
 
     @Override
     public void apply(EntityPixelmon entityPixelmon) {
-        String atk = this.value.replaceAll("_", " ");
-        boolean isattack = Attack.hasAttack(atk);
-        if (isattack){
-            entityPixelmon.getPokemonData().getMoveset().set(1, new Attack(atk));
-        }
+        this.apply(entityPixelmon.getPokemonData());
     }
 
-    @Override
-    public void apply(NBTTagCompound nbtTagCompound) {
-
-    }
 
     @Override
     public void apply(Pokemon pokemon) {
         String atk = this.value.replaceAll("_", " ");
+        if (atk.equalsIgnoreCase("None")){
+            pokemon.getMoveset().remove(1);
+            return;
+        }
         boolean isattack = Attack.hasAttack(atk);
         if (isattack){
             pokemon.getMoveset().set(1, new Attack(atk));
+            if(!pokemon.getPersistentData().hasKey("flashspec")){
+                pokemon.getPersistentData().setTag("flashspec",new NBTTagList());
+            }
+            pokemon.getPersistentData().getTagList("flashspec",8).appendTag(new NBTTagString(this.key+":"+this.value));
         }
     }
 
     @Override
     public boolean matches(EntityPixelmon entityPixelmon) {
         return  entityPixelmon.getPokemonData().getMoveset().get(1).toString().equalsIgnoreCase(this.value.replaceAll("_"," "));
-    }
-
-    @Override
-    public boolean matches(NBTTagCompound nbtTagCompound) {
-        return false;
-        // return nbtTagCompound.getTagList("Moveset",10).get(0).toString().equalsIgnoreCase("MoveID");
     }
 
     @Override

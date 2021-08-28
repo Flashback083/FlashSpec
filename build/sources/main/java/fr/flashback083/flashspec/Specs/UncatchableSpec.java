@@ -8,6 +8,8 @@ import com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon;
 import com.pixelmonmod.pixelmon.enums.EnumSpecies;
 import com.pixelmonmod.pixelmon.util.helpers.CollectionHelper;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
+import net.minecraft.nbt.NBTTagString;
 
 import java.util.List;
 
@@ -75,6 +77,11 @@ public class UncatchableSpec extends SpecValue<Boolean> implements ISpecType
 	public void apply(Pokemon pokemon)
 	{
 		pokemon.getBonusStats().setPreventsCapture(this.value);
+		if(!pokemon.getPersistentData().hasKey("flashspec")){
+			pokemon.getPersistentData().setTag("flashspec",new NBTTagList());
+		}
+		pokemon.getPersistentData().getTagList("flashspec",8).appendTag(new NBTTagString(this.key+":"+this.value));
+
 	}
 
 	@Override

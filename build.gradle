@@ -1,19 +1,15 @@
 buildscript {
     repositories {
         jcenter()
-        maven {
-            name = "forge"
-            url = "https://files.minecraftforge.net/maven"
-        }
+        maven { url = "http://files.minecraftforge.net/maven" }
     }
     dependencies {
-        classpath "net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT"
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
     }
 }
+apply plugin: 'net.minecraftforge.gradle.forge'
 
-apply plugin: "net.minecraftforge.gradle.forge"
-
-version = "2.2.17"
+version = "2.6.3"
 group = modGroup
 archivesBaseName = "FlashSpec"
 compileJava.options.encoding = 'UTF-8'
@@ -40,6 +36,7 @@ repositories {
 dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
 }
+
 
 processResources {
     // this will ensure that this task is redone when the versions change.

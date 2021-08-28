@@ -9,7 +9,7 @@ import net.minecraft.nbt.NBTTagCompound;
 
 import java.util.List;
 
-public class SpecialTextureSpec extends SpecValue<String> implements ISpecType {
+/*public class SpecialTextureSpec extends SpecValue<String> implements ISpecType {
 
         public String value;
         public List<String> keys;
@@ -55,7 +55,7 @@ public class SpecialTextureSpec extends SpecValue<String> implements ISpecType {
                 nbt.setInteger("specialTexture", Integer.parseInt(this.value));
                 }
 
-        public boolean matches(EntityPixelmon pixelmon) {
+        /*public boolean matches(EntityPixelmon pixelmon) {
                 return pixelmon.getPokemonData().getSpecialTexture().id == Integer.parseInt(this.value);
         }
 
@@ -79,4 +79,4 @@ public class SpecialTextureSpec extends SpecValue<String> implements ISpecType {
         public void apply(NBTTagCompound nbt) {
                 nbt.setInteger("specialTexture", Integer.parseInt(this.value));
                 }
-}
+}*/

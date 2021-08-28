@@ -55,12 +55,16 @@ public class TextureSpec extends SpecValue<String> implements ISpecType {
         }
 
         public boolean matches(EntityPixelmon pixelmon) {
-                return pixelmon.getPokemonData().getCustomTexture().equalsIgnoreCase(this.value);
-                }
+                return this.matches(pixelmon.getPokemonData());
+        }
 
         public boolean matches(Pokemon pokemon) {
-                return pokemon.getCustomTexture().equalsIgnoreCase(this.value);
+                if (this.value.equalsIgnoreCase("*")){
+                        return !pokemon.getCustomTexture().isEmpty();
+                }else {
+                        return pokemon.getCustomTexture().equalsIgnoreCase(this.value);
                 }
+        }
 
 
         public void apply(EntityPixelmon pixelmon) {

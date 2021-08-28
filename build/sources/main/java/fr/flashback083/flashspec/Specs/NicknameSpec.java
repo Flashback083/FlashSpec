@@ -61,12 +61,12 @@ public class NicknameSpec extends SpecValue implements ISpecType {
     }
 
     public void apply(EntityPixelmon pokemon) {
-        String nick = ((String)this.value).replace("%pokemon%", pokemon.getSpecies().name);
+        String nick = ((String)this.value).replace("$pokemon$", pokemon.getSpecies().name);
         pokemon.getPokemonData().setNickname(nick);
     }
 
     public void apply(Pokemon pokemon) {
-        String nick = ((String)this.value).replace("%pokemon%", pokemon.getSpecies().name);
+        String nick = ((String)this.value).replace("$pokemon$", pokemon.getSpecies().name);
         pokemon.setNickname(nick);
     }
 }

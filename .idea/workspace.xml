@@ -1,10 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="494ac352-152a-4662-8b78-a10f8b07edc4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/DropChanceSpec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/DropISSpec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/DropSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FlashSpec.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/Pixelmon-1.12.2-8.2.0-server.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/PaginationApi/PaginationApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/CloneSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/CustomTextureChanceSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/DateSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/DynamaxLevelSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/EggStepSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/EvsSpec/GiveEVAtkSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/EvsSpec/GiveEVDefSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/EvsSpec/GiveEVHPSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/EvsSpec/GiveEVSpeAtkSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/EvsSpec/GiveEVSpeDefSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/EvsSpec/GiveEVSpeedSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/FormChanceSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/LegUbLevelSpec/LegGen1Spec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/LegUbLevelSpec/LegSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/LegUbLevelSpec/LegUbSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/LegUbLevelSpec/UbSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/LegUbSpec/LegGen1Spec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/HAChanceSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/HPSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/HappinessChangeSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/HappinessSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/IvsSpec/MaxIvs31AndMinPercent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/IvsSpec/MinIvs31AndMinPercent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/IvsSpec/MinNumIVs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/IvsSpec/changeStats/IVAtkSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/IvsSpec/changeStats/IVDefSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/IvsSpec/changeStats/IVHPSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/IvsSpec/changeStats/IVSpeAtkSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/IvsSpec/changeStats/IVSpeDefSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/IvsSpec/changeStats/IVSpeedSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MatchSpec/AllSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MatchSpec/DimNameSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MatchSpec/DimSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MatchSpec/EggGroupSpec/EggGroup1Spec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MatchSpec/EggGroupSpec/EggGroup2Spec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MatchSpec/EggGroupSpec/EggGroupSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MatchSpec/HasCustomTextureSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MatchSpec/MovesSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MatchSpec/SpawnerSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MatchSpec/isBossSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MatchSpec/isMegaSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MatchSpec/isWildSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/RealTimeSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/RibbonSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/ShinyChanceSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/TransformSpec/CatchTransformSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/TransformSpec/TransformChanceSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/YSpec/YChangeSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/YSpec/YRangeSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/TimerApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/cmds/CatchSpecCmd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/cmds/FlashSpecCallback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/cmds/FlashSpecCmd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/config/ChatColor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/config/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/config/Functions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/config/GsonUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/config/Lang.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/annotation-processors.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -14,6 +77,68 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__ca_weblite_java_objc_bridge_1_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_3_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_guava_21_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_ibm_icu_icu4j_core_mojang_51_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mojang_authlib_1_5_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mojang_patchy_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mojang_realms_1_10_22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mojang_text2speech_1_10_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_paulscode_codecjorbis_20101023.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_paulscode_codecwav_20101023.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_paulscode_libraryjavasound_20101123.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_paulscode_librarylwjglopenal_20100824.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_paulscode_soundsystem_20120107.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_typesafe_akka_akka_actor_2_11_2_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_typesafe_config_1_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_codec_commons_codec_1_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_io_commons_io_2_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_logging_commons_logging_1_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_netty_netty_all_4_1_9_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__it_unimi_dsi_fastutil_7_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__java3d_vecmath_1_5_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__lzma_lzma_0_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_java_dev_jna_jna_4_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_java_dev_jna_platform_3_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_java_jinput_jinput_2_0_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_java_jinput_jinput_platform_natives_linux_2_0_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_java_jinput_jinput_platform_natives_osx_2_0_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_java_jinput_jinput_platform_natives_windows_2_0_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_java_jutils_jutils_1_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_minecraft_launchwrapper_1_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_jopt_simple_jopt_simple_5_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_trove4j_trove4j_3_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_commons_commons_compress_1_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_commons_commons_lang3_3_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_httpcomponents_httpclient_4_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_httpcomponents_httpcore_4_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_logging_log4j_log4j_api_2_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_logging_log4j_log4j_core_2_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_maven_maven_artifact_3_5_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_plexus_plexus_utils_3_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jline_jline_3_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_lwjgl_lwjgl_lwjgl_2_9_4_nightly_20150209.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_lwjgl_lwjgl_lwjgl_platform_natives_linux_2_9_4_nightly_20150209.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_lwjgl_lwjgl_lwjgl_platform_natives_osx_2_9_4_nightly_20150209.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_lwjgl_lwjgl_lwjgl_platform_natives_windows_2_9_4_nightly_20150209.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_lwjgl_lwjgl_lwjgl_util_2_9_4_nightly_20150209.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_ow2_asm_asm_debug_all_5_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_scala_lang_modules_scala_parser_combinators_2_11_1_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_scala_lang_modules_scala_swing_2_11_1_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_scala_lang_modules_scala_xml_2_11_1_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_scala_lang_plugins_scala_continuations_library_2_11_1_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_scala_lang_plugins_scala_continuations_plugin_2_11_1_1_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_scala_lang_scala_actors_2_11_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_scala_lang_scala_actors_migration_2_11_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_scala_lang_scala_compiler_2_11_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_scala_lang_scala_library_2_11_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_scala_lang_scala_reflect_2_11_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__oshi_project_oshi_core_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/fr.flashback083.FlashSpec.api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/fr.flashback083.FlashSpec.api.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/fr.flashback083.FlashSpec.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/fr.flashback083.FlashSpec.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/fr.flashback083.FlashSpec.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/fr.flashback083.FlashSpec.main.iml" afterDir="false" />
@@ -24,20 +149,23 @@
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/PixelmonEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/PixelmonEvent.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/AISpec.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/AISpec.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/AbsSpec.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/AbsSpec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/HelpItemSpec.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/HelpItemSpec.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/HelpItemSpec.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/IvsSpec/MinIVPercent.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/IvsSpec/MinIVPercent.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/IvsSpec/NumIVs.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/IvsSpec/NumIVs.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/IvsSpec/NumMaxIVs.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/IvsSpec/NumMaxIVs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/LegUbSpec/LegSpec.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/LegUbSpec/LegSpec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/LegUbSpec/LegUbSpec.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/LegUbSpec/LegUbSpec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/LegUbSpec/UbSpec.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/LegUbSpec/UbSpec.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/LegUbSpec/LegSpec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/LegUbSpec/LegUbSpec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/LegUbSpec/UbSpec.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/MoveSpec/Move1Spec.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/MoveSpec/Move1Spec.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/MoveSpec/Move2Spec.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/MoveSpec/Move2Spec.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/MoveSpec/Move3Spec.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/MoveSpec/Move3Spec.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/MoveSpec/Move4Spec.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/MoveSpec/Move4Spec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/TypeSpec/Type1Spec.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/TypeSpec/Type1Spec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/TypeSpec/Type2Spec.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/TypeSpec/Type2Spec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/TypeSpec/TypeSpec.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/TypeSpec/TypeSpec.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/NicknameSpec.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/NicknameSpec.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/SpecialTextureSpec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/TextureSpec.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/TextureSpec.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/TypeSpec/Type1Spec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/TypeSpec/Type2Spec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/TypeSpec/TypeSpec.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/UncatchableSpec.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Specs/UncatchableSpec.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/mcmod.info" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/mcmod.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/retromapping/replacedMain.rangemap" beforeDir="false" afterPath="$PROJECT_DIR$/build/retromapping/replacedMain.rangemap" afterDir="false" />
@@ -46,42 +174,51 @@
       <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/PixelmonEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/PixelmonEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/AISpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/AISpec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/AbsSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/AbsSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/HelpItemSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/HelpItemSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/HelpItemSpec.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/IvsSpec/MinIVPercent.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/IvsSpec/MinIVPercent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/IvsSpec/NumIVs.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/IvsSpec/NumIVs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/IvsSpec/NumMaxIVs.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/IvsSpec/NumMaxIVs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/LegUbSpec/LegSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/LegUbSpec/LegSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/LegUbSpec/LegUbSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/LegUbSpec/LegUbSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/LegUbSpec/UbSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/LegUbSpec/UbSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/LegUbSpec/LegSpec.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/LegUbSpec/LegUbSpec.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/LegUbSpec/UbSpec.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/MoveSpec/Move1Spec.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/MoveSpec/Move1Spec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/MoveSpec/Move2Spec.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/MoveSpec/Move2Spec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/MoveSpec/Move3Spec.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/MoveSpec/Move3Spec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/MoveSpec/Move4Spec.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/MoveSpec/Move4Spec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/TypeSpec/Type1Spec.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/TypeSpec/Type1Spec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/TypeSpec/Type2Spec.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/TypeSpec/Type2Spec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/TypeSpec/TypeSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/TypeSpec/TypeSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/NicknameSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/NicknameSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/SpecialTextureSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/SpecialTextureSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/TextureSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/TextureSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/TypeSpec/Type1Spec.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/TypeSpec/Type2Spec.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/TypeSpec/TypeSpec.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/UncatchableSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/UncatchableSpec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/taskLogs/extractRangemapReplacedMain.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/taskLogs/extractRangemapReplacedMain.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/taskLogs/retromapReplacedMain.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/taskLogs/retromapReplacedMain.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/shadowJar/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/shadowJar/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/FlashSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/FlashSpec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/PixelmonEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/PixelmonEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/AISpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/AISpec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/AbsSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/AbsSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/HelpItemSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/HelpItemSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/DropISSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/DropISSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/HelpItemSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/HeldItemSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/IvsSpec/Ivs31AndMinPercent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/IvsSpec/Ivs31AndMinPercent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/IvsSpec/MinIVPercent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/IvsSpec/MinIVPercent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/IvsSpec/NumIVs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/IvsSpec/NumIVs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/IvsSpec/NumMaxIVs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/IvsSpec/NumMaxIVs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/LegUbSpec/LegSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/LegUbSpec/LegSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/LegUbSpec/LegUbSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/LegUbSpec/LegUbSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/LegUbSpec/UbSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/LegUbSpec/UbSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/LevelSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/LevelSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/LegUbSpec/LegSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/LegUbSpec/LegSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/LegUbSpec/LegUbSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/LegUbSpec/LegUbSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/LegUbSpec/UbSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/LegUbSpec/UbSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/LevelSpec/LevelSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/LevelSpec/LevelSpec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MoveSpec/Move1Spec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MoveSpec/Move1Spec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MoveSpec/Move2Spec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MoveSpec/Move2Spec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MoveSpec/Move3Spec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MoveSpec/Move3Spec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MoveSpec/Move4Spec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MoveSpec/Move4Spec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/TypeSpec/Type1Spec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/TypeSpec/Type1Spec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/TypeSpec/Type2Spec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/TypeSpec/Type2Spec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/TypeSpec/TypeSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/TypeSpec/TypeSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/NicknameSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/NicknameSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/SpecialTextureSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/SpecialTextureSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/TextureSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/TextureSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/TypeSpec/Type1Spec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/TypeSpec/Type1Spec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/TypeSpec/Type2Spec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/TypeSpec/Type2Spec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/TypeSpec/TypeSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/TypeSpec/TypeSpec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/UncatchableSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/UncatchableSpec.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,12 +240,20 @@
         <task path="$PROJECT_DIR$/../FlashSpec fatjar">
           <activation />
         </task>
+        <task path="">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="FlashSpec" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="FlashSpec" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
             <select />
@@ -138,28 +283,38 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560910201899" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TraderCycle/build.gradle" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="project.structure.side.proportion" value="0.3264368" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="fr.flashback083.flashspec" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitLab\FlashSpec\src\main\java\fr\flashback083\flashspec" />
+      <recent name="D:\GitLab\FlashSpec\libs" />
+      <recent name="D:\GitLab\FlashSpec\src\main\java\fr\flashback083\flashspec\Specs\GiveSpec\LegUbLevelSpec" />
+      <recent name="D:\GitLab\FlashSpec\src\main\java\fr\flashback083\flashspec\Specs\YSpec" />
+      <recent name="D:\GitLab\FlashSpec\src\main\java\fr\flashback083\flashspec\Specs\EggGroupSpec" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="fr.flashback083.flashspec.Specs" />
+      <recent name="fr.flashback083.flashspec.Specs.MatchSpec" />
       <recent name="fr.flashback083.flashspec.Specs.MoveSpec" />
-      <recent name="fr.flashback083.flashspec.Specs.LegUbSpec" />
-      <recent name="fr.flashback083.flashspec.Specs.IvsSpec" />
-      <recent name="fr.flashback083.flashspec.TypeSpec" />
+      <recent name="fr.flashback083.flashspec.Specs" />
+      <recent name="fr.flashback083.flashspec.Specs.EvsSpec" />
+      <recent name="fr.flashback083.flashspec.Specs.IvsSpec.changeStats" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.FlashSpec build">
@@ -196,7 +351,9 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration name="FlashSpec fatjar" type="GradleRunConfiguration" factoryName="Gradle">
@@ -215,7 +372,30 @@
         </option>
         <option name="vmOptions" value="" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="FlashSpec shadow" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="shadowJar" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <list>
@@ -223,20 +403,10 @@
       <item itemvalue="Application.fr.flashback083.FlashSpec run server" />
       <item itemvalue="Gradle.FlashSpec build" />
       <item itemvalue="Gradle.FlashSpec fatjar" />
+      <item itemvalue="Gradle.FlashSpec shadow" />
     </list>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -255,7 +425,21 @@
       <option name="project" value="LOCAL" />
       <updated>1582187262448</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="idk lot of things sorry">
+      <created>1583272131749</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583272131749</updated>
+    </task>
+    <task id="LOCAL-00003" summary="somes fix">
+      <created>1586184380220</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586184380220</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -263,134 +447,18 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add aura spec + levelspec &#10;fix texture  / aura spec (thx hiro)&#10;somes improvmeent" />
-    <option name="LAST_COMMIT_MESSAGE" value="add aura spec + levelspec &#10;fix texture  / aura spec (thx hiro)&#10;somes improvmeent" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="-1091" y="344" key="#Notifications" timestamp="1578102991012">
-      <screen x="-1366" y="323" width="1366" height="728" />
-    </state>
-    <state x="-1091" y="344" key="#Notifications/0.0.1920.1040/-1366.323.1366.728@-1366.323.1366.728" timestamp="1578102991012" />
-    <state x="-1092" y="358" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578102912601">
-      <screen x="-1366" y="323" width="1366" height="728" />
-    </state>
-    <state x="-1092" y="358" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1366.323.1366.728@-1366.323.1366.728" timestamp="1578102912601" />
-    <state x="651" y="155" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1577562049721" />
-    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1578148884963">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1578148884963" />
-    <state x="690" y="265" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1577746277388">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="265" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1577746277388" />
-    <state x="211" y="0" key="CommitChangelistDialog2" timestamp="1582187256957">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-1216" y="323" key="CommitChangelistDialog2/0.0.1920.1040/-1366.323.1366.728@-1366.323.1366.728" timestamp="1578103031673" />
-    <state x="211" y="0" key="CommitChangelistDialog2/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1582187256957" />
-    <state x="-837" y="514" key="FileChooserDialogImpl" timestamp="1580999027058">
-      <screen x="-1366" y="323" width="1366" height="728" />
-    </state>
-    <state x="-837" y="514" key="FileChooserDialogImpl/0.0.1920.1040/-1366.323.1366.728@-1366.323.1366.728" timestamp="1580999027058" />
-    <state x="744" y="273" key="FileChooserDialogImpl/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1578173373361" />
-    <state width="1322" height="150" key="GridCell.Tab.0.bottom" timestamp="1583259040180">
-      <screen x="-1366" y="323" width="1366" height="728" />
-    </state>
-    <state width="1322" height="150" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1366.323.1366.728@-1366.323.1366.728" timestamp="1583259040180" />
-    <state width="1876" height="80" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1583205293556" />
-    <state width="1322" height="150" key="GridCell.Tab.0.center" timestamp="1583259040180">
-      <screen x="-1366" y="323" width="1366" height="728" />
-    </state>
-    <state width="1322" height="150" key="GridCell.Tab.0.center/0.0.1920.1040/-1366.323.1366.728@-1366.323.1366.728" timestamp="1583259040180" />
-    <state width="1876" height="80" key="GridCell.Tab.0.center/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1583205293556" />
-    <state width="1322" height="150" key="GridCell.Tab.0.left" timestamp="1583259040180">
-      <screen x="-1366" y="323" width="1366" height="728" />
-    </state>
-    <state width="1322" height="150" key="GridCell.Tab.0.left/0.0.1920.1040/-1366.323.1366.728@-1366.323.1366.728" timestamp="1583259040180" />
-    <state width="1876" height="80" key="GridCell.Tab.0.left/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1583205293556" />
-    <state width="1322" height="150" key="GridCell.Tab.0.right" timestamp="1583259040180">
-      <screen x="-1366" y="323" width="1366" height="728" />
-    </state>
-    <state width="1322" height="150" key="GridCell.Tab.0.right/0.0.1920.1040/-1366.323.1366.728@-1366.323.1366.728" timestamp="1583259040180" />
-    <state width="1876" height="80" key="GridCell.Tab.0.right/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1583205293556" />
-    <state x="-1091" y="418" key="Vcs.Push.Dialog.v2" timestamp="1583272076686">
-      <screen x="-1366" y="323" width="1366" height="728" />
-    </state>
-    <state x="-1091" y="418" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1366.323.1366.728@-1366.323.1366.728" timestamp="1583272076686" />
-    <state x="387" y="136" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1582187270336" />
-    <state x="-1174" y="375" width="879" height="598" key="new project wizard" timestamp="1583253260814">
-      <screen x="-1366" y="323" width="1366" height="728" />
-    </state>
-    <state x="-1174" y="375" width="879" height="598" key="new project wizard/0.0.1920.1040/-1366.323.1366.728@-1366.323.1366.728" timestamp="1583253260814" />
-    <state x="466" y="173" width="1235" height="665" key="new project wizard/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1583192927138" />
-    <state x="616" y="235" key="run.anything.popup" timestamp="1578660250303">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="235" key="run.anything.popup/0.0.1920.1040/-1366.323.1366.728@0.0.1920.1040" timestamp="1578660250303" />
-    <state x="-1020" y="372" width="672" height="678" key="search.everywhere.popup" timestamp="1583106997316">
-      <screen x="-1366" y="323" width="1366" height="728" />
-    </state>
-    <state x="-1020" y="372" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1366.323.1366.728@-1366.323.1366.728" timestamp="1583106997316" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <MESSAGE value="idk lot of things sorry" />
+    <MESSAGE value="somes fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="somes fix" />
   </component>
 </project>

@@ -63,11 +63,6 @@ public class AISpec extends SpecValue<String> implements ISpecType {
     }
 
     @Override
-    public void apply(NBTTagCompound nbtTagCompound) {
-
-    }
-
-    @Override
     public void apply(Pokemon pokemon) {
     }
 
@@ -76,11 +71,6 @@ public class AISpec extends SpecValue<String> implements ISpecType {
         return  entityPixelmon.getAggression() == EnumAggression.valueOf(this.value);
     }
 
-    @Override
-    public boolean matches(NBTTagCompound nbtTagCompound) {
-        return false;
-        // return nbtTagCompound.getTagList("Moveset",10).get(0).toString().equalsIgnoreCase("MoveID");
-    }
 
     @Override
     public boolean matches(Pokemon pokemon) {

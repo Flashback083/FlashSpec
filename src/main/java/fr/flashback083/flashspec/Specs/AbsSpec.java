@@ -40,7 +40,7 @@ public class AbsSpec extends SpecValue<String> implements ISpecType {
 
     @Override
     public void writeToNBT(NBTTagCompound nbtTagCompound, SpecValue<?> specValue) {
-        nbtTagCompound.setString(this.key, this.value);
+        nbtTagCompound.setInteger(this.key,Integer.parseInt(this.value));
     }
 
     @Override
@@ -64,11 +64,6 @@ public class AbsSpec extends SpecValue<String> implements ISpecType {
     }
 
     @Override
-    public void apply(NBTTagCompound nbtTagCompound) {
-
-    }
-
-    @Override
     public void apply(Pokemon pokemon) {
         pokemon.setAbilitySlot(Integer.parseInt(this.value));
     }
@@ -76,12 +71,6 @@ public class AbsSpec extends SpecValue<String> implements ISpecType {
     @Override
     public boolean matches(EntityPixelmon entityPixelmon) {
         return  entityPixelmon.getPokemonData().getAbilitySlot() == Integer.parseInt(this.value);
-    }
-
-    @Override
-    public boolean matches(NBTTagCompound nbtTagCompound) {
-        return false;
-        // return nbtTagCompound.getTagList("Moveset",10).get(0).toString().equalsIgnoreCase("MoveID");
     }
 
     @Override

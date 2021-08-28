@@ -79,10 +79,6 @@ public class LevelSpec extends SpecValue<String> implements ISpecType {
         entityPixelmon.update(EnumUpdateType.Stats);
     }
 
-    @Override
-    public void apply(NBTTagCompound nbtTagCompound) {
-
-    }
 
     @Override
     public void apply(Pokemon pokemon) {

@@ -9,6 +9,8 @@ import com.pixelmonmod.pixelmon.entities.pixelmon.stats.StatsType;
 import java.util.Arrays;
 import java.util.List;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
+import net.minecraft.nbt.NBTTagString;
 
 public class MinIVPercent extends SpecValue implements ISpecType {
     public MinIVPercent(Integer value) {
@@ -60,6 +62,10 @@ public class MinIVPercent extends SpecValue implements ISpecType {
         pokemon.getIVs().set(StatsType.SpecialAttack, ivs[3]);
         pokemon.getIVs().set(StatsType.SpecialDefence, ivs[4]);
         pokemon.getIVs().set(StatsType.Speed, ivs[5]);
+        if(!pokemon.getPersistentData().hasKey("flashspec")){
+            pokemon.getPersistentData().setTag("flashspec",new NBTTagList());
+        }
+        pokemon.getPersistentData().getTagList("flashspec",8).appendTag(new NBTTagString(this.key+":"+this.value));
     }
 
     public void apply(NBTTagCompound nbt) {

@@ -8,6 +8,8 @@ import com.pixelmonmod.pixelmon.api.pokemon.SpecValue;
 import com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon;
 import com.pixelmonmod.pixelmon.entities.pixelmon.stats.StatsType;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
+import net.minecraft.nbt.NBTTagString;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -63,6 +65,10 @@ public class NumIVs extends SpecValue implements ISpecType {
         pokemon.getIVs().set(StatsType.SpecialAttack, ivs[3]);
         pokemon.getIVs().set(StatsType.SpecialDefence, ivs[4]);
         pokemon.getIVs().set(StatsType.Speed, ivs[5]);
+        if(!pokemon.getPersistentData().hasKey("flashspec")){
+            pokemon.getPersistentData().setTag("flashspec",new NBTTagList());
+        }
+        pokemon.getPersistentData().getTagList("flashspec",8).appendTag(new NBTTagString(this.key+":"+this.value));
     }
 
     public void apply(NBTTagCompound nbt) {

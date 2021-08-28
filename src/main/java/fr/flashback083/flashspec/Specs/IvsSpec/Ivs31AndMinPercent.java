@@ -90,6 +90,7 @@ public class Ivs31AndMinPercent extends SpecValue<String> implements ISpecType {
                         pokemon.getIVs().set(StatsType.SpecialAttack, iv[3]);
                         pokemon.getIVs().set(StatsType.SpecialDefence, iv[4]);
                         pokemon.getIVs().set(StatsType.Speed, iv[5]);
+
                     });
                 });
                 offthread.start();
