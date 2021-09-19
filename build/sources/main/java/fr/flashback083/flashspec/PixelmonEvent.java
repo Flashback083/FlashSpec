@@ -145,7 +145,7 @@ public class PixelmonEvent {
     public void onEvolve(EvolveEvent.PreEvolve event){
         if (event.preEvo.getPokemonData().hasSpecFlag("unevo")){
             event.setCanceled(true);
-            event.player.sendMessage(new TextComponentString(translateAlternateColorCodes('&',lang.get("unevolvemsg").getString().replace("%pokemonname%",event.postEvo.name))));
+            event.player.sendMessage(new TextComponentString(translateAlternateColorCodes('&',lang.get("unevolvemsg").getString().replace("%pokemonname%",event.preEvo.getPokemonName()))));
         }
     }
 
@@ -396,7 +396,7 @@ public class PixelmonEvent {
     }
 
     private boolean canSpawnRealtime(ArrayList<String> listspawn, LocalTime time){
-        System.out.println("[FlashSpec] " + time.getHour());
+        //System.out.println("[FlashSpec] " + time.getHour());
         for (String s1 : listspawn) {
             if (s1.contains("-")) {
                 String[] timecut = s1.split("-");
@@ -628,9 +628,11 @@ public class PixelmonEvent {
     public void onBattleEndDespawn(BattleEndEvent event){
         for (BattleParticipant participant : event.bc.participants) {
             if (participant instanceof WildPixelmonParticipant){
-                EntityPixelmon pixelmon = (EntityPixelmon) participant.getEntity();
-                if (pixelmon.getPokemonData().hasSpecFlag("despawnable")){
-                    pixelmon.func_70106_y();
+                if (participant.getEntity() != null){
+                    EntityPixelmon pixelmon = (EntityPixelmon) participant.getEntity();
+                    if (pixelmon.getPokemonData().hasSpecFlag("despawnable")){
+                        pixelmon.func_70106_y();
+                    }
                 }
             }
         }

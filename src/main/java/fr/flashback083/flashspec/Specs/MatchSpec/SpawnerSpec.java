@@ -90,13 +90,26 @@ public class SpawnerSpec extends SpecValue<Boolean> implements ISpecType
 	@Override
 	public boolean matches(EntityPixelmon pixelmon)
 	{
-		return pixelmon.spawner != null;
+        if (this.value){
+            return pixelmon.spawner != null;
+        }else{
+            return pixelmon.spawner == null;
+        }
 	}
 
 
 	@Override
 	public boolean matches(Pokemon pokemon)
 	{
-		return false;
+        if (pokemon.getPixelmonIfExists() != null){
+            if (this.value){
+                return pokemon.getPixelmonIfExists().spawner != null;
+            }else{
+                return pokemon.getPixelmonIfExists().spawner == null;
+            }
+        }else{
+            return false;
+        }
+
 	}
 }

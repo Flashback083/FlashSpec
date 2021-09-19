@@ -1,13 +1,13 @@
-Processing 91 files
+Processing 97 files
 Start Processing: fr/flashback083/flashspec/FlashSpec.java
 New Key: class net/minecraftforge/fml/common/Mod
 New Key: class net/minecraftforge/fml/common/Mod
 New Key: class net/minecraftforge/fml/common/Mod
 New Key: class net/minecraftforge/fml/common/Mod
 New Key: class net/minecraftforge/fml/common/Mod
-Rename method net/minecraft/command/ICommandSender/getServer ()Lnet/minecraft/server/MinecraftServer;[19862,19871]::getServer->func_184102_h
-Rename method net/minecraft/server/MinecraftServer/getPlayerList ()Lnet/minecraft/server/management/PlayerList;[19901,19914]::getPlayerList->func_184103_al
-Rename method net/minecraft/server/management/PlayerList/getPlayerByUsername (Ljava/lang/String;)Lnet/minecraft/entity/player/EntityPlayerMP;[19918,19937]::getPlayerByUsername->func_152612_a
+Rename method net/minecraft/command/ICommandSender/getServer ()Lnet/minecraft/server/MinecraftServer;[20870,20879]::getServer->func_184102_h
+Rename method net/minecraft/server/MinecraftServer/getPlayerList ()Lnet/minecraft/server/management/PlayerList;[20909,20922]::getPlayerList->func_184103_al
+Rename method net/minecraft/server/management/PlayerList/getPlayerByUsername (Ljava/lang/String;)Lnet/minecraft/entity/player/EntityPlayerMP;[20926,20945]::getPlayerByUsername->func_152612_a
 Import: com.google.common.collect.Lists
 Import: com.google.gson.Gson
 Import: com.google.gson.GsonBuilder
@@ -21,6 +21,7 @@ Import: fr.flashback083.flashspec.Specs.GiveSpec.LegUbSpec.LegGen1Spec
 Import: fr.flashback083.flashspec.Specs.GiveSpec.LegUbSpec.LegSpec
 Import: fr.flashback083.flashspec.Specs.GiveSpec.LegUbSpec.LegUbSpec
 Import: fr.flashback083.flashspec.Specs.GiveSpec.LegUbSpec.UbSpec
+Import: fr.flashback083.flashspec.Specs.GiveSpec.evospec.LastEvoSpec
 Import: fr.flashback083.flashspec.Specs.IvsSpec.*
 Import: fr.flashback083.flashspec.Specs.IvsSpec.changeStats.*
 Import: fr.flashback083.flashspec.Specs.LevelSpec.LevelRangeSpec
@@ -95,62 +96,62 @@ New Key: class com/pixelmonmod/pixelmon/api/events/CaptureEvent
 Rename method net/minecraft/command/ICommandSender/sendMessage (Lnet/minecraft/util/text/ITextComponent;)V[7062,7073]::sendMessage->func_145747_a
 New Key: class com/pixelmonmod/pixelmon/api/events/EvolveEvent
 Rename method net/minecraft/command/ICommandSender/sendMessage (Lnet/minecraft/util/text/ITextComponent;)V[7511,7522]::sendMessage->func_145747_a
-Rename method net/minecraft/command/ICommandSender/sendMessage (Lnet/minecraft/util/text/ITextComponent;)V[8158,8169]::sendMessage->func_145747_a
+Rename method net/minecraft/command/ICommandSender/sendMessage (Lnet/minecraft/util/text/ITextComponent;)V[8169,8180]::sendMessage->func_145747_a
 New Key: class net/minecraftforge/event/entity/player/PlayerInteractEvent
-Rename field net/minecraft/entity/player/EntityPlayer/inventory[8551,8560]::inventory->field_71071_by
-Rename method net/minecraft/entity/player/InventoryPlayer/getCurrentItem ()Lnet/minecraft/item/ItemStack;[8566,8580]::getCurrentItem->func_70448_g
-Rename method net/minecraft/item/ItemStack/getItem ()Lnet/minecraft/item/Item;[8581,8588]::getItem->func_77973_b
-Rename method net/minecraft/command/ICommandSender/sendMessage (Lnet/minecraft/util/text/ITextComponent;)V[8903,8914]::sendMessage->func_145747_a
+Rename field net/minecraft/entity/player/EntityPlayer/inventory[8562,8571]::inventory->field_71071_by
+Rename method net/minecraft/entity/player/InventoryPlayer/getCurrentItem ()Lnet/minecraft/item/ItemStack;[8577,8591]::getCurrentItem->func_70448_g
+Rename method net/minecraft/item/ItemStack/getItem ()Lnet/minecraft/item/Item;[8592,8599]::getItem->func_77973_b
+Rename method net/minecraft/command/ICommandSender/sendMessage (Lnet/minecraft/util/text/ITextComponent;)V[8914,8925]::sendMessage->func_145747_a
 New Key: class net/minecraftforge/fml/common/gameevent/TickEvent
-Rename method net/minecraft/command/ICommandSender/getEntityWorld ()Lnet/minecraft/world/World;[9587,9601]::getEntityWorld->func_130014_f_
-Rename method net/minecraft/world/World/getClosestPlayerToEntity (Lnet/minecraft/entity/Entity;D)Lnet/minecraft/entity/player/EntityPlayer;[9604,9628]::getClosestPlayerToEntity->func_72890_a
-Rename method net/minecraft/command/ICommandSender/getName ()Ljava/lang/String;[9946,9953]::getName->func_70005_c_
-Rename method net/minecraft/command/ICommandSender/getName ()Ljava/lang/String;[10989,10996]::getName->func_70005_c_
+Rename method net/minecraft/command/ICommandSender/getEntityWorld ()Lnet/minecraft/world/World;[9598,9612]::getEntityWorld->func_130014_f_
+Rename method net/minecraft/world/World/getClosestPlayerToEntity (Lnet/minecraft/entity/Entity;D)Lnet/minecraft/entity/player/EntityPlayer;[9615,9639]::getClosestPlayerToEntity->func_72890_a
+Rename method net/minecraft/command/ICommandSender/getName ()Ljava/lang/String;[9957,9964]::getName->func_70005_c_
+Rename method net/minecraft/command/ICommandSender/getName ()Ljava/lang/String;[11000,11007]::getName->func_70005_c_
 New Key: class net/minecraftforge/fml/common/gameevent/TickEvent
 New Key: class net/minecraftforge/fml/common/gameevent
-Rename method net/minecraft/command/ICommandSender/sendMessage (Lnet/minecraft/util/text/ITextComponent;)V[12124,12135]::sendMessage->func_145747_a
+Rename method net/minecraft/command/ICommandSender/sendMessage (Lnet/minecraft/util/text/ITextComponent;)V[12135,12146]::sendMessage->func_145747_a
 New Key: class fr/flashback083/flashspec/Specs/UndeleteSpec/TrashListener
-Rename method net/minecraft/nbt/NBTTagCompound/hasKey (Ljava/lang/String;)Z[12969,12975]::hasKey->func_74764_b
-Rename method net/minecraft/nbt/NBTTagCompound/hasKey (Ljava/lang/String;)Z[13044,13050]::hasKey->func_74764_b
-Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[13149,13158]::getString->func_74779_i
-Rename method net/minecraft/item/Item/getByNameOrId (Ljava/lang/String;)Lnet/minecraft/item/Item;[13417,13430]::getByNameOrId->func_111206_d
-Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[13455,13464]::getString->func_74779_i
-Rename method net/minecraft/item/Item/getByNameOrId (Ljava/lang/String;)Lnet/minecraft/item/Item;[13661,13674]::getByNameOrId->func_111206_d
-Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[13699,13708]::getString->func_74779_i
-Rename method net/minecraft/nbt/NBTTagCompound/hasKey (Ljava/lang/String;)Z[13848,13854]::hasKey->func_74764_b
-Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[13935,13944]::getString->func_74779_i
-Rename method net/minecraft/nbt/NBTTagCompound/hasKey (Ljava/lang/String;)Z[14012,14018]::hasKey->func_74764_b
-Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[14117,14126]::getString->func_74779_i
-Rename method net/minecraft/nbt/NBTTagCompound/hasKey (Ljava/lang/String;)Z[15024,15030]::hasKey->func_74764_b
-Rename method net/minecraft/nbt/NBTTagCompound/hasKey (Ljava/lang/String;)Z[15080,15086]::hasKey->func_74764_b
-Rename method net/minecraft/entity/IEntityOwnable/getOwner ()Lnet/minecraft/entity/Entity;[15572,15580]::getOwner->func_70902_q
-Rename method net/minecraft/command/ICommandSender/sendMessage (Lnet/minecraft/util/text/ITextComponent;)V[15587,15598]::sendMessage->func_145747_a
-Rename method net/minecraft/command/ICommandSender/sendMessage (Lnet/minecraft/util/text/ITextComponent;)V[15983,15994]::sendMessage->func_145747_a
-Rename method net/minecraft/command/ICommand/getName ()Ljava/lang/String;[16548,16555]::getName->func_71517_b
-Rename method net/minecraft/command/ICommandSender/sendMessage (Lnet/minecraft/util/text/ITextComponent;)V[17095,17106]::sendMessage->func_145747_a
-Rename method net/minecraft/tileentity/TileEntity/getWorld ()Lnet/minecraft/world/World;[17660,17668]::getWorld->func_145831_w
-Rename method net/minecraft/world/World/getWorldTime ()J[17676,17688]::getWorldTime->func_72820_D
-Rename method net/minecraft/tileentity/TileEntity/getWorld ()Lnet/minecraft/world/World;[17961,17969]::getWorld->func_145831_w
-Rename method net/minecraft/world/World/getWorldInfo ()Lnet/minecraft/world/storage/WorldInfo;[17977,17989]::getWorldInfo->func_72912_H
-Rename method net/minecraft/world/storage/WorldInfo/isRaining ()Z[19081,19090]::isRaining->func_76059_o
-Rename method net/minecraft/world/storage/WorldInfo/isThundering ()Z[19181,19193]::isThundering->func_76061_m
-Rename method net/minecraft/world/storage/WorldInfo/isThundering ()Z[19283,19295]::isThundering->func_76061_m
-Rename method net/minecraft/world/storage/WorldInfo/isRaining ()Z[19312,19321]::isRaining->func_76059_o
+Rename method net/minecraft/nbt/NBTTagCompound/hasKey (Ljava/lang/String;)Z[12980,12986]::hasKey->func_74764_b
+Rename method net/minecraft/nbt/NBTTagCompound/hasKey (Ljava/lang/String;)Z[13055,13061]::hasKey->func_74764_b
+Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[13160,13169]::getString->func_74779_i
+Rename method net/minecraft/item/Item/getByNameOrId (Ljava/lang/String;)Lnet/minecraft/item/Item;[13428,13441]::getByNameOrId->func_111206_d
+Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[13466,13475]::getString->func_74779_i
+Rename method net/minecraft/item/Item/getByNameOrId (Ljava/lang/String;)Lnet/minecraft/item/Item;[13672,13685]::getByNameOrId->func_111206_d
+Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[13710,13719]::getString->func_74779_i
+Rename method net/minecraft/nbt/NBTTagCompound/hasKey (Ljava/lang/String;)Z[13859,13865]::hasKey->func_74764_b
+Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[13946,13955]::getString->func_74779_i
+Rename method net/minecraft/nbt/NBTTagCompound/hasKey (Ljava/lang/String;)Z[14023,14029]::hasKey->func_74764_b
+Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[14128,14137]::getString->func_74779_i
+Rename method net/minecraft/nbt/NBTTagCompound/hasKey (Ljava/lang/String;)Z[15035,15041]::hasKey->func_74764_b
+Rename method net/minecraft/nbt/NBTTagCompound/hasKey (Ljava/lang/String;)Z[15091,15097]::hasKey->func_74764_b
+Rename method net/minecraft/entity/IEntityOwnable/getOwner ()Lnet/minecraft/entity/Entity;[15583,15591]::getOwner->func_70902_q
+Rename method net/minecraft/command/ICommandSender/sendMessage (Lnet/minecraft/util/text/ITextComponent;)V[15598,15609]::sendMessage->func_145747_a
+Rename method net/minecraft/command/ICommandSender/sendMessage (Lnet/minecraft/util/text/ITextComponent;)V[15994,16005]::sendMessage->func_145747_a
+Rename method net/minecraft/command/ICommand/getName ()Ljava/lang/String;[16559,16566]::getName->func_71517_b
+Rename method net/minecraft/command/ICommandSender/sendMessage (Lnet/minecraft/util/text/ITextComponent;)V[17106,17117]::sendMessage->func_145747_a
+Rename method net/minecraft/tileentity/TileEntity/getWorld ()Lnet/minecraft/world/World;[17671,17679]::getWorld->func_145831_w
+Rename method net/minecraft/world/World/getWorldTime ()J[17687,17699]::getWorldTime->func_72820_D
+Rename method net/minecraft/tileentity/TileEntity/getWorld ()Lnet/minecraft/world/World;[17972,17980]::getWorld->func_145831_w
+Rename method net/minecraft/world/World/getWorldInfo ()Lnet/minecraft/world/storage/WorldInfo;[17988,18000]::getWorldInfo->func_72912_H
+Rename method net/minecraft/world/storage/WorldInfo/isRaining ()Z[19092,19101]::isRaining->func_76059_o
+Rename method net/minecraft/world/storage/WorldInfo/isThundering ()Z[19192,19204]::isThundering->func_76061_m
+Rename method net/minecraft/world/storage/WorldInfo/isThundering ()Z[19294,19306]::isThundering->func_76061_m
+Rename method net/minecraft/world/storage/WorldInfo/isRaining ()Z[19323,19332]::isRaining->func_76059_o
 New Key: class com/pixelmonmod/pixelmon/api/events/CaptureEvent
-Rename method net/minecraft/nbt/NBTTagCompound/hasKey (Ljava/lang/String;)Z[20528,20534]::hasKey->func_74764_b
-Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[20748,20757]::getString->func_74779_i
-Rename method net/minecraft/nbt/NBTTagCompound/hasKey (Ljava/lang/String;)Z[21304,21310]::hasKey->func_74764_b
-Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[21620,21629]::getString->func_74779_i
+Rename method net/minecraft/nbt/NBTTagCompound/hasKey (Ljava/lang/String;)Z[20541,20547]::hasKey->func_74764_b
+Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[20761,20770]::getString->func_74779_i
+Rename method net/minecraft/nbt/NBTTagCompound/hasKey (Ljava/lang/String;)Z[21317,21323]::hasKey->func_74764_b
+Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[21633,21642]::getString->func_74779_i
 New Key: class com/pixelmonmod/pixelmon/api/events/CaptureEvent
-Rename method net/minecraft/command/ICommandSender/sendMessage (Lnet/minecraft/util/text/ITextComponent;)V[22397,22408]::sendMessage->func_145747_a
-Rename method net/minecraft/entity/Entity/getUniqueID ()Ljava/util/UUID;[23253,23264]::getUniqueID->func_110124_au
-Rename method net/minecraft/entity/Entity/getUniqueID ()Ljava/util/UUID;[23381,23392]::getUniqueID->func_110124_au
-Rename method net/minecraft/entity/Entity/getUniqueID ()Ljava/util/UUID;[23750,23761]::getUniqueID->func_110124_au
-Rename method net/minecraft/nbt/NBTTagCompound/hasKey (Ljava/lang/String;)Z[24064,24070]::hasKey->func_74764_b
-Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[24140,24149]::getString->func_74779_i
+Rename method net/minecraft/command/ICommandSender/sendMessage (Lnet/minecraft/util/text/ITextComponent;)V[22410,22421]::sendMessage->func_145747_a
+Rename method net/minecraft/entity/Entity/getUniqueID ()Ljava/util/UUID;[23266,23277]::getUniqueID->func_110124_au
+Rename method net/minecraft/entity/Entity/getUniqueID ()Ljava/util/UUID;[23394,23405]::getUniqueID->func_110124_au
+Rename method net/minecraft/entity/Entity/getUniqueID ()Ljava/util/UUID;[23763,23774]::getUniqueID->func_110124_au
+Rename method net/minecraft/nbt/NBTTagCompound/hasKey (Ljava/lang/String;)Z[24077,24083]::hasKey->func_74764_b
+Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[24153,24162]::getString->func_74779_i
 New Key: class com/pixelmonmod/pixelmon/api/events/CaptureEvent
-Rename method net/minecraft/nbt/NBTTagCompound/hasKey (Ljava/lang/String;)Z[29845,29851]::hasKey->func_74764_b
-Rename method net/minecraft/nbt/NBTTagCompound/setLong (Ljava/lang/String;J)V[29995,30002]::setLong->func_74772_a
+Rename method net/minecraft/nbt/NBTTagCompound/hasKey (Ljava/lang/String;)Z[29858,29864]::hasKey->func_74764_b
+Rename method net/minecraft/nbt/NBTTagCompound/setLong (Ljava/lang/String;J)V[30008,30015]::setLong->func_74772_a
 Import: com.google.common.collect.Lists
 Import: com.pixelmonmod.pixelmon.Pixelmon
 Import: com.pixelmonmod.pixelmon.api.enums.DeleteType
@@ -266,8 +267,8 @@ End  Processing: fr/flashback083/flashspec/Specs/CloneSpec.java
 
 Start Processing: fr/flashback083/flashspec/Specs/CustomTextureChanceSpec.java
 FOUND CONSTR method fr/flashback083/flashspec/Specs/CustomTextureChanceSpec/CustomTextureChanceSpec (Ljava/lang/String;)V fr/flashback083/flashspec/Specs/CustomTextureChanceSpec
-Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[1226,1235]::getString->func_74779_i
-Rename method net/minecraft/nbt/NBTTagCompound/setString (Ljava/lang/String;Ljava/lang/String;)V[1384,1393]::setString->func_74778_a
+Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[1067,1076]::getString->func_74779_i
+Rename method net/minecraft/nbt/NBTTagCompound/setString (Ljava/lang/String;Ljava/lang/String;)V[1225,1234]::setString->func_74778_a
 Import: com.google.common.collect.Lists
 Import: com.pixelmonmod.pixelmon.api.pokemon.ISpecType
 Import: com.pixelmonmod.pixelmon.api.pokemon.Pokemon
@@ -478,6 +479,19 @@ Import: java.util.Random
 Import: java.util.concurrent.atomic.AtomicBoolean
 End  Processing: fr/flashback083/flashspec/Specs/FormChanceSpec.java
 
+Start Processing: fr/flashback083/flashspec/Specs/GigaMaxSpec.java
+FOUND CONSTR method fr/flashback083/flashspec/Specs/GigaMaxSpec/GigaMaxSpec (Z)V fr/flashback083/flashspec/Specs/GigaMaxSpec
+Rename method net/minecraft/nbt/NBTTagCompound/getBoolean (Ljava/lang/String;)Z[1086,1096]::getBoolean->func_74767_n
+Rename method net/minecraft/nbt/NBTTagCompound/setBoolean (Ljava/lang/String;Z)V[1322,1332]::setBoolean->func_74757_a
+Import: com.google.common.collect.Lists
+Import: com.pixelmonmod.pixelmon.api.pokemon.ISpecType
+Import: com.pixelmonmod.pixelmon.api.pokemon.Pokemon
+Import: com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+Import: com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon
+Import: net.minecraft.nbt.NBTTagCompound
+Import: java.util.List
+End  Processing: fr/flashback083/flashspec/Specs/GigaMaxSpec.java
+
 Start Processing: fr/flashback083/flashspec/Specs/GiveSpec/LegUbLevelSpec/LegGen1Spec.java
 FOUND CONSTR method fr/flashback083/flashspec/Specs/GiveSpec/LegUbLevelSpec/LegGen1Spec/LegGen1Spec (Z)V fr/flashback083/flashspec/Specs/GiveSpec/LegUbLevelSpec/LegGen1Spec
 Rename method net/minecraft/nbt/NBTTagCompound/getBoolean (Ljava/lang/String;)Z[1432,1442]::getBoolean->func_74767_n
@@ -565,10 +579,13 @@ End  Processing: fr/flashback083/flashspec/Specs/GiveSpec/LegUbSpec/LegGen1Spec.
 
 Start Processing: fr/flashback083/flashspec/Specs/GiveSpec/LegUbSpec/LegSpec.java
 FOUND CONSTR method fr/flashback083/flashspec/Specs/GiveSpec/LegUbSpec/LegSpec/LegSpec (Z)V fr/flashback083/flashspec/Specs/GiveSpec/LegUbSpec/LegSpec
-Rename method net/minecraft/nbt/NBTTagCompound/getBoolean (Ljava/lang/String;)Z[1077,1087]::getBoolean->func_74767_n
-Rename method net/minecraft/nbt/NBTTagCompound/setBoolean (Ljava/lang/String;Z)V[1313,1323]::setBoolean->func_74757_a
+Rename method net/minecraft/nbt/NBTTagCompound/getBoolean (Ljava/lang/String;)Z[1264,1274]::getBoolean->func_74767_n
+Rename method net/minecraft/nbt/NBTTagCompound/setBoolean (Ljava/lang/String;Z)V[1500,1510]::setBoolean->func_74757_a
 Import: com.google.common.collect.Lists
-Import: com.pixelmonmod.pixelmon.api.pokemon.*
+Import: com.pixelmonmod.pixelmon.api.pokemon.EnumInitializeCategory
+Import: com.pixelmonmod.pixelmon.api.pokemon.ISpecType
+Import: com.pixelmonmod.pixelmon.api.pokemon.Pokemon
+Import: com.pixelmonmod.pixelmon.api.pokemon.SpecValue
 Import: com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon
 Import: com.pixelmonmod.pixelmon.enums.EnumSpecies
 Import: com.pixelmonmod.pixelmon.util.helpers.CollectionHelper
@@ -654,6 +671,21 @@ Import: javax.annotation.Nullable
 Import: java.util.List
 End  Processing: fr/flashback083/flashspec/Specs/GiveSpec/TypeSpec/TypeSpec.java
 
+Start Processing: fr/flashback083/flashspec/Specs/GiveSpec/evospec/LastEvoSpec.java
+FOUND CONSTR method fr/flashback083/flashspec/Specs/GiveSpec/evospec/LastEvoSpec/LastEvoSpec (Z)V fr/flashback083/flashspec/Specs/GiveSpec/evospec/LastEvoSpec
+Rename method net/minecraft/nbt/NBTTagCompound/getBoolean (Ljava/lang/String;)Z[1234,1244]::getBoolean->func_74767_n
+Rename method net/minecraft/nbt/NBTTagCompound/setBoolean (Ljava/lang/String;Z)V[1470,1480]::setBoolean->func_74757_a
+Import: com.google.common.collect.Lists
+Import: com.pixelmonmod.pixelmon.api.pokemon.EnumInitializeCategory
+Import: com.pixelmonmod.pixelmon.api.pokemon.ISpecType
+Import: com.pixelmonmod.pixelmon.api.pokemon.Pokemon
+Import: com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+Import: com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon
+Import: com.pixelmonmod.pixelmon.enums.EnumSpecies
+Import: net.minecraft.nbt.NBTTagCompound
+Import: java.util.List
+End  Processing: fr/flashback083/flashspec/Specs/GiveSpec/evospec/LastEvoSpec.java
+
 Start Processing: fr/flashback083/flashspec/Specs/HAChanceSpec.java
 FOUND CONSTR method fr/flashback083/flashspec/Specs/HAChanceSpec/HAChanceSpec (Ljava/lang/String;)V fr/flashback083/flashspec/Specs/HAChanceSpec
 Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[1067,1076]::getString->func_74779_i
@@ -714,23 +746,24 @@ End  Processing: fr/flashback083/flashspec/Specs/HappinessSpec.java
 
 Start Processing: fr/flashback083/flashspec/Specs/HeldItemSpec.java
 FOUND CONSTR method fr/flashback083/flashspec/Specs/HeldItemSpec/HeldItemSpec (Ljava/util/List;Ljava/lang/String;)V fr/flashback083/flashspec/Specs/HeldItemSpec
-Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[1088,1097]::getString->func_74779_i
-Rename method net/minecraft/nbt/NBTTagCompound/setString (Ljava/lang/String;Ljava/lang/String;)V[1243,1252]::setString->func_74778_a
-Rename method net/minecraft/item/Item/getByNameOrId (Ljava/lang/String;)Lnet/minecraft/item/Item;[1801,1814]::getByNameOrId->func_111206_d
-Rename method net/minecraft/item/Item/getByNameOrId (Ljava/lang/String;)Lnet/minecraft/item/Item;[2055,2068]::getByNameOrId->func_111206_d
-Rename method net/minecraft/item/Item/getByNameOrId (Ljava/lang/String;)Lnet/minecraft/item/Item;[2302,2315]::getByNameOrId->func_111206_d
-Rename method net/minecraft/item/ItemStack/isItemEqualIgnoreDurability (Lnet/minecraft/item/ItemStack;)Z[2387,2414]::isItemEqualIgnoreDurability->func_185136_b
-Rename method net/minecraft/item/Item/getByNameOrId (Ljava/lang/String;)Lnet/minecraft/item/Item;[2583,2596]::getByNameOrId->func_111206_d
-Rename method net/minecraft/item/ItemStack/isItemEqualIgnoreDurability (Lnet/minecraft/item/ItemStack;)Z[2643,2670]::isItemEqualIgnoreDurability->func_185136_b
+Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[1269,1278]::getString->func_74779_i
+Rename method net/minecraft/nbt/NBTTagCompound/setString (Ljava/lang/String;Ljava/lang/String;)V[1424,1433]::setString->func_74778_a
+Rename method net/minecraft/item/Item/getByNameOrId (Ljava/lang/String;)Lnet/minecraft/item/Item;[2331,2344]::getByNameOrId->func_111206_d
+Rename method net/minecraft/item/Item/getByNameOrId (Ljava/lang/String;)Lnet/minecraft/item/Item;[2741,2754]::getByNameOrId->func_111206_d
+Rename method net/minecraft/item/ItemStack/isItemEqualIgnoreDurability (Lnet/minecraft/item/ItemStack;)Z[2802,2829]::isItemEqualIgnoreDurability->func_185136_b
 Import: com.pixelmonmod.pixelmon.api.pokemon.ISpecType
 Import: com.pixelmonmod.pixelmon.api.pokemon.Pokemon
 Import: com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+Import: com.pixelmonmod.pixelmon.config.PixelmonItemsHeld
 Import: com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon
+Import: com.pixelmonmod.pixelmon.util.helpers.CollectionHelper
 Import: net.minecraft.item.Item
 Import: net.minecraft.item.ItemStack
 Import: net.minecraft.nbt.NBTTagCompound
 Import: javax.annotation.Nullable
+Import: java.util.Collections
 Import: java.util.List
+Import: java.util.Objects
 End  Processing: fr/flashback083/flashspec/Specs/HeldItemSpec.java
 
 Start Processing: fr/flashback083/flashspec/Specs/IvsSpec/Ivs31AndMinPercent.java
@@ -1171,6 +1204,24 @@ Import: net.minecraft.nbt.NBTTagCompound
 Import: java.util.List
 End  Processing: fr/flashback083/flashspec/Specs/MatchSpec/isBossSpec.java
 
+Start Processing: fr/flashback083/flashspec/Specs/MatchSpec/isEnumSpeciesSpec.java
+FOUND CONSTR method fr/flashback083/flashspec/Specs/MatchSpec/isEnumSpeciesSpec/isEnumSpeciesSpec (Ljava/lang/String;)V fr/flashback083/flashspec/Specs/MatchSpec/isEnumSpeciesSpec
+Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[1185,1194]::getString->func_74779_i
+Rename method net/minecraft/nbt/NBTTagCompound/setString (Ljava/lang/String;Ljava/lang/String;)V[1343,1352]::setString->func_74778_a
+Import: com.google.common.collect.Lists
+Import: com.pixelmonmod.pixelmon.api.pokemon.EnumInitializeCategory
+Import: com.pixelmonmod.pixelmon.api.pokemon.ISpecType
+Import: com.pixelmonmod.pixelmon.api.pokemon.Pokemon
+Import: com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+Import: com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon
+Import: com.pixelmonmod.pixelmon.enums.EnumSpecies
+Import: com.pixelmonmod.pixelmon.util.helpers.CollectionHelper
+Import: net.minecraft.nbt.NBTTagCompound
+Import: javax.annotation.Nullable
+Import: java.util.ArrayList
+Import: java.util.List
+End  Processing: fr/flashback083/flashspec/Specs/MatchSpec/isEnumSpeciesSpec.java
+
 Start Processing: fr/flashback083/flashspec/Specs/MatchSpec/isMegaSpec.java
 FOUND CONSTR method fr/flashback083/flashspec/Specs/MatchSpec/isMegaSpec/isMegaSpec (Z)V fr/flashback083/flashspec/Specs/MatchSpec/isMegaSpec
 Rename method net/minecraft/nbt/NBTTagCompound/getBoolean (Ljava/lang/String;)Z[1199,1209]::getBoolean->func_74767_n
@@ -1185,6 +1236,54 @@ Import: com.pixelmonmod.pixelmon.enums.forms.EnumSpecial
 Import: net.minecraft.nbt.NBTTagCompound
 Import: java.util.List
 End  Processing: fr/flashback083/flashspec/Specs/MatchSpec/isMegaSpec.java
+
+Start Processing: fr/flashback083/flashspec/Specs/MatchSpec/isNotEnumSpeciesSpec.java
+FOUND CONSTR method fr/flashback083/flashspec/Specs/MatchSpec/isNotEnumSpeciesSpec/isNotEnumSpeciesSpec (Ljava/lang/String;)V fr/flashback083/flashspec/Specs/MatchSpec/isNotEnumSpeciesSpec
+Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[1203,1212]::getString->func_74779_i
+Rename method net/minecraft/nbt/NBTTagCompound/setString (Ljava/lang/String;Ljava/lang/String;)V[1361,1370]::setString->func_74778_a
+Import: com.google.common.collect.Lists
+Import: com.pixelmonmod.pixelmon.api.pokemon.EnumInitializeCategory
+Import: com.pixelmonmod.pixelmon.api.pokemon.ISpecType
+Import: com.pixelmonmod.pixelmon.api.pokemon.Pokemon
+Import: com.pixelmonmod.pixelmon.api.pokemon.SpecValue
+Import: com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon
+Import: com.pixelmonmod.pixelmon.enums.EnumSpecies
+Import: com.pixelmonmod.pixelmon.util.helpers.CollectionHelper
+Import: net.minecraft.nbt.NBTTagCompound
+Import: javax.annotation.Nullable
+Import: java.util.ArrayList
+Import: java.util.List
+End  Processing: fr/flashback083/flashspec/Specs/MatchSpec/isNotEnumSpeciesSpec.java
+
+Start Processing: fr/flashback083/flashspec/Specs/MatchSpec/isNotSpecSpec.java
+FOUND CONSTR method fr/flashback083/flashspec/Specs/MatchSpec/isNotSpecSpec/isNotSpecSpec (Ljava/lang/String;)V fr/flashback083/flashspec/Specs/MatchSpec/isNotSpecSpec
+Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[974,983]::getString->func_74779_i
+Rename method net/minecraft/nbt/NBTTagCompound/setString (Ljava/lang/String;Ljava/lang/String;)V[1132,1141]::setString->func_74778_a
+Import: com.google.common.collect.Lists
+Import: com.pixelmonmod.pixelmon.api.pokemon.*
+Import: com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon
+Import: com.pixelmonmod.pixelmon.enums.EnumSpecies
+Import: com.pixelmonmod.pixelmon.util.helpers.CollectionHelper
+Import: net.minecraft.nbt.NBTTagCompound
+Import: javax.annotation.Nullable
+Import: java.util.ArrayList
+Import: java.util.List
+End  Processing: fr/flashback083/flashspec/Specs/MatchSpec/isNotSpecSpec.java
+
+Start Processing: fr/flashback083/flashspec/Specs/MatchSpec/isSpecSpec.java
+FOUND CONSTR method fr/flashback083/flashspec/Specs/MatchSpec/isSpecSpec/isSpecSpec (Ljava/lang/String;)V fr/flashback083/flashspec/Specs/MatchSpec/isSpecSpec
+Rename method net/minecraft/nbt/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String;[956,965]::getString->func_74779_i
+Rename method net/minecraft/nbt/NBTTagCompound/setString (Ljava/lang/String;Ljava/lang/String;)V[1114,1123]::setString->func_74778_a
+Import: com.google.common.collect.Lists
+Import: com.pixelmonmod.pixelmon.api.pokemon.*
+Import: com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon
+Import: com.pixelmonmod.pixelmon.enums.EnumSpecies
+Import: com.pixelmonmod.pixelmon.util.helpers.CollectionHelper
+Import: net.minecraft.nbt.NBTTagCompound
+Import: javax.annotation.Nullable
+Import: java.util.ArrayList
+Import: java.util.List
+End  Processing: fr/flashback083/flashspec/Specs/MatchSpec/isSpecSpec.java
 
 Start Processing: fr/flashback083/flashspec/Specs/MatchSpec/isWildSpec.java
 FOUND CONSTR method fr/flashback083/flashspec/Specs/MatchSpec/isWildSpec/isWildSpec (Z)V fr/flashback083/flashspec/Specs/MatchSpec/isWildSpec

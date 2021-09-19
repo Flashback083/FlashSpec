@@ -9,7 +9,7 @@ buildscript {
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
 
-version = "2.6.3"
+version = "2.6.4"
 group = modGroup
 archivesBaseName = "FlashSpec"
 compileJava.options.encoding = 'UTF-8'

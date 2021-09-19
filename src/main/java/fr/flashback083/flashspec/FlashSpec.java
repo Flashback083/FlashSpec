@@ -13,6 +13,7 @@ import fr.flashback083.flashspec.Specs.GiveSpec.LegUbSpec.LegGen1Spec;
 import fr.flashback083.flashspec.Specs.GiveSpec.LegUbSpec.LegSpec;
 import fr.flashback083.flashspec.Specs.GiveSpec.LegUbSpec.LegUbSpec;
 import fr.flashback083.flashspec.Specs.GiveSpec.LegUbSpec.UbSpec;
+import fr.flashback083.flashspec.Specs.GiveSpec.evospec.LastEvoSpec;
 import fr.flashback083.flashspec.Specs.IvsSpec.*;
 import fr.flashback083.flashspec.Specs.IvsSpec.changeStats.*;
 import fr.flashback083.flashspec.Specs.LevelSpec.LevelRangeSpec;
@@ -61,7 +62,7 @@ public class FlashSpec {
 
     public static final String MOD_ID = "flashspec";
     public static final String MOD_NAME = "FlashSpec";
-    public static final String VERSION = "2.6.3";
+    public static final String VERSION = "2.6.4";
 
 
     public static File speclist;
@@ -242,8 +243,8 @@ public class FlashSpec {
         PokemonSpec.extraSpecTypes.add(new fr.flashback083.flashspec.Specs.GiveSpec.LegUbLevelSpec.UbSpec(false));
         PokemonSpec.extraSpecTypes.add(new fr.flashback083.flashspec.Specs.GiveSpec.LegUbLevelSpec.LegUbSpec(false));
         logger.info("[FlashSpec] Registered leg1l/legl/ubl/uborlegl spec");
-        PokemonSpec.extraSpecTypes.add(new HasCustomTextureSpec(false));
-        logger.info("[FlashSpec] Registered hascustomtexture spec");
+        //PokemonSpec.extraSpecTypes.add(new HasCustomTextureSpec(false));
+        //logger.info("[FlashSpec] Registered hascustomtexture spec");
         PokemonSpec.extraSpecTypes.add(new HAChanceSpec(null));
         logger.info("[FlashSpec] Registered hachancespec spec");
         PokemonSpec.extraSpecTypes.add(new HappinessChangeSpec(Lists.newArrayList("happinessc"), null));
@@ -316,6 +317,30 @@ public class FlashSpec {
         logger.info("[FlashSpec] Registered despawnable spec");
         PokemonSpec.extraSpecTypes.add(new isWildSpec(false));
         logger.info("[FlashSpec] Registered isWild spec [MatchOnly]");
+
+        PokemonSpec.extraSpecTypes.add(new LastEvoSpec(false));
+        logger.info("[FlashSpec] Registered lastevo spec");
+
+        //PokemonSpec.extraSpecTypes.add(new TrioBirdSpec(false));
+        //logger.info("[FlashSpec] Registered triobird spec [MatchOnly]");
+
+        PokemonSpec.extraSpecTypes.add(new isEnumSpeciesSpec(null));
+        logger.info("[FlashSpec] Registered isEnumSpecies spec");
+
+        PokemonSpec.extraSpecTypes.add(new isNotEnumSpeciesSpec(null));
+        logger.info("[FlashSpec] Registered isNotEnumSpecies spec");
+
+
+        PokemonSpec.extraSpecTypes.add(new isSpecSpec(null));
+        logger.info("[FlashSpec] Registered isSpecSpecies spec");
+
+        PokemonSpec.extraSpecTypes.add(new isNotSpecSpec(null));
+        logger.info("[FlashSpec] Registered isNotSpecSpec spec");
+
+        PokemonSpec.extraSpecTypes.add(new GigaMaxSpec(false));
+        logger.info("[FlashSpec] Registered gigamax spec");
+
+
 
         if (config.getCategory("General").get("specflags").getStringList().length>0){
             ArrayList<String> list = Lists.newArrayList(config.getCategory("General").get("specflags").getStringList());

@@ -1,33 +1,34 @@
-package fr.flashback083.flashspec.Specs;
+package fr.flashback083.flashspec.Specs.MatchSpec;
 
 import com.google.common.collect.Lists;
+import com.pixelmonmod.pixelmon.api.pokemon.EnumInitializeCategory;
 import com.pixelmonmod.pixelmon.api.pokemon.ISpecType;
 import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
 import com.pixelmonmod.pixelmon.api.pokemon.SpecValue;
 import com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon;
+import com.pixelmonmod.pixelmon.enums.EnumSpecies;
+import com.pixelmonmod.pixelmon.util.helpers.CollectionHelper;
 import net.minecraft.nbt.NBTTagCompound;
 
 import javax.annotation.Nullable;
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
-public class CustomTextureChanceSpec extends SpecValue<String> implements ISpecType {
+public class isEnumSpeciesSpec extends SpecValue<String> implements ISpecType {
 
-
-    public CustomTextureChanceSpec(String value){
-        super("customtexturechance", value);
+    public isEnumSpeciesSpec(String value){
+        super("isEnumSpecies", value);
     }
 
 
     @Override
     public List<String> getKeys() {
-        return Lists.newArrayList("ctchance","customtexturechance");
+        return Lists.newArrayList("isenumspecies");
     }
 
     @Override
-    public CustomTextureChanceSpec parse(@Nullable String s) {
-        return new CustomTextureChanceSpec(s);
+    public isEnumSpeciesSpec parse(@Nullable String s) {
+        return new isEnumSpeciesSpec(s);
     }
 
     @Override
@@ -63,36 +64,32 @@ public class CustomTextureChanceSpec extends SpecValue<String> implements ISpecT
 
     @Override
     public void apply(Pokemon pokemon) {
-        int chance = Integer.parseInt(this.value.split(";")[1]);
-        if (chance == 0){
-            //System.out.println("[FlashSpec] Chance == 0");
-            return;
-        }
-        int random =  new Random().nextInt(chance)+1;
-        boolean choose = random == chance;
-        if (choose){
-            //System.out.println("[FlashSpec] Spawn with texture !");
-            pokemon.setCustomTexture(this.value.split(";")[0]);
-        }/*else{
-            System.out.println("[FlashSpec] Spawn without the texture !");
-        }*/
+        List<String> species = Lists.newArrayList(this.value.split("/"));
+        pokemon.setSpecies(EnumSpecies.getFromNameAnyCase(CollectionHelper.getRandomElement(species)),true);
+        pokemon.initialize(EnumInitializeCategory.INTRINSIC_FORCEFUL);
     }
 
     @Override
     public boolean matches(EntityPixelmon entityPixelmon) {
-        return  matches(entityPixelmon.getPokemonData());
+        return matches(entityPixelmon.getPokemonData());
     }
 
     @Override
     public boolean matches(Pokemon pokemon) {
-        if (pokemon.getCustomTexture().length()>0){
-            return pokemon.getCustomTexture().equalsIgnoreCase(this.value.split(";")[0]);
+        String name = pokemon.getSpecies().getPokemonName();
+        ArrayList<String> list = Lists.newArrayList(this.value.split("/"));
+        boolean match = false;
+        for (String species : list) {
+            if (species.replaceAll("_"," ").equalsIgnoreCase(name)) {
+                match = true;
+                break;
+            }
         }
-        return false;
+        return match;
     }
 
     @Override
     public SpecValue<String> clone() {
-        return new CustomTextureChanceSpec(this.value);
+        return new isEnumSpeciesSpec(this.value);
     }
 }

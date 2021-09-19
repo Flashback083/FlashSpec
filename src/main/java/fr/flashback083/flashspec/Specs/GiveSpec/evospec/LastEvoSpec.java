@@ -1,4 +1,4 @@
-package fr.flashback083.flashspec.Specs.GiveSpec.LegUbSpec;
+package fr.flashback083.flashspec.Specs.GiveSpec.evospec;
 
 import com.google.common.collect.Lists;
 import com.pixelmonmod.pixelmon.api.pokemon.EnumInitializeCategory;
@@ -7,22 +7,21 @@ import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
 import com.pixelmonmod.pixelmon.api.pokemon.SpecValue;
 import com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon;
 import com.pixelmonmod.pixelmon.enums.EnumSpecies;
-import com.pixelmonmod.pixelmon.util.helpers.CollectionHelper;
 import net.minecraft.nbt.NBTTagCompound;
 
 import java.util.List;
 
-public class LegSpec extends SpecValue<Boolean> implements ISpecType
+public class LastEvoSpec extends SpecValue<Boolean> implements ISpecType
 {
-	public LegSpec(boolean value)
+	public LastEvoSpec(boolean value)
 	{
-		super("leg", value);
+		super("lastevo", value);
 	}
 
 	@Override
 	public List<String> getKeys()
 	{
-		return Lists.newArrayList("leg","isleg");
+		return Lists.newArrayList("lastevo","islastevo");
 	}
 
 	@Override
@@ -35,22 +34,22 @@ public class LegSpec extends SpecValue<Boolean> implements ISpecType
 	public SpecValue<?> parse(String s)
 	{
 		if (s == null)
-			return new LegSpec(true);
+			return new LastEvoSpec(true);
 		
 		try
 		{
-			return new LegSpec(Boolean.parseBoolean(s));
+			return new LastEvoSpec(Boolean.parseBoolean(s));
 		}
 		catch (Exception e)
 		{
-			return new LegSpec(true);
+			return new LastEvoSpec(true);
 		}
 	}
 
 	@Override
 	public SpecValue<?> readFromNBT(NBTTagCompound nbt)
 	{
-		return new LegSpec(nbt.getBoolean(this.key));
+		return new LastEvoSpec(nbt.getBoolean(this.key));
 	}
 
 	@Override
@@ -75,21 +74,26 @@ public class LegSpec extends SpecValue<Boolean> implements ISpecType
 	@Override
 	public void apply(Pokemon pokemon)
 	{
+		//PokemonSpec spec;
 		if (this.value){
-			List<EnumSpecies> species = Lists.newArrayList(EnumSpecies.LEGENDARY_ENUMS);
-            species.remove(EnumSpecies.Phione);
-			pokemon.setSpecies(CollectionHelper.getRandomElement(species),true);
+			pokemon.setSpecies(getEvo(),true);
 			pokemon.initialize(EnumInitializeCategory.INTRINSIC_FORCEFUL);
+			//spec = PokemonSpec.from(CollectionHelper.getRandomElement(species).getPokemonName());
+			//Pokemon newpokemon = spec.create();
+			//pokemon.readFromNBT(newpokemon.writeToNBT(new NBTTagCompound()));
 		}else {
-			pokemon.setSpecies(EnumSpecies.randomPoke(false),true);
+            pokemon.setSpecies(getEvo(),true);
 			pokemon.initialize(EnumInitializeCategory.INTRINSIC_FORCEFUL,EnumInitializeCategory.SPECIES);
+			//spec = PokemonSpec.from(EnumSpecies.randomPoke(false).getPokemonName());
 		}
+		//spec.apply(pokemon);
+		//pokemon.initialize(EnumInitializeCategory.INTRINSIC_FORCEFUL,EnumInitializeCategory.SPECIES);
 	}
 
 	@Override
 	public SpecValue<Boolean> clone()
 	{
-		return new LegSpec(value);
+		return new LastEvoSpec(value);
 	}
 
 	@Override
@@ -108,9 +112,28 @@ public class LegSpec extends SpecValue<Boolean> implements ISpecType
 	@Override
 	public boolean matches(Pokemon pokemon)
 	{
-        List<String> legendary = EnumSpecies.legendaries;
-        legendary.remove("Phione");
-		return legendary.contains(pokemon.getSpecies().getPokemonName());
-		//return (EnumSpecies.legendaries.contains(pokemon.getSpecies().getPokemonName())  == this.value);
+        if (this.value){
+            return pokemon.getBaseStats().getEvolutions().size()>0;
+        }else{
+            return pokemon.getBaseStats().getEvolutions().size()==0;
+        }
 	}
+
+    public EnumSpecies getEvo(){
+        EnumSpecies poke = EnumSpecies.randomPoke();
+        if (this.value){
+            while (!isLastEvo(poke)){
+                poke = EnumSpecies.randomPoke();
+            }
+        }else{
+            while (isLastEvo(poke)){
+                poke = EnumSpecies.randomPoke();
+            }
+        }
+        return poke;
+    }
+
+    public boolean isLastEvo(EnumSpecies enumSpecies){
+        return enumSpecies.getBaseStats().getEvolutions().size()==0;
+    }
 }

@@ -3,13 +3,17 @@ package fr.flashback083.flashspec.Specs;
 import com.pixelmonmod.pixelmon.api.pokemon.ISpecType;
 import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
 import com.pixelmonmod.pixelmon.api.pokemon.SpecValue;
+import com.pixelmonmod.pixelmon.config.PixelmonItemsHeld;
 import com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon;
+import com.pixelmonmod.pixelmon.util.helpers.CollectionHelper;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 
 import javax.annotation.Nullable;
+import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 public class HeldItemSpec extends SpecValue<String> implements ISpecType {
 
@@ -60,30 +64,31 @@ public class HeldItemSpec extends SpecValue<String> implements ISpecType {
 
     @Override
     public void apply(EntityPixelmon entityPixelmon) {
-        String item = "pixelmon:" + this.value;
-        ItemStack itemStack = new ItemStack(Item.getByNameOrId(item));
-        entityPixelmon.getPokemonData().setHeldItem(itemStack);
+        apply(entityPixelmon.getPokemonData());
     }
 
 
     @Override
     public void apply(Pokemon pokemon) {
-        String item = "pixelmon:" + this.value;
-        ItemStack itemStack = new ItemStack(Item.getByNameOrId(item));
+        ItemStack itemStack;
+        if (this.value.equalsIgnoreCase("random")){
+            itemStack = new ItemStack(CollectionHelper.getRandomElement(PixelmonItemsHeld.getHeldItemList()));
+        }else{
+            String item = "pixelmon:" + this.value;
+            itemStack = new ItemStack(Objects.requireNonNull(Item.getByNameOrId(item)));
+        }
         pokemon.setHeldItem(itemStack);
     }
 
     @Override
     public boolean matches(EntityPixelmon entityPixelmon) {
-        String item = "pixelmon:" + this.value;
-        ItemStack itemStack = new ItemStack(Item.getByNameOrId(item));
-        return  entityPixelmon.getPokemonData().getHeldItem().isItemEqualIgnoreDurability(itemStack);
+       return matches(entityPixelmon.getPokemonData());
     }
 
     @Override
     public boolean matches(Pokemon pokemon) {
         String item = "pixelmon:" + this.value;
-        ItemStack itemStack = new ItemStack(Item.getByNameOrId(item));
+        ItemStack itemStack = new ItemStack(Objects.requireNonNull(Item.getByNameOrId(item)));
         return pokemon.getHeldItem().isItemEqualIgnoreDurability(itemStack);
     }
 

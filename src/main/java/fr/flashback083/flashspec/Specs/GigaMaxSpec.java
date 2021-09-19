@@ -1,28 +1,25 @@
-package fr.flashback083.flashspec.Specs.GiveSpec.LegUbSpec;
+package fr.flashback083.flashspec.Specs;
 
 import com.google.common.collect.Lists;
-import com.pixelmonmod.pixelmon.api.pokemon.EnumInitializeCategory;
 import com.pixelmonmod.pixelmon.api.pokemon.ISpecType;
 import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
 import com.pixelmonmod.pixelmon.api.pokemon.SpecValue;
 import com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon;
-import com.pixelmonmod.pixelmon.enums.EnumSpecies;
-import com.pixelmonmod.pixelmon.util.helpers.CollectionHelper;
 import net.minecraft.nbt.NBTTagCompound;
 
 import java.util.List;
 
-public class LegSpec extends SpecValue<Boolean> implements ISpecType
+public class GigaMaxSpec extends SpecValue<Boolean> implements ISpecType
 {
-	public LegSpec(boolean value)
+	public GigaMaxSpec(boolean value)
 	{
-		super("leg", value);
+		super("fgigamax", value);
 	}
 
 	@Override
 	public List<String> getKeys()
 	{
-		return Lists.newArrayList("leg","isleg");
+		return Lists.newArrayList("fgigamax");
 	}
 
 	@Override
@@ -35,22 +32,22 @@ public class LegSpec extends SpecValue<Boolean> implements ISpecType
 	public SpecValue<?> parse(String s)
 	{
 		if (s == null)
-			return new LegSpec(true);
+			return new GigaMaxSpec(true);
 		
 		try
 		{
-			return new LegSpec(Boolean.parseBoolean(s));
+			return new GigaMaxSpec(Boolean.parseBoolean(s));
 		}
 		catch (Exception e)
 		{
-			return new LegSpec(true);
+			return new GigaMaxSpec(true);
 		}
 	}
 
 	@Override
 	public SpecValue<?> readFromNBT(NBTTagCompound nbt)
 	{
-		return new LegSpec(nbt.getBoolean(this.key));
+		return new GigaMaxSpec(nbt.getBoolean(this.key));
 	}
 
 	@Override
@@ -76,20 +73,14 @@ public class LegSpec extends SpecValue<Boolean> implements ISpecType
 	public void apply(Pokemon pokemon)
 	{
 		if (this.value){
-			List<EnumSpecies> species = Lists.newArrayList(EnumSpecies.LEGENDARY_ENUMS);
-            species.remove(EnumSpecies.Phione);
-			pokemon.setSpecies(CollectionHelper.getRandomElement(species),true);
-			pokemon.initialize(EnumInitializeCategory.INTRINSIC_FORCEFUL);
-		}else {
-			pokemon.setSpecies(EnumSpecies.randomPoke(false),true);
-			pokemon.initialize(EnumInitializeCategory.INTRINSIC_FORCEFUL,EnumInitializeCategory.SPECIES);
+            pokemon.setGigantamaxFactor(true);
 		}
 	}
 
 	@Override
 	public SpecValue<Boolean> clone()
 	{
-		return new LegSpec(value);
+		return new GigaMaxSpec(value);
 	}
 
 	@Override
@@ -108,9 +99,8 @@ public class LegSpec extends SpecValue<Boolean> implements ISpecType
 	@Override
 	public boolean matches(Pokemon pokemon)
 	{
-        List<String> legendary = EnumSpecies.legendaries;
-        legendary.remove("Phione");
-		return legendary.contains(pokemon.getSpecies().getPokemonName());
-		//return (EnumSpecies.legendaries.contains(pokemon.getSpecies().getPokemonName())  == this.value);
+        return false;
 	}
+
+
 }
