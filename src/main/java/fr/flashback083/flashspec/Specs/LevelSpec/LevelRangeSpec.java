@@ -94,13 +94,20 @@ public class LevelRangeSpec extends SpecValue<String> implements ISpecType {
 
     @Override
     public boolean matches(EntityPixelmon entityPixelmon) {
-       return false;
+        return matches(entityPixelmon.getPokemonData());
     }
 
 
     @Override
     public boolean matches(Pokemon pokemon) {
-        return false;
+        int level = pokemon.getLevel();
+        int x = Integer.parseInt(this.value.split("-")[0]);
+        int y = Integer.parseInt(this.value.split("-")[1]);
+        //lvlr:x-y
+        //lvlr:10-20
+        //poke level = 15
+        //donc il doit être >= x et <= y
+        return level >= x && level <= y;
     }
 
     @Override

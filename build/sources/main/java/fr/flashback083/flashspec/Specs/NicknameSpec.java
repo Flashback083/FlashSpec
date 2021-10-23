@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
-public class NicknameSpec extends SpecValue implements ISpecType {
+public class NicknameSpec extends SpecValue<String> implements ISpecType {
 
     public NicknameSpec(String value) {
         super("nickname", value);
@@ -41,7 +41,7 @@ public class NicknameSpec extends SpecValue implements ISpecType {
     }
 
     public SpecValue clone() {
-        return new NicknameSpec((String)this.value);
+        return new NicknameSpec(this.value);
     }
 
     public NicknameSpec readFromNBT(NBTTagCompound nbt) {
@@ -61,12 +61,12 @@ public class NicknameSpec extends SpecValue implements ISpecType {
     }
 
     public void apply(EntityPixelmon pokemon) {
-        String nick = ((String)this.value).replace("$pokemon$", pokemon.getSpecies().name);
+        String nick = (this.value).replace("$pokemon$", pokemon.getSpecies().name);
         pokemon.getPokemonData().setNickname(nick);
     }
 
     public void apply(Pokemon pokemon) {
-        String nick = ((String)this.value).replace("$pokemon$", pokemon.getSpecies().name);
+        String nick = (this.value).replace("$pokemon$", pokemon.getSpecies().name);
         pokemon.setNickname(nick);
     }
 }

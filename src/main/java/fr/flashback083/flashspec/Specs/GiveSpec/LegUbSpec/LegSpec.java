@@ -108,9 +108,9 @@ public class LegSpec extends SpecValue<Boolean> implements ISpecType
 	@Override
 	public boolean matches(Pokemon pokemon)
 	{
-        List<String> legendary = EnumSpecies.legendaries;
-        legendary.remove("Phione");
-		return legendary.contains(pokemon.getSpecies().getPokemonName());
+        List<EnumSpecies> legendary = Lists.newArrayList(EnumSpecies.legendaries);
+        legendary.remove(EnumSpecies.Phione);
+		return legendary.contains(pokemon.getSpecies());
 		//return (EnumSpecies.legendaries.contains(pokemon.getSpecies().getPokemonName())  == this.value);
 	}
 }

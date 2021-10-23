@@ -12,6 +12,7 @@ import com.pixelmonmod.pixelmon.util.helpers.CollectionHelper;
 import net.minecraft.nbt.NBTTagCompound;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class LegUbSpec extends SpecValue<Boolean> implements ISpecType {
@@ -66,12 +67,11 @@ public class LegUbSpec extends SpecValue<Boolean> implements ISpecType {
 
     public void apply(Pokemon pokemon) {
         if (this.value) {
-            ArrayList<String> list = Lists.newArrayList();
+            ArrayList<EnumSpecies> list = Lists.newArrayList();
             list.addAll(EnumSpecies.ultrabeasts);
-            for (EnumSpecies legs : EnumSpecies.LEGENDARY_ENUMS){
-                list.add(legs.getPokemonName());
-            }
-            EnumSpecies p = EnumSpecies.getFromNameAnyCase(CollectionHelper.getRandomElement(list));
+            list.addAll(Arrays.asList(EnumSpecies.LEGENDARY_ENUMS));
+
+            EnumSpecies p = CollectionHelper.getRandomElement(list);
             pokemon.setSpecies(p,true);
             //PokemonSpec spec = PokemonSpec.from(p);
             //spec.apply(pokemon);
@@ -94,7 +94,7 @@ public class LegUbSpec extends SpecValue<Boolean> implements ISpecType {
     }
 
     public boolean matches(Pokemon pokemon) {
-       return (EnumSpecies.ultrabeasts.contains(pokemon.getSpecies().getPokemonName()) == this.value) ||  (EnumSpecies.legendaries.contains(pokemon.getSpecies().getPokemonName()) == this.value);
+       return (EnumSpecies.ultrabeasts.contains(pokemon.getSpecies()) == this.value) ||  (EnumSpecies.legendaries.contains(pokemon.getSpecies()) == this.value);
     }
 
     public SpecValue clone() {
@@ -103,15 +103,15 @@ public class LegUbSpec extends SpecValue<Boolean> implements ISpecType {
 
     private EnumSpecies randomPokeNonLegNonUB(){
 
-        ArrayList<String> list = Lists.newArrayList(EnumSpecies.getNameList());
+        ArrayList<EnumSpecies> list = Lists.newArrayList(EnumSpecies.values());
         EnumSpecies.legendaries.forEach(list::remove);
         EnumSpecies.ultrabeasts.forEach(list::remove);
-        String pokemon = CollectionHelper.getRandomElement(list);
+        String pokemon = CollectionHelper.getRandomElement(list).getPokemonName();
         EnumSpecies s = EnumSpecies.getFromName(pokemon).get();
         boolean isValid = false;
         while(!isValid) {
             if (!PixelmonConfig.isGenerationEnabled(s.getGeneration())) {
-                pokemon = CollectionHelper.getRandomElement(list);
+                pokemon = CollectionHelper.getRandomElement(list).getPokemonName();
                 s = EnumSpecies.getFromName(pokemon).get();
             }else {
                 isValid = true;

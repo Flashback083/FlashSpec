@@ -90,13 +90,17 @@ public class isBossSpec extends SpecValue<Boolean> implements ISpecType
 	@Override
 	public boolean matches(EntityPixelmon pixelmon)
 	{
-		return pixelmon.isBossPokemon();
+		return pixelmon.isBossPokemon() == value;
 	}
 
 
 	@Override
 	public boolean matches(Pokemon pokemon)
 	{
-		return false;
+        if (pokemon.getPixelmonIfExists() != null){
+            return matches(pokemon.getPixelmonIfExists());
+        }else{
+            return !value;
+        }
 	}
 }

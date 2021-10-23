@@ -6,7 +6,10 @@ import com.google.gson.GsonBuilder;
 import com.pixelmonmod.pixelmon.Pixelmon;
 import com.pixelmonmod.pixelmon.api.pokemon.PokemonSpec;
 import com.pixelmonmod.pixelmon.api.pokemon.SpecFlag;
+import com.pixelmonmod.pixelmon.battles.BattleRegistry;
+import com.pixelmonmod.pixelmon.enums.EnumRibbonType;
 import com.pixelmonmod.pixelmon.enums.EnumSpecies;
+import com.pixelmonmod.pixelmon.enums.battle.EnumBattleType;
 import fr.flashback083.flashspec.Specs.*;
 import fr.flashback083.flashspec.Specs.EvsSpec.*;
 import fr.flashback083.flashspec.Specs.GiveSpec.LegUbSpec.LegGen1Spec;
@@ -54,7 +57,6 @@ import java.util.List;
         modid = FlashSpec.MOD_ID,
         name = FlashSpec.MOD_NAME,
         version = FlashSpec.VERSION,
-        serverSideOnly = true,
         dependencies = "required-after:pixelmon",
         acceptableRemoteVersions = "*"
 )
@@ -62,7 +64,7 @@ public class FlashSpec {
 
     public static final String MOD_ID = "flashspec";
     public static final String MOD_NAME = "FlashSpec";
-    public static final String VERSION = "2.6.4";
+    public static final String VERSION = "2.7.0";
 
 
     public static File speclist;
@@ -341,6 +343,11 @@ public class FlashSpec {
         logger.info("[FlashSpec] Registered gigamax spec");
 
 
+        PokemonSpec.extraSpecTypes.add(new SpecFlag("isFromFishing"));
+        logger.info("[FlashSpec] Registered isFromFishing spec");
+
+        PokemonSpec.extraSpecTypes.add(new SpecFlag("unpcable"));
+        logger.info("[FlashSpec] Registered unpcable spec");
 
         if (config.getCategory("General").get("specflags").getStringList().length>0){
             ArrayList<String> list = Lists.newArrayList(config.getCategory("General").get("specflags").getStringList());
@@ -349,6 +356,7 @@ public class FlashSpec {
                 logger.info("[FlashSpec] Registered custom specflag " + spec);
             });
         }
+
 
 
 

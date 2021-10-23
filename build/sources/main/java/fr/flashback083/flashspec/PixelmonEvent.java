@@ -11,6 +11,7 @@ import com.pixelmonmod.pixelmon.api.events.pokemon.SetNicknameEvent;
 import com.pixelmonmod.pixelmon.api.events.spawning.PixelmonSpawnerEvent;
 import com.pixelmonmod.pixelmon.api.events.spawning.SpawnEvent;
 import com.pixelmonmod.pixelmon.api.pokemon.PokemonSpec;
+import com.pixelmonmod.pixelmon.api.world.WorldTime;
 import com.pixelmonmod.pixelmon.battles.BattleRegistry;
 import com.pixelmonmod.pixelmon.battles.controller.participants.*;
 import com.pixelmonmod.pixelmon.config.PixelmonItems;
@@ -30,6 +31,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.text.TextComponentString;
+import net.minecraft.world.World;
 import net.minecraft.world.storage.WorldInfo;
 import net.minecraftforge.common.config.ConfigCategory;
 import net.minecraftforge.event.CommandEvent;
@@ -180,8 +182,10 @@ public class PixelmonEvent {
                 EntityPixelmon pixelmon = event.pokemon;
                 if (!pixelmon.getPokemonData().hasSpecFlag("aggro")) return;
                 if (pixelmon.battleController != null) return;
-                EntityPlayerMP player = (EntityPlayerMP) pixelmon.getEntityWorld().getClosestPlayerToEntity(pixelmon, 5.0);
+                int range = FlashSpec.config.getCategory("General").get("aggrorange").getInt();
+                EntityPlayerMP player = (EntityPlayerMP) pixelmon.getEntityWorld().getClosestPlayerToEntity(pixelmon, range);
                 if (player == null) return;
+                if (player.isCreative()) return;
                 if (BattleRegistry.getBattle(player) != null) return;
                 PlayerPartyStorage party = Pixelmon.storageManager.getParty(player);
                 if (party.countAblePokemon() == 0) return;
@@ -202,7 +206,8 @@ public class PixelmonEvent {
              EntityPixelmon wildpokemon = (EntityPixelmon) event.bc.otherParticipant(playerParticipant).getEntity();
              EntityPlayerMP player = (EntityPlayerMP) playerParticipant.getEntity();
              if (wildpokemon != null && wildpokemon.getPokemonData().hasSpecFlag("aggro")){
-                 playertime.putIfAbsent(player.getName(),100);
+                 int cooldown = FlashSpec.config.getCategory("General").get("aggrocooldown").getInt() * 20;
+                 playertime.putIfAbsent(player.getName(),cooldown);
              }
          }
     }
@@ -354,8 +359,8 @@ public class PixelmonEvent {
     public void onSpawnerBlock(PixelmonSpawnerEvent event){
         List<String> spec = Lists.newArrayList(event.spec.args);
         if (spec.contains("tday") || spec.contains("tnight")  || spec.contains("tdusk")  || spec.contains("tdawn")){
-            long age = event.spawner.getWorld().getWorldTime() % 24000;
-            if (!canSpawnMCWeather(spec,age)){
+            //long age = event.spawner.getWorld().getWorldTime() % 24000;
+            if (!canSpawnMCWeather(spec,event.spawner.getWorld())){
                 event.setCanceled(true);
             }
         }
@@ -376,7 +381,7 @@ public class PixelmonEvent {
         });
     }
 
-    private boolean canSpawnMCWeather(List<String> spec,long agemodulo){
+    /*private boolean canSpawnMCWeather(List<String> spec,long agemodulo){
         if (spec.contains("tday") && agemodulo < 12000){
             return true;
         }else if (spec.contains("tnight") && agemodulo >= 13000 && agemodulo <=23000){
@@ -384,8 +389,17 @@ public class PixelmonEvent {
         }else if (spec.contains("tdusk") && agemodulo >= 12000 && agemodulo < 13000 ){
             return true;
         }else return spec.contains("tdawn") && agemodulo > 23000;
-    }
+    }*/
 
+    private boolean canSpawnMCWeather(List<String> spec, World world){
+        if (spec.contains("tday") && WorldTime.getCurrent(world).contains(WorldTime.DAY)){
+            return true;
+        }else if (spec.contains("tnight") && WorldTime.getCurrent(world).contains(WorldTime.NIGHT)){
+            return true;
+        }else if (spec.contains("tdusk")&& WorldTime.getCurrent(world).contains(WorldTime.DUSK)){
+            return true;
+        }else return spec.contains("tdawn") && WorldTime.getCurrent(world).contains(WorldTime.DAWN);
+    }
 
     private boolean canSpawnWeather(List<String> spec, WorldInfo worldInfo){
         if (spec.contains("rain") && worldInfo.isRaining()){
@@ -514,21 +528,6 @@ public class PixelmonEvent {
                    event.setCanceled(true);
                }
            }
-           /*if (pix.getPokemonData().hasSpecFlag("uncatchable")){
-               if (!pix.getPokemonData().getBonusStats().preventsCapture()){
-                   pix.getPokemonData().getBonusStats().setPreventsCapture(true);
-               }
-               if (pix.getPokemonData().getNickname() == null){
-                   String nickname = pix.getNickname();
-                   pix.getPokemonData().setNickname(stripColor(lang.get("uncatchabletag").getString().replace("%pokemonname%",pix.getLocalizedName()).replaceAll("%nickname%",nickname)));
-               }
-           }
-           if (pix.getPokemonData().hasSpecFlag("unbattleable")){
-               if (pix.getPokemonData().getNickname() == null){
-                   String nickname = pix.getNickname();
-                   pix.getPokemonData().setNickname(stripColor(lang.get("unbattleabletag").getString().replace("%pokemonname%",pix.getLocalizedName()).replaceAll("%nickname%",nickname)));
-               }
-           }*/
        }
     }
 
@@ -621,6 +620,9 @@ public class PixelmonEvent {
             Calendar calendar = Calendar.getInstance();
             event.getPokemon().getPokemonData().getPersistentData().setLong("fdate",calendar.getTimeInMillis());
         }
+        if (event.getPokemon().getPokemonData().hasSpecFlag("isFromFishing")){
+            event.getPokemon().getPokemonData().removeSpecFlag("isFromFishing");
+        }
     }
 
     //Despawnable spec
@@ -648,13 +650,55 @@ public class PixelmonEvent {
                 if (!pixelmon.getPokemonData().getBonusStats().preventsCapture()){
                     pixelmon.getPokemonData().getBonusStats().setPreventsCapture(true);
                 }
-                Task.builder().execute(() -> pixelmon.getPokemonData().setNickname(translateAlternateColorCodes('&',lang.get("uncatchabletag").getString().replace("%pokemonname%",pixelmon.getLocalizedName()).replaceAll("%nickname%",nickname)))).delay(1).build();
+                Thread offthread = new Thread(() -> Task.builder().execute(() -> pixelmon.getPokemonData().setNickname(translateAlternateColorCodes('&',lang.get("uncatchabletag").getString().replace("%pokemonname%",pixelmon.getLocalizedName()).replaceAll("%nickname%",nickname)))).delay(1).build());
+                offthread.start();
             }
             if (pixelmon.getPokemonData().hasSpecFlag("unbattleable")){
-                Task.builder().execute(() -> pixelmon.getPokemonData().setNickname(translateAlternateColorCodes('&',lang.get("unbattleabletag").getString().replace("%pokemonname%",pixelmon.getLocalizedName()).replaceAll("%nickname%",nickname)))).delay(1).build();
+                Thread offthread = new Thread(() -> Task.builder().execute(() -> pixelmon.getPokemonData().setNickname(translateAlternateColorCodes('&',lang.get("unbattleabletag").getString().replace("%pokemonname%",pixelmon.getLocalizedName()).replaceAll("%nickname%",nickname)))).delay(1).build());
+                offthread.start();
             }
         }
     }
+
+    @SubscribeEvent
+    public void onSpawnFishing(FishingEvent.Reel event){
+        if (event.isPokemon()){
+            if (event.optEntity.isPresent()){
+                EntityPixelmon pixelmon = (EntityPixelmon) event.optEntity.get();
+                pixelmon.getPokemonData().addSpecFlag("isFromFishing");
+            }
+        }
+    }
+
+    /*@SubscribeEvent
+    public void onChangeStorage(ChangeStorageEvent event){
+        if (event.pokemon.hasSpecFlag("unpcable") && event.newPosition.box >= 0 && event.oldPosition.box == -1) {
+            System.out.println("ok cancel");
+            PlayerPartyStorage partyStorage = Pixelmon.storageManager.getParty(event.pokemon.getOwnerPlayer());
+            PCStorage pcStorage = Pixelmon.storageManager.getPCForPlayer(event.pokemon.getOwnerPlayer());
+            Pokemon newtoundopc = pcStorage.get(event.newPosition);
+            Pokemon newtoundoparty = partyStorage.get(event.oldPosition);
+            new Task.Builder().delay(1).execute(() -> {
+                event.pokemon.getOwnerPlayer().sendMessage(new TextComponentString("ovnroifrf"));
+                pcStorage.set(event.newPosition,newtoundoparty);
+                partyStorage.set(event.oldPosition,newtoundopc);
+            }).build();
+
+           // tryToSwap(event.newStorage,event.newPosition,event.oldStorage,event.oldPosition);
+        }
+    }*/
+
+    /*protected void tryToSwap(PokemonStorage from, StoragePosition fromPosition, PokemonStorage to, StoragePosition toPosition) {
+        Pokemon fromPokemon = from.get(fromPosition);
+        Pokemon toPokemon = to.get(toPosition);
+        if ((fromPokemon == null || !fromPokemon.isInRanch()) && (toPokemon == null || !toPokemon.isInRanch())) {
+            StoragePosition fromOriginalPosition = fromPokemon == null ? fromPosition : fromPokemon.getPosition();
+            StoragePosition toOriginalPosition = toPokemon == null ? toPosition : toPokemon.getPosition();
+            if (to.transfer(from, fromPosition, toPosition)) {
+                Pixelmon.network.sendToServer(new ServerSwap(fromOriginalPosition, fromPokemon, toOriginalPosition, toPokemon));
+            }
+        }
+    }*/
 
 
 }

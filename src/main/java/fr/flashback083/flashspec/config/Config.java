@@ -8,6 +8,8 @@ public class Config {
 
     private static final String CATEGORY_GENERAL = "General";
     private static String[] specflags = {};
+    private static int aggrorange = 5;
+    private static int aggrocooldown = 5;
 
     //-----------------------------------------------------//
   
@@ -30,6 +32,9 @@ public class Config {
     private static void initGeneralConfig(Configuration cfg,String category) {
         cfg.addCustomCategoryComment(category, "General configuration");
         specflags = cfg.getStringList("specflags", category, specflags, "List of spec flag you wanna create. Be carefull that the flag isnt already used by another plugin!");
+        aggrorange = cfg.getInt("aggrorange",category,aggrorange,1,Integer.MAX_VALUE,"Set the range for aggro spec");
+        aggrocooldown = cfg.getInt("aggrocooldown",category,aggrocooldown,1,Integer.MAX_VALUE,"Set the cooldown before player can be aggro again with aggro spec");
+
     }
     
 

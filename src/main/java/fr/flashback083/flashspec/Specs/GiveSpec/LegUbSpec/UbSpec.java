@@ -76,7 +76,7 @@ public class UbSpec extends SpecValue<Boolean> implements ISpecType
 		//PokemonSpec spec;
 		if (this.value){
 			//spec = PokemonSpec.from(CollectionHelper.getRandomElement(EnumSpecies.ultrabeasts));
-			pokemon.setSpecies(EnumSpecies.getFromNameAnyCase(CollectionHelper.getRandomElement(EnumSpecies.ultrabeasts)), true);
+			pokemon.setSpecies(CollectionHelper.getRandomElement(EnumSpecies.ultrabeasts), true);
 			pokemon.initialize(EnumInitializeCategory.INTRINSIC_FORCEFUL);
 		}else {
 			//spec = PokemonSpec.from(randomPokeNoUb().getPokemonName());
@@ -113,21 +113,21 @@ public class UbSpec extends SpecValue<Boolean> implements ISpecType
 	@Override
 	public boolean matches(Pokemon pokemon)
 	{
-		return (EnumSpecies.ultrabeasts.contains(pokemon.getSpecies().getPokemonName())  == this.value);
+		return (EnumSpecies.ultrabeasts.contains(pokemon.getSpecies())  == this.value);
 	}
 
 
 	private EnumSpecies randomPokeNoUb(){
 
-		ArrayList<String> list = Lists.newArrayList(EnumSpecies.getNameList());
+		ArrayList<EnumSpecies> list = Lists.newArrayList(EnumSpecies.values());
 		EnumSpecies.ultrabeasts.forEach(list::remove);
-		String pokemon = CollectionHelper.getRandomElement(list);
+		String pokemon = CollectionHelper.getRandomElement(list).getPokemonName();
 		EnumSpecies s = EnumSpecies.getFromName(pokemon).get();
 		boolean isValid = false;
 		while(!isValid) {
 			if (!PixelmonConfig.isGenerationEnabled(s.getGeneration())) {
 				isValid = false;
-				pokemon = CollectionHelper.getRandomElement(list);
+				pokemon = CollectionHelper.getRandomElement(list).getPokemonName();
 				s = EnumSpecies.getFromName(pokemon).get();
 			}else {
 				isValid = true;
