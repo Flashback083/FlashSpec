@@ -17,6 +17,7 @@ public class Lang {
     private static String unmegaoutmsg = "&cYou can't Mega evolve this %pokemonname% outside a battle!";
     private static String unnickablemsg = "&cYou can't change the name of this %pokemonname%!";
     private static String unhatchablemsg = "&cYou can't hatch this %pokemonname% with the hatch command!";
+    private static String cantbreedmore = "&cYou can't breed this %pokemonname% anymore!";
 
     //-----------------------------------------------------//
   
@@ -48,7 +49,8 @@ public class Lang {
         unmegaoutmsg = cfg.getString("unmegaoutmsg", CATEGORY_LANG, unmegaoutmsg, "Message when player try to mega evo a non-mega evo able pokemon. %pokemonname%");
         unnickablemsg = cfg.getString("unnickablemsg", CATEGORY_LANG, unnickablemsg, "Message when player try to nick a non-unnickable pokemon. %pokemonname%");
         unhatchablemsg = cfg.getString("unhatchablemsg", CATEGORY_LANG, unhatchablemsg, "Message when player try to hatch a non-hatchable pokemon. %pokemonname%");
- }
+        cantbreedmore = cfg.getString("cantbreedmore", CATEGORY_LANG, cantbreedmore, "Message when player try to breed with a pokemon which have already used all of their breed amount. %pokemonname%");
+    }
     
 
     

@@ -70,7 +70,7 @@ public class AbsSpec extends SpecValue<String> implements ISpecType {
 
     @Override
     public boolean matches(EntityPixelmon entityPixelmon) {
-        return  entityPixelmon.getPokemonData().getAbilitySlot() == Integer.parseInt(this.value);
+        return entityPixelmon.getPokemonData().getAbilitySlot() == Integer.parseInt(this.value);
     }
 
     @Override

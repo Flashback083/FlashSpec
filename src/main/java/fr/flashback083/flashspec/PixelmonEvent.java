@@ -43,7 +43,6 @@ import net.minecraftforge.fml.common.gameevent.TickEvent;
 import java.time.LocalTime;
 import java.util.*;
 
-import static fr.flashback083.flashspec.TimerApi.removeExpiredTasks;
 import static fr.flashback083.flashspec.TimerApi.tasks;
 import static fr.flashback083.flashspec.config.ChatColor.translateAlternateColorCodes;
 import static fr.flashback083.flashspec.config.Functions.getOrder;
@@ -227,13 +226,39 @@ public class PixelmonEvent {
                     }
                 }
             }
-        }else{
-            for(Task task : new ArrayList<>(tasks)){
+        }else {
+            if (!tasks.isEmpty()) {
+                List<Task> keys = new ArrayList<>(tasks);
+                for (Task task : keys) {
+                    if (task.isExpired()) {
+                        tasks.remove(task);
+                    } else {
+                        task.tick();
+                    }
+                }
+            }
+            /*for (Task task : new ArrayList<>(tasks)) {
                 task.tick();
             }
-            removeExpiredTasks();
+            removeExpiredTasks();*/
         }
-    }
+            //Iterator<Task> iterator = tasks.iterator();
+            /*List<Task> tasksl = Lists.newArrayList();
+            tasks.iterator().forEachRemaining(tasksl::add);
+            for (Task task : tasksl) {
+                task.tick();
+                if (task.isExpired()){
+                    tasks.remove(task);
+                }
+            }*/
+            /*while (iterator.hasNext()) {
+                Task task = iterator.next();
+                task.tick();
+                if (task.isExpired()) {
+                    iterator.remove();
+                }
+            }*/
+        }
 
 
     //Untrashable & Undeleteable spec
@@ -699,6 +724,33 @@ public class PixelmonEvent {
             }
         }
     }*/
+
+    @SubscribeEvent
+    public void onBreedEvent(BreedEvent.MakeEgg event){
+        if (event.parent1.getPersistentData().hasKey("countbreed")){
+            int count = event.parent1.getPersistentData().getInteger("countbreed");
+            if (count == 0){
+                event.setCanceled(true);
+                if (event.getEgg().getOwnerPlayer() != null){
+                    event.getEgg().getOwnerPlayer().sendMessage(new TextComponentString(translateAlternateColorCodes('&',lang.get("cantbreedmore").getString().replace("%pokemonname%",event.parent1.getLocalizedName()))));
+                }
+            }else{
+                event.parent1.getPersistentData().setInteger("countbreed",count-1);
+            }
+            return;
+        }
+        if (event.parent2.getPersistentData().hasKey("countbreed")){
+            int count = event.parent2.getPersistentData().getInteger("countbreed");
+            if (count == 0){
+                event.setCanceled(true);
+                if (event.getEgg().getOwnerPlayer() != null){
+                    event.getEgg().getOwnerPlayer().sendMessage(new TextComponentString(translateAlternateColorCodes('&',lang.get("cantbreedmore").getString().replace("%pokemonname%",event.parent2.getLocalizedName()))));
+                }
+            }else{
+                event.parent2.getPersistentData().setInteger("countbreed",count-1);
+            }
+        }
+    }
 
 
 }

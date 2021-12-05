@@ -6,7 +6,6 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -16,6 +15,7 @@ public class Functions {
 
     private static final String regex = "&(?=[0-9a-ff-or])";
     private static final Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
+
 
     /*public static String getStringColored(String msg){
         return msg.replaceAll("&4","§4")

@@ -121,14 +121,11 @@ public class UbSpec extends SpecValue<Boolean> implements ISpecType
 
 		ArrayList<EnumSpecies> list = Lists.newArrayList(EnumSpecies.values());
 		EnumSpecies.ultrabeasts.forEach(list::remove);
-		String pokemon = CollectionHelper.getRandomElement(list).getPokemonName();
-		EnumSpecies s = EnumSpecies.getFromName(pokemon).get();
+		EnumSpecies s = CollectionHelper.getRandomElement(list);
 		boolean isValid = false;
 		while(!isValid) {
 			if (!PixelmonConfig.isGenerationEnabled(s.getGeneration())) {
-				isValid = false;
-				pokemon = CollectionHelper.getRandomElement(list).getPokemonName();
-				s = EnumSpecies.getFromName(pokemon).get();
+				s = CollectionHelper.getRandomElement(list);
 			}else {
 				isValid = true;
 			}

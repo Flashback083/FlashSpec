@@ -18,7 +18,6 @@ public class GsonUtils {
     }
 
 
-
     public static JsonObject readJson(){
         try (Reader reader = new InputStreamReader(new FileInputStream(FlashSpec.speclist), StandardCharsets.UTF_8)) {
             JsonObject data = FlashSpec.gson.fromJson(reader, JsonObject.class);

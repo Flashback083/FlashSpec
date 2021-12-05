@@ -66,7 +66,8 @@ public class LegUbSpec extends SpecValue<Boolean> implements ISpecType {
         if (this.value) {
             ArrayList<EnumSpecies> list = Lists.newArrayList();
             list.addAll(EnumSpecies.ultrabeasts);
-            list.addAll(Arrays.asList(EnumSpecies.LEGENDARY_ENUMS));
+            list.addAll(EnumSpecies.legendaries);
+            //list.addAll(Arrays.asList(EnumSpecies.LEGENDARY_ENUMS));
             EnumSpecies p = CollectionHelper.getRandomElement(list);
             pokemon.setSpecies(p,true);
             pokemon.initialize(EnumInitializeCategory.INTRINSIC_FORCEFUL);
@@ -78,7 +79,7 @@ public class LegUbSpec extends SpecValue<Boolean> implements ISpecType {
             //pokemon.setSpecies(EnumSpecies.getFromName(p).get());
         } else {
             pokemon.setSpecies(randomPokeNonLegNonUB(),true);
-            pokemon.initialize(EnumInitializeCategory.INTRINSIC_FORCEFUL,EnumInitializeCategory.SPECIES);
+            //pokemon.initialize(EnumInitializeCategory.INTRINSIC_FORCEFUL,EnumInitializeCategory.SPECIES);
             //PokemonSpec spec = PokemonSpec.from(randomPokeNonLegNonUB().getPokemonName());
             //spec.apply(pokemon);
 
@@ -102,15 +103,13 @@ public class LegUbSpec extends SpecValue<Boolean> implements ISpecType {
     private EnumSpecies randomPokeNonLegNonUB(){
 
         ArrayList<EnumSpecies> list = Lists.newArrayList(EnumSpecies.values());
-        EnumSpecies.legendaries.forEach(list::remove);
         EnumSpecies.ultrabeasts.forEach(list::remove);
-        String pokemon = CollectionHelper.getRandomElement(list).getPokemonName();
-        EnumSpecies s = EnumSpecies.getFromName(pokemon).get();
+        EnumSpecies.legendaries.forEach(list::remove);
+        EnumSpecies s = CollectionHelper.getRandomElement(list);
         boolean isValid = false;
         while(!isValid) {
             if (!PixelmonConfig.isGenerationEnabled(s.getGeneration())) {
-                pokemon = CollectionHelper.getRandomElement(list).getPokemonName();
-                s = EnumSpecies.getFromName(pokemon).get();
+                s = CollectionHelper.getRandomElement(list);
             }else {
                 isValid = true;
             }

@@ -6,20 +6,18 @@ import com.pixelmonmod.pixelmon.api.pokemon.SpecValue;
 import com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon;
 import net.minecraft.nbt.NBTTagCompound;
 
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class AuraSpec extends SpecValue<String> implements ISpecType {
 
-        //public String value;
-        //public List<String> keys;
 
         public AuraSpec(String value) {
                 super("aura", value);
         }
 
         public List<String> getKeys() {
-                return Arrays.asList("aura");
+                return Collections.singletonList("aura");
         }
 
         public Class getSpecClass() {

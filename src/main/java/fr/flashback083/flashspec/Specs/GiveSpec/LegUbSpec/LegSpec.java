@@ -79,12 +79,11 @@ public class LegSpec extends SpecValue<Boolean> implements ISpecType
 			List<EnumSpecies> species = Lists.newArrayList(EnumSpecies.LEGENDARY_ENUMS);
             species.remove(EnumSpecies.Phione);
 			pokemon.setSpecies(CollectionHelper.getRandomElement(species),true);
-			pokemon.initialize(EnumInitializeCategory.INTRINSIC_FORCEFUL);
-		}else {
+        }else {
 			pokemon.setSpecies(EnumSpecies.randomPoke(false),true);
-			pokemon.initialize(EnumInitializeCategory.INTRINSIC_FORCEFUL,EnumInitializeCategory.SPECIES);
-		}
-	}
+        }
+        pokemon.initialize(EnumInitializeCategory.INTRINSIC_FORCEFUL,EnumInitializeCategory.SPECIES);
+    }
 
 	@Override
 	public SpecValue<Boolean> clone()
@@ -110,7 +109,7 @@ public class LegSpec extends SpecValue<Boolean> implements ISpecType
 	{
         List<EnumSpecies> legendary = Lists.newArrayList(EnumSpecies.legendaries);
         legendary.remove(EnumSpecies.Phione);
-		return legendary.contains(pokemon.getSpecies());
+		return legendary.contains(pokemon.getSpecies()) == this.value;
 		//return (EnumSpecies.legendaries.contains(pokemon.getSpecies().getPokemonName())  == this.value);
 	}
 }

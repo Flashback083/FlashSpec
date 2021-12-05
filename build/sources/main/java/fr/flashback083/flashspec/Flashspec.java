@@ -4,18 +4,16 @@ import com.google.common.collect.Lists;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.pixelmonmod.pixelmon.Pixelmon;
+import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
 import com.pixelmonmod.pixelmon.api.pokemon.PokemonSpec;
 import com.pixelmonmod.pixelmon.api.pokemon.SpecFlag;
-import com.pixelmonmod.pixelmon.battles.BattleRegistry;
-import com.pixelmonmod.pixelmon.enums.EnumRibbonType;
 import com.pixelmonmod.pixelmon.enums.EnumSpecies;
-import com.pixelmonmod.pixelmon.enums.battle.EnumBattleType;
 import fr.flashback083.flashspec.Specs.*;
 import fr.flashback083.flashspec.Specs.EvsSpec.*;
-import fr.flashback083.flashspec.Specs.GiveSpec.LegUbSpec.LegGen1Spec;
 import fr.flashback083.flashspec.Specs.GiveSpec.LegUbSpec.LegSpec;
 import fr.flashback083.flashspec.Specs.GiveSpec.LegUbSpec.LegUbSpec;
 import fr.flashback083.flashspec.Specs.GiveSpec.LegUbSpec.UbSpec;
+import fr.flashback083.flashspec.Specs.GiveSpec.evospec.FirstEvoSpec;
 import fr.flashback083.flashspec.Specs.GiveSpec.evospec.LastEvoSpec;
 import fr.flashback083.flashspec.Specs.IvsSpec.*;
 import fr.flashback083.flashspec.Specs.IvsSpec.changeStats.*;
@@ -34,6 +32,7 @@ import fr.flashback083.flashspec.cmds.FlashSpecCallback;
 import fr.flashback083.flashspec.cmds.FlashSpecCmd;
 import fr.flashback083.flashspec.config.Config;
 import fr.flashback083.flashspec.config.Lang;
+import fr.flashback083.flashspec.config.SpecGroup;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.MinecraftServer;
 import net.minecraftforge.common.MinecraftForge;
@@ -51,7 +50,10 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+
+import static fr.flashback083.flashspec.config.GsonUtilsSpecGroup.getSpecGroupList;
 
 @Mod(
         modid = FlashSpec.MOD_ID,
@@ -64,10 +66,11 @@ public class FlashSpec {
 
     public static final String MOD_ID = "flashspec";
     public static final String MOD_NAME = "FlashSpec";
-    public static final String VERSION = "2.7.0";
+    public static final String VERSION = "2.7.1";
 
 
     public static File speclist;
+    public static File customspecgroup;
     public static Gson gson = new GsonBuilder().setPrettyPrinting().create();
     public static Configuration lang;
     public static Configuration config;
@@ -102,6 +105,8 @@ public class FlashSpec {
     @Mod.Instance(MOD_ID)
     public static FlashSpec INSTANCE;
 
+    public static HashMap<String,List<Pokemon>> getPokeSpecGroup = new HashMap<>();
+
     /**
      * This is the first initialization event. Register tile entities here.
      * The registry events below will have fired prior to entry to this method.
@@ -119,6 +124,13 @@ public class FlashSpec {
             start.write(json);
             start.close();
         }
+        customspecgroup = new File(directory, "customspecgroup.json");
+        check = customspecgroup.exists();
+        if (!check) {
+            PrintWriter start = new PrintWriter(customspecgroup,"UTF-8");
+            start.write(gson.toJson(new SpecGroup(new HashMap<>())));
+            start.close();
+        }
         lang = new Configuration(new File(directory.getPath(), "lang.cfg"));
         Lang.readConfig();
         config = new Configuration(new File(directory.getPath(), "config.cfg"));
@@ -129,67 +141,67 @@ public class FlashSpec {
         PokemonSpec.extraSpecTypes.add(new Move2Spec(Lists.newArrayList("move2","m2"), null));
         PokemonSpec.extraSpecTypes.add(new Move3Spec(Lists.newArrayList("move3","m3"), null));
         PokemonSpec.extraSpecTypes.add(new Move4Spec(Lists.newArrayList("move4","m4"), null));
-        logger.info("[FlashSpec] Registered move1/move2/move3/move4 spec");
+        //logger.info("[FlashSpec] Registered move1/move2/move3/move4 spec");
         PokemonSpec.extraSpecTypes.add(new HeldItemSpec(Lists.newArrayList("helditem","hi"), null));
-        logger.info("[FlashSpec] Registered helditem spec");
+        //logger.info("[FlashSpec] Registered helditem spec");
         PokemonSpec.extraSpecTypes.add(new LegUbSpec(false));
-        logger.info("[FlashSpec] Registered uborleg spec");
+        //logger.info("[FlashSpec] Registered uborleg spec");
         //PokemonSpec.extraSpecTypes.add(new Type1Spec(Lists.newArrayList("type1"), null));
         //PokemonSpec.extraSpecTypes.add(new Type2Spec(Lists.newArrayList("type2"), null));
         //PokemonSpec.extraSpecTypes.add(new TypeSpec(Lists.newArrayList("type"), null));
         PokemonSpec.extraSpecTypes.add(new AbsSpec(Lists.newArrayList("abs"), null));
-        logger.info("[FlashSpec] Registered abs spec");
+        ////logger.info("[FlashSpec] Registered abs spec");
         PokemonSpec.extraSpecTypes.add(new SpecFlag("unbattleable"));
-        logger.info("[FlashSpec] Registered unbattleable spec");
+        ////logger.info("[FlashSpec] Registered unbattleable spec");
         PokemonSpec.extraSpecTypes.add(new NumIVs(0));
-        logger.info("[FlashSpec] Registered numivs spec");
+        ////logger.info("[FlashSpec] Registered numivs spec");
         PokemonSpec.extraSpecTypes.add(new AISpec(Lists.newArrayList("ai"), null));
-        logger.info("[FlashSpec] Registered ai spec");
+        //logger.info("[FlashSpec] Registered ai spec");
         //PokemonSpec.extraSpecTypes.add(new SpecialTextureSpec(Lists.newArrayList("sptexture"), null));
         PokemonSpec.extraSpecTypes. add(new LegSpec(false));
-        logger.info("[FlashSpec] Registered leg spec");
+        //logger.info("[FlashSpec] Registered leg spec");
         PokemonSpec.extraSpecTypes.add(new UbSpec(false));
-        logger.info("[FlashSpec] Registered ub spec");
+        //logger.info("[FlashSpec] Registered ub spec");
         PokemonSpec.extraSpecTypes.add(new SpecFlag("unevo"));
-        logger.info("[FlashSpec] Registered unevo spec");
+        //logger.info("[FlashSpec] Registered unevo spec");
         PokemonSpec.extraSpecTypes.add(new SpecFlag("unlevel"));
-        logger.info("[FlashSpec] Registered unlevel spec");
+        //logger.info("[FlashSpec] Registered unlevel spec");
         PokemonSpec.extraSpecTypes.add(new SpecFlag("uncatchable"));
-        logger.info("[FlashSpec] Registered uncatchable spec");
+        //logger.info("[FlashSpec] Registered uncatchable spec");
         //PokemonSpec.extraSpecTypes.add(new UncatchableSpec(false));
         PokemonSpec.extraSpecTypes.add(new SpecFlag("aggro"));
-        logger.info("[FlashSpec] Registered aggro spec");
+        //logger.info("[FlashSpec] Registered aggro spec");
         PokemonSpec.extraSpecTypes.add(new LevelSpec(Lists.newArrayList("lvlc","levelc"), null));
-        logger.info("[FlashSpec] Registered levelc spec");
+        //logger.info("[FlashSpec] Registered levelc spec");
         PokemonSpec.extraSpecTypes.add(new SpecFlag("untrashable"));
-        logger.info("[FlashSpec] Registered untrashable spec");
+        //logger.info("[FlashSpec] Registered untrashable spec");
         PokemonSpec.extraSpecTypes.add(new SpecFlag("undeleteable"));
-        logger.info("[FlashSpec] Registered undeleteable spec");
+        //logger.info("[FlashSpec] Registered undeleteable spec");
         PokemonSpec.extraSpecTypes.add(new SpecFlag("unmega"));
-        logger.info("[FlashSpec] Registered unmega spec");
+        //logger.info("[FlashSpec] Registered unmega spec");
         PokemonSpec.extraSpecTypes.add(new SpecFlag("unmegabattle"));
-        logger.info("[FlashSpec] Registered unmegabattle spec");
+        //logger.info("[FlashSpec] Registered unmegabattle spec");
         PokemonSpec.extraSpecTypes.add(new SpecFlag("undropable"));
-        logger.info("[FlashSpec] Registered undropable spec");
+        //logger.info("[FlashSpec] Registered undropable spec");
         PokemonSpec.extraSpecTypes.add(new DropSpec(Lists.newArrayList("dropitem","di"), null));
         PokemonSpec.extraSpecTypes.add(new DropChanceSpec(Lists.newArrayList("dropchance","dc"), null));
         PokemonSpec.extraSpecTypes.add(new DropISSpec(Lists.newArrayList("dropitemsaver","dis"), null));
-        logger.info("[FlashSpec] Registered dropitem/dropchance/dropitemsaver spec");
+        //logger.info("[FlashSpec] Registered dropitem/dropchance/dropitemsaver spec");
         PokemonSpec.extraSpecTypes.add(new SpecFlag("unmegaout"));
-        logger.info("[FlashSpec] Registered unmegaout spec");
+        //logger.info("[FlashSpec] Registered unmegaout spec");
         //PokemonSpec.extraSpecTypes.add(new SpecFlag("unmegain"));
         PokemonSpec.extraSpecTypes.add(new LevelRangeSpec(Lists.newArrayList("lvlr","levelr"), null));
-        logger.info("[FlashSpec] Registered levelr spec");
+        //logger.info("[FlashSpec] Registered levelr spec");
         PokemonSpec.extraSpecTypes.add(new SpecFlag("unnickable"));
-        logger.info("[FlashSpec] Registered unnickable spec");
+        //logger.info("[FlashSpec] Registered unnickable spec");
         PokemonSpec.extraSpecTypes.add(new Ivs31AndMinPercent(Lists.newArrayList("iv31&min%"), null));
-        logger.info("[FlashSpec] Registered iv31&min% spec");
+        //logger.info("[FlashSpec] Registered iv31&min% spec");
         PokemonSpec.extraSpecTypes.add(new EggStepSpec(Lists.newArrayList("reggsteps"), null));
-        logger.info("[FlashSpec] Registered reggsteps spec");
+        //logger.info("[FlashSpec] Registered reggsteps spec");
         PokemonSpec.extraSpecTypes.add(new SpecFlag("unhatchable"));
-        logger.info("[FlashSpec] Registered unhatchable spec");
+        //logger.info("[FlashSpec] Registered unhatchable spec");
         PokemonSpec.extraSpecTypes.add(new NumMaxIVs(0));
-        logger.info("[FlashSpec] Registered nummaxivs spec");
+        //logger.info("[FlashSpec] Registered nummaxivs spec");
         //PokemonSpec.extraSpecTypes.add(new EggGroup1Spec(Lists.newArrayList("egggroup1"), null));
         //PokemonSpec.extraSpecTypes.add(new EggGroup2Spec(Lists.newArrayList("egggroup2"), null));
 
@@ -198,165 +210,162 @@ public class FlashSpec {
         //PokemonSpec.extraSpecTypes.add(new YChangeSpec(Lists.newArrayList("ychange"), null));
         PokemonSpec.extraSpecTypes.add(new CatchTransformSpec(Lists.newArrayList("oncatch"), null));
         PokemonSpec.extraSpecTypes.add(new TransformChanceSpec(Lists.newArrayList("transformchance"), null));
-        logger.info("[FlashSpec] Registered oncatch/transformchance spec");
+        //logger.info("[FlashSpec] Registered oncatch/transformchance spec");
         PokemonSpec.extraSpecTypes.add(new HappinessSpec(Lists.newArrayList("happiness"), null));
-        logger.info("[FlashSpec] Registered happiness spec");
+        //logger.info("[FlashSpec] Registered happiness spec");
         //PokemonSpec.extraSpecTypes.add(new SpecFlag("unpokedexable"));
-        //logger.info("[FlashSpec] Registered unpokedexable spec");
+        ////logger.info("[FlashSpec] Registered unpokedexable spec");
         //Time spec
         PokemonSpec.extraSpecTypes.add(new SpecFlag("tdusk"));
         PokemonSpec.extraSpecTypes.add(new SpecFlag("tday"));
         PokemonSpec.extraSpecTypes.add(new SpecFlag("tdawn"));
         PokemonSpec.extraSpecTypes.add(new SpecFlag("tnight"));
-        logger.info("[FlashSpec] Registered tdusk/tday/tdawn/tnight spec");
-        PokemonSpec.extraSpecTypes.add(new LegGen1Spec(false));
-        logger.info("[FlashSpec] Registered leg1 spec");
+        //logger.info("[FlashSpec] Registered tdusk/tday/tdawn/tnight spec");
         //CustomSpec import
         //PokemonSpec.extraSpecTypes.add(new TextureSpec(Lists.newArrayList("texture"), null));
         PokemonSpec.extraSpecTypes.add(new OTSpec(Lists.newArrayList("ot", "originaltrainer"), null));
-        logger.info("[FlashSpec] Registered originaltrainer spec");
+        ////logger.info("[FlashSpec] Registered originaltrainer spec");
         PokemonSpec.extraSpecTypes.add(new NicknameSpec(null));
-        logger.info("[FlashSpec] Registered nickname spec");
+        ////logger.info("[FlashSpec] Registered nickname spec");
         PokemonSpec.extraSpecTypes.add(new MinIVPercent(0));
-        logger.info("[FlashSpec] Registered miniv% spec");
+        ////logger.info("[FlashSpec] Registered miniv% spec");
         if (!Loader.isModLoaded("aquaauras")){
             PokemonSpec.extraSpecTypes.add(new AuraSpec(null));
-            logger.info("[FlashSpec] Registered aura spec");
+            //logger.info("[FlashSpec] Registered aura spec");
         }
         //Leg spec
         //PokemonSpec.extraSpecTypes.add(new SpecFlag("leg1"));
 
         //MatchSpec
         PokemonSpec.extraSpecTypes.add(new MovesSpec(Lists.newArrayList("moves","knowsmove"), null));
-        logger.info("[FlashSpec] Registered moves spec [MatchOnly]");
+        ////logger.info("[FlashSpec] Registered moves spec [MatchOnly]");
         PokemonSpec.extraSpecTypes.add(new AllSpec(false));
-        logger.info("[FlashSpec] Registered all spec [MatchOnly]");
+        //logger.info("[FlashSpec] Registered all spec [MatchOnly]");
         PokemonSpec.extraSpecTypes.add(new SpawnerSpec(false));
-        logger.info("[FlashSpec] Registered spawner spec [MatchOnly]");
+        //logger.info("[FlashSpec] Registered spawner spec [MatchOnly]");
         PokemonSpec.extraSpecTypes.add(new DimSpec(Lists.newArrayList("dim"), null));
-        logger.info("[FlashSpec] Registered dim spec [MatchOnly]");
+        //logger.info("[FlashSpec] Registered dim spec [MatchOnly]");
         PokemonSpec.extraSpecTypes.add(new DimNameSpec(Lists.newArrayList("dimname"), null));
-        logger.info("[FlashSpec] Registered dimname spec [MatchOnly]");
+        //logger.info("[FlashSpec] Registered dimname spec [MatchOnly]");
         PokemonSpec.extraSpecTypes.add(new EggGroupSpec(Lists.newArrayList("egggroup"), null));
-        logger.info("[FlashSpec] Registered egggroup spec [MatchOnly]");
-        //LegUbLevel
-        PokemonSpec.extraSpecTypes.add(new fr.flashback083.flashspec.Specs.GiveSpec.LegUbLevelSpec.LegGen1Spec(false));
-        PokemonSpec.extraSpecTypes.add(new fr.flashback083.flashspec.Specs.GiveSpec.LegUbLevelSpec.LegSpec(false));
-        PokemonSpec.extraSpecTypes.add(new fr.flashback083.flashspec.Specs.GiveSpec.LegUbLevelSpec.UbSpec(false));
-        PokemonSpec.extraSpecTypes.add(new fr.flashback083.flashspec.Specs.GiveSpec.LegUbLevelSpec.LegUbSpec(false));
-        logger.info("[FlashSpec] Registered leg1l/legl/ubl/uborlegl spec");
+        //logger.info("[FlashSpec] Registered egggroup spec [MatchOnly]");
         //PokemonSpec.extraSpecTypes.add(new HasCustomTextureSpec(false));
-        //logger.info("[FlashSpec] Registered hascustomtexture spec");
+        ////logger.info("[FlashSpec] Registered hascustomtexture spec");
         PokemonSpec.extraSpecTypes.add(new HAChanceSpec(null));
-        logger.info("[FlashSpec] Registered hachancespec spec");
+        //logger.info("[FlashSpec] Registered hachancespec spec");
         PokemonSpec.extraSpecTypes.add(new HappinessChangeSpec(Lists.newArrayList("happinessc"), null));
-        logger.info("[FlashSpec] Registered happinesschange spec");
+        //logger.info("[FlashSpec] Registered happinesschange spec");
         PokemonSpec.extraSpecTypes.add(new ShinyChanceSpec(null));
-        logger.info("[FlashSpec] Registered shinychance spec");
+        //logger.info("[FlashSpec] Registered shinychance spec");
         PokemonSpec.extraSpecTypes.add(new CloneSpec(Lists.newArrayList("clone"), null));
-        logger.info("[FlashSpec] Registered Clone spec");
+        //logger.info("[FlashSpec] Registered Clone spec");
         PokemonSpec.extraSpecTypes.add(new HPSpec(Lists.newArrayList("hp"), null));
-        logger.info("[FlashSpec] Registered HP spec");
+        //logger.info("[FlashSpec] Registered HP spec");
         PokemonSpec.extraSpecTypes.add(new MinNumIVs(0));
-        logger.info("[FlashSpec] Registered minnumivs spec");
+        //logger.info("[FlashSpec] Registered minnumivs spec");
         PokemonSpec.extraSpecTypes.add(new MinIvs31AndMinPercent(Lists.newArrayList("miniv31&min%"), null));
-        logger.info("[FlashSpec] Registered miniv31&min% spec");
+        //logger.info("[FlashSpec] Registered miniv31&min% spec");
 
         PokemonSpec.extraSpecTypes.add(new SpecFlag("unexpable"));
-        logger.info("[FlashSpec] unexpable spec");
+        //logger.info("[FlashSpec] unexpable spec");
 
         //Weather spec
         PokemonSpec.extraSpecTypes.add(new SpecFlag("rain"));
         PokemonSpec.extraSpecTypes.add(new SpecFlag("thunder"));
         PokemonSpec.extraSpecTypes.add(new SpecFlag("clear"));
-        logger.info("[FlashSpec] Registered rain/thunder/clear spec");
+        //logger.info("[FlashSpec] Registered rain/thunder/clear spec");
 
         PokemonSpec.extraSpecTypes.add(new CustomTextureChanceSpec(null));
-        logger.info("[FlashSpec] Registered customtexturechance spec");
+        //logger.info("[FlashSpec] Registered customtexturechance spec");
         PokemonSpec.extraSpecTypes.add(new isBossSpec(false));
-        logger.info("[FlashSpec] Registered isBoss spec [MatchOnly]");
+        //logger.info("[FlashSpec] Registered isBoss spec [MatchOnly]");
         //PokemonSpec.extraSpecTypes.add(new RibbonSpec(null));
-        //logger.info("[FlashSpec] Registered fribbon spec");
+        ////logger.info("[FlashSpec] Registered fribbon spec");
         PokemonSpec.extraSpecTypes.add(new RealTimeSpec(Lists.newArrayList("realtime"), null));
-        logger.info("[FlashSpec] Registered rtime spec");
+        //logger.info("[FlashSpec] Registered rtime spec");
         PokemonSpec.extraSpecTypes.add(new FormChanceSpec(null));
-        logger.info("[FlashSpec] Registered formchance spec");
+        //logger.info("[FlashSpec] Registered formchance spec");
         PokemonSpec.extraSpecTypes.add(new isMegaSpec(false));
-        logger.info("[FlashSpec] Registered isMega spec [MatchOnly]");
+        //logger.info("[FlashSpec] Registered isMega spec [MatchOnly]");
         //IV Spec
         PokemonSpec.extraSpecTypes.add(new IVHPSpec(Lists.newArrayList("ivhpf"), null));
-        logger.info("[FlashSpec] Registered ivhpf spec");
+        //logger.info("[FlashSpec] Registered ivhpf spec");
         PokemonSpec.extraSpecTypes.add(new IVAtkSpec(Lists.newArrayList("ivatkf"), null));
-        logger.info("[FlashSpec] Registered ivatkf spec");
+        //logger.info("[FlashSpec] Registered ivatkf spec");
         PokemonSpec.extraSpecTypes.add(new IVDefSpec(Lists.newArrayList("ivdeff"), null));
-        logger.info("[FlashSpec] Registered ivdeff spec");
+        //logger.info("[FlashSpec] Registered ivdeff spec");
         PokemonSpec.extraSpecTypes.add(new IVSpeAtkSpec(Lists.newArrayList("ivspeatkf"), null));
-        logger.info("[FlashSpec] Registered ivspeatkf spec");
+        //logger.info("[FlashSpec] Registered ivspeatkf spec");
         PokemonSpec.extraSpecTypes.add(new IVSpeDefSpec(Lists.newArrayList("ivspedeff"), null));
-        logger.info("[FlashSpec] Registered ivspedeff spec");
+        //logger.info("[FlashSpec] Registered ivspedeff spec");
         PokemonSpec.extraSpecTypes.add(new IVSpeedSpec(Lists.newArrayList("ivspeedf"), null));
-        logger.info("[FlashSpec] Registered ivspeedf spec");
+        //logger.info("[FlashSpec] Registered ivspeedf spec");
         //EV Spec
         PokemonSpec.extraSpecTypes.add(new GiveEVHPSpec(Lists.newArrayList("gevhp"), null));
-        logger.info("[FlashSpec] Registered gevhp spec");
+        //logger.info("[FlashSpec] Registered gevhp spec");
         PokemonSpec.extraSpecTypes.add(new GiveEVAtkSpec(Lists.newArrayList("gevatk"), null));
-        logger.info("[FlashSpec] Registered gevatk spec");
+        //logger.info("[FlashSpec] Registered gevatk spec");
         PokemonSpec.extraSpecTypes.add(new GiveEVDefSpec(Lists.newArrayList("gevdef"), null));
-        logger.info("[FlashSpec] Registered gevdef spec");
+        //logger.info("[FlashSpec] Registered gevdef spec");
         PokemonSpec.extraSpecTypes.add(new GiveEVSpeAtkSpec(Lists.newArrayList("gevspeatk"), null));
-        logger.info("[FlashSpec] Registered gevspeatk spec");
+        //logger.info("[FlashSpec] Registered gevspeatk spec");
         PokemonSpec.extraSpecTypes.add(new GiveEVSpeDefSpec(Lists.newArrayList("gevspedef"), null));
-        logger.info("[FlashSpec] Registered gevspedef spec");
+        //logger.info("[FlashSpec] Registered gevspedef spec");
         PokemonSpec.extraSpecTypes.add(new GiveEVSpeedSpec(Lists.newArrayList("gevspeed"), null));
-        logger.info("[FlashSpec] Registered gevspeed spec");
+        //logger.info("[FlashSpec] Registered gevspeed spec");
 
         PokemonSpec.extraSpecTypes.add(new DateSpec(Lists.newArrayList("fdate"), null));
-        logger.info("[FlashSpec] Registered fdate spec");
+        //logger.info("[FlashSpec] Registered fdate spec");
         PokemonSpec.extraSpecTypes.add(new DynamaxLevelSpec(Lists.newArrayList("dynlvl"), null));
-        logger.info("[FlashSpec] Registered dynlvl spec");
+        //logger.info("[FlashSpec] Registered dynlvl spec");
 
         PokemonSpec.extraSpecTypes.add(new SpecFlag("despawnable"));
-        logger.info("[FlashSpec] Registered despawnable spec");
+        //logger.info("[FlashSpec] Registered despawnable spec");
         PokemonSpec.extraSpecTypes.add(new isWildSpec(false));
-        logger.info("[FlashSpec] Registered isWild spec [MatchOnly]");
+        //logger.info("[FlashSpec] Registered isWild spec [MatchOnly]");
 
         PokemonSpec.extraSpecTypes.add(new LastEvoSpec(false));
-        logger.info("[FlashSpec] Registered lastevo spec");
+        //logger.info("[FlashSpec] Registered lastevo spec");
 
         //PokemonSpec.extraSpecTypes.add(new TrioBirdSpec(false));
-        //logger.info("[FlashSpec] Registered triobird spec [MatchOnly]");
+        ////logger.info("[FlashSpec] Registered triobird spec [MatchOnly]");
 
         PokemonSpec.extraSpecTypes.add(new isEnumSpeciesSpec(null));
-        logger.info("[FlashSpec] Registered isEnumSpecies spec");
+        //logger.info("[FlashSpec] Registered isEnumSpecies spec");
 
         PokemonSpec.extraSpecTypes.add(new isNotEnumSpeciesSpec(null));
-        logger.info("[FlashSpec] Registered isNotEnumSpecies spec");
+        //logger.info("[FlashSpec] Registered isNotEnumSpecies spec");
 
 
         PokemonSpec.extraSpecTypes.add(new isSpecSpec(null));
-        logger.info("[FlashSpec] Registered isSpecSpecies spec");
+        //logger.info("[FlashSpec] Registered isSpecSpecies spec");
 
         PokemonSpec.extraSpecTypes.add(new isNotSpecSpec(null));
-        logger.info("[FlashSpec] Registered isNotSpecSpec spec");
+        //logger.info("[FlashSpec] Registered isNotSpecSpec spec");
 
         PokemonSpec.extraSpecTypes.add(new GigaMaxSpec(false));
-        logger.info("[FlashSpec] Registered gigamax spec");
+        //logger.info("[FlashSpec] Registered gigamax spec");
 
 
         PokemonSpec.extraSpecTypes.add(new SpecFlag("isFromFishing"));
-        logger.info("[FlashSpec] Registered isFromFishing spec");
+        //logger.info("[FlashSpec] Registered isFromFishing spec");
 
         PokemonSpec.extraSpecTypes.add(new SpecFlag("unpcable"));
-        logger.info("[FlashSpec] Registered unpcable spec");
+        //logger.info("[FlashSpec] Registered unpcable spec");
+
+        PokemonSpec.extraSpecTypes.add(new isHA(false));
+
+        PokemonSpec.extraSpecTypes.add(new FirstEvoSpec(false));
+
+        PokemonSpec.extraSpecTypes.add(new CountBreedSpec(null));
 
         if (config.getCategory("General").get("specflags").getStringList().length>0){
             ArrayList<String> list = Lists.newArrayList(config.getCategory("General").get("specflags").getStringList());
             list.forEach(spec -> {
                 PokemonSpec.extraSpecTypes.add(new SpecFlag(spec));
-                logger.info("[FlashSpec] Registered custom specflag " + spec);
+                //logger.info("[FlashSpec] Registered custom specflag " + spec);
             });
         }
-
 
 
 
@@ -372,15 +381,25 @@ public class FlashSpec {
     @Mod.EventHandler
     public void postinit(FMLPostInitializationEvent event) {
         loadleg1();
+        getPokeSpecGroup.clear();
+        getSpecGroupList().forEach((name, spec) -> {
+            List<Pokemon> pokemonList = Lists.newArrayList();
+            for (EnumSpecies value : EnumSpecies.values()) {
+                if (new PokemonSpec(spec).matches(Pixelmon.pokemonFactory.create(value))){
+                    pokemonList.add(Pixelmon.pokemonFactory.create(value));
+                }
+            }
+            getPokeSpecGroup.put(name,pokemonList);
+        });
     }
 
     @Mod.EventHandler
     public void serverStart(FMLServerStartingEvent event) {
-            System.out.println("FlashSpec loaded!");
-            server = event.getServer();
-            event.registerServerCommand(new CatchSpecCmd());
-            event.registerServerCommand(new FlashSpecCallback());
-            event.registerServerCommand(new FlashSpecCmd());
+        System.out.println("FlashSpec loaded!");
+        server = event.getServer();
+        event.registerServerCommand(new CatchSpecCmd());
+        event.registerServerCommand(new FlashSpecCallback());
+        event.registerServerCommand(new FlashSpecCmd());
     }
 
     public static EntityPlayerMP getPlayer(String playername){
