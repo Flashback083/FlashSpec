@@ -18,6 +18,7 @@ public class Lang {
     private static String unnickablemsg = "&cYou can't change the name of this %pokemonname%!";
     private static String unhatchablemsg = "&cYou can't hatch this %pokemonname% with the hatch command!";
     private static String cantbreedmore = "&cYou can't breed this %pokemonname% anymore!";
+    private static String cantcatchowner = "&cYou can't catch this %pokemonname% because it doesnt belong to you.";
 
     //-----------------------------------------------------//
   
@@ -50,6 +51,8 @@ public class Lang {
         unnickablemsg = cfg.getString("unnickablemsg", CATEGORY_LANG, unnickablemsg, "Message when player try to nick a non-unnickable pokemon. %pokemonname%");
         unhatchablemsg = cfg.getString("unhatchablemsg", CATEGORY_LANG, unhatchablemsg, "Message when player try to hatch a non-hatchable pokemon. %pokemonname%");
         cantbreedmore = cfg.getString("cantbreedmore", CATEGORY_LANG, cantbreedmore, "Message when player try to breed with a pokemon which have already used all of their breed amount. %pokemonname%");
+        cantcatchowner = cfg.getString("cantcatchowner", CATEGORY_LANG, cantcatchowner, "Message when player try to catch a pokemon that he can't because of canCatch spec. %pokemonname%");
+
     }
     
 

@@ -6,6 +6,7 @@ import com.pixelmonmod.pixelmon.api.enums.DeleteType;
 import com.pixelmonmod.pixelmon.api.enums.ExperienceGainType;
 import com.pixelmonmod.pixelmon.api.events.*;
 import com.pixelmonmod.pixelmon.api.events.battles.BattleEndEvent;
+import com.pixelmonmod.pixelmon.api.events.battles.UseBattleItemEvent;
 import com.pixelmonmod.pixelmon.api.events.moveskills.UseMoveSkillEvent;
 import com.pixelmonmod.pixelmon.api.events.pokemon.SetNicknameEvent;
 import com.pixelmonmod.pixelmon.api.events.spawning.PixelmonSpawnerEvent;
@@ -23,6 +24,7 @@ import com.pixelmonmod.pixelmon.enums.EnumSpecies;
 import com.pixelmonmod.pixelmon.pokedex.EnumPokedexRegisterStatus;
 import com.pixelmonmod.pixelmon.storage.PlayerPartyStorage;
 import fr.flashback083.flashspec.Specs.UndeleteSpec.TrashListener;
+import fr.flashback083.flashspec.utils.Task;
 import fr.pokepixel.itemsaver.GsonMethods;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -43,7 +45,7 @@ import net.minecraftforge.fml.common.gameevent.TickEvent;
 import java.time.LocalTime;
 import java.util.*;
 
-import static fr.flashback083.flashspec.TimerApi.tasks;
+import static fr.flashback083.flashspec.utils.TimerApi.tasks;
 import static fr.flashback083.flashspec.config.ChatColor.translateAlternateColorCodes;
 import static fr.flashback083.flashspec.config.Functions.getOrder;
 import static fr.flashback083.flashspec.config.Functions.getRemainingEVs;
@@ -69,7 +71,6 @@ public class PixelmonEvent {
             evolveEvent.pokemon.getPokemonData().setNickname(prevName.replace(preSpecies.name, evolveEvent.pokemon.getSpecies().name));
         }
     }
-
 
     //Uncatchable & Unbattleable spec
     /*@SubscribeEvent
@@ -105,7 +106,72 @@ public class PixelmonEvent {
             }*/
             event.setCanceled(true);
         }
+        if (event.getPokemon().getPokemonData().hasSpecFlag("forceCatch")){
+            //event.setCatchRate(255);
+            event.setBallBonus(1000);
+        }
+        /*if (event.getPokemon().getPokemonData().getPersistentData().hasKey("canCatch")) {
+            NBTTagCompound data = event.getPokemon().getPokemonData().getPersistentData();
+            String playerName = data.getString("canCatch");
+            if (!event.pokeball.getThrower().getName().equalsIgnoreCase(playerName)){
+                event.player.sendMessage(new TextComponentString(translateAlternateColorCodes('&',lang.get("cantcatchowner").getString().replace("%pokemonname%",event.getPokemon().getPokemonName()))));
+                event.setCanceled(true);
+            }
+        }*/
     }
+
+    @SubscribeEvent
+    public void onPokeballImpact(PokeballImpactEvent event){
+        if (event.isEmptyBall){
+            if (event.getEntityHit() != null && event.pokeball.getThrower() != null){
+                if (event.getEntityHit() instanceof EntityPixelmon && event.pokeball.getThrower() instanceof EntityPlayerMP){
+                    EntityPixelmon pixelmon = (EntityPixelmon) event.getEntityHit();
+                    EntityPlayerMP player = (EntityPlayerMP) event.pokeball.getThrower();
+                    if (!pixelmon.hasOwner()){
+                        if (pixelmon.getPokemonData().getPersistentData().hasKey("canCatch")) {
+                            NBTTagCompound data = pixelmon.getPokemonData().getPersistentData();
+                            String playerName = data.getString("canCatch");
+                            if (!event.pokeball.getThrower().getName().equalsIgnoreCase(playerName)){
+                                player.sendMessage(new TextComponentString(translateAlternateColorCodes('&',lang.get("cantcatchowner").getString().replace("%pokemonname%",pixelmon.getPokemonName()))));
+                                event.setCanceled(true);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public void onBattleStartcanCatch(BattleStartedEvent event){
+        EntityPlayerMP player = null;
+        EntityPixelmon pixelmon = null;
+        if (event.participant1.length==1 && event.participant2.length==1){
+            if (event.participant1[0] instanceof PlayerParticipant){
+                player = (EntityPlayerMP) event.participant1[0].getEntity();
+            }else if (event.participant1[0] instanceof WildPixelmonParticipant){
+                pixelmon = (EntityPixelmon) event.participant1[0].getEntity();
+            }
+            if (event.participant2[0] instanceof PlayerParticipant){
+                player = (EntityPlayerMP) event.participant2[0].getEntity();
+            }else if (event.participant2[0] instanceof WildPixelmonParticipant){
+                pixelmon = (EntityPixelmon) event.participant2[0].getEntity();
+            }
+            if (player != null && pixelmon != null){
+                if (pixelmon.getPokemonData().getPersistentData().hasKey("canCatch")) {
+                    NBTTagCompound data = pixelmon.getPokemonData().getPersistentData();
+                    String playerName = data.getString("canCatch");
+                    if (!player.getName().equalsIgnoreCase(playerName)){
+                        player.sendMessage(new TextComponentString(translateAlternateColorCodes('&',lang.get("cantcatchowner").getString().replace("%pokemonname%",pixelmon.getPokemonName()))));
+                        event.setCanceled(true);
+                    }
+                }
+            }
+        }
+    }
+
+
+
 
     //Unbattleable spec
     @SubscribeEvent
@@ -213,8 +279,8 @@ public class PixelmonEvent {
 
     //Aggro spec
     @SubscribeEvent
-    public void onServerTick(TickEvent.ServerTickEvent event){
-        if (event.phase.equals(TickEvent.ServerTickEvent.Phase.START)){
+    public void onServerTick(TickEvent.ServerTickEvent event) {
+        if (event.phase.equals(TickEvent.ServerTickEvent.Phase.START)) {
             if (!playertime.isEmpty()) {
                 List<String> keys = new ArrayList<>(playertime.keySet());
                 for (String key : keys) {
@@ -226,7 +292,7 @@ public class PixelmonEvent {
                     }
                 }
             }
-        }else {
+        } else {
             if (!tasks.isEmpty()) {
                 List<Task> keys = new ArrayList<>(tasks);
                 for (Task task : keys) {
@@ -237,28 +303,8 @@ public class PixelmonEvent {
                     }
                 }
             }
-            /*for (Task task : new ArrayList<>(tasks)) {
-                task.tick();
-            }
-            removeExpiredTasks();*/
         }
-            //Iterator<Task> iterator = tasks.iterator();
-            /*List<Task> tasksl = Lists.newArrayList();
-            tasks.iterator().forEachRemaining(tasksl::add);
-            for (Task task : tasksl) {
-                task.tick();
-                if (task.isExpired()){
-                    tasks.remove(task);
-                }
-            }*/
-            /*while (iterator.hasNext()) {
-                Task task = iterator.next();
-                task.tick();
-                if (task.isExpired()) {
-                    iterator.remove();
-                }
-            }*/
-        }
+    }
 
 
     //Untrashable & Undeleteable spec

@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="494ac352-152a-4662-8b78-a10f8b07edc4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/CountBreedSpec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MatchSpec/isHA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/config/GsonUtilsSpecGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/config/SpecGroup.java" afterDir="false" />
+    <list default="true" id="494ac352-152a-4662-8b78-a10f8b07edc4" name="Default Changelist" comment="Bump 2.8.0&#10;- Added status spec&#10;- Added isGalar spec&#10;- Added isAlolan spec&#10;- Added forceCatch spec&#10;- Added canCatch spec&#10;- Improved and fixed somes issue with /flashspec give/spawn command&#10;- Now this command w">
+      <change afterPath="$PROJECT_DIR$/libs/itemsaver-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MatchSpec/isAlolan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/MatchSpec/isGalar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/StatusEffectSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/canCatchSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/utils/PokeSpecie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/utils/PosInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/annotation-processors.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -18,42 +21,65 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/fr.flashback083.FlashSpec.api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/fr.flashback083.FlashSpec.api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/fr.flashback083.FlashSpec.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/fr.flashback083.FlashSpec.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/fr.flashback083.FlashSpec.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/fr.flashback083.FlashSpec.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/fr.flashback083.FlashSpec.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/fr.flashback083.FlashSpec.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/fr.flashback083.FlashSpec.api.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/fr.flashback083.FlashSpec.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/fr.flashback083.FlashSpec.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/fr.flashback083.FlashSpec.test.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Flashspec.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/Flashspec.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/PixelmonEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/flashback083/flashspec/PixelmonEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-1.1-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-1.2-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-1.3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-1.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-1.4-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-1.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-1.5-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-1.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-2.0-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-2.1-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-2.2-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-2.2.1-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-2.2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-2.2.2-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-2.2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-2.2.3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-2.2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-2.2.4-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-2.2.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-2.2.5-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-2.2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-2.2.6-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-2.2.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-2.2.7-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-2.2.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-2.2.8-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-2.2.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-2.2.9-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-2.2.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/FlashSpec-2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/flashspec-1.0-SNAPSHOT-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/flashspec-1.0-SNAPSHOT.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/mcmod.info" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/mcmod.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/retromapping/replacedMain.rangemap" beforeDir="false" afterPath="$PROJECT_DIR$/build/retromapping/replacedMain.rangemap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/retromapping/retromappedReplacedMain.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/retromapping/retromappedReplacedMain.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Flashspec.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Flashspec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/PixelmonEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/PixelmonEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/AbsSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/fr/flashback083/flashspec/Specs/AbsSpec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/taskLogs/extractRangemapReplacedMain.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/taskLogs/extractRangemapReplacedMain.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/taskLogs/retromapReplacedMain.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/taskLogs/retromapReplacedMain.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/Pixelmon-1.12.2-8.3.1-server.jar" beforeDir="false" afterPath="$PROJECT_DIR$/libs/Pixelmon-1.12.2-8.3.1c-server.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/Pixelmon-1.12.2-8.3.1c-server.jar" beforeDir="false" afterPath="$PROJECT_DIR$/libs/Pixelmon-1.12.2-8.3.6-server.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/FlashSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/FlashSpec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/PixelmonEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/PixelmonEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/AbsSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/AbsSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/AuraSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/AuraSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/LegUbLevelSpec/LegGen1Spec.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/LegUbLevelSpec/LegSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/evospec/FirstEvoSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/LegUbLevelSpec/LegUbSpec.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/LegUbLevelSpec/UbSpec.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/LegUbSpec/LegGen1Spec.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/LegUbSpec/LegSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/LegUbSpec/LegSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/LegUbSpec/LegUbSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/LegUbSpec/LegUbSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/LegUbSpec/UbSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/LegUbSpec/UbSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/TypeSpec/Type1Spec.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/TypeSpec/Type2Spec.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Specs/GiveSpec/TypeSpec/TypeSpec.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/TimerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/TimerApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/utils/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/TimerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/utils/TimerApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/cmds/FlashSpecCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/cmds/FlashSpecCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/config/Functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/config/Functions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/config/GsonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/config/GsonUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/config/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/config/Lang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/flashback083/flashspec/config/Lang.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +109,12 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="FlashSpec" type="f1a62948:ProjectNode" />
+                <item name="FlashSpecPublic" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="FlashSpecPublic" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
             <select />
@@ -120,9 +151,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="app.teamhub.trackedBranches" value="-1v41h3g/master" />
+    <property name="app.teamhub.trackedBranches" value="od6id1/master" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560910201899" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../GitLab/PokeFix/build.gradle" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3264368" />
@@ -134,18 +165,18 @@
       <recent name="fr.flashback083.flashspec" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Github\FlashSpecPublic\libs" />
       <recent name="D:\GitLab\FlashSpec\libs" />
       <recent name="D:\GitLab\FlashSpec\src\main\java\fr\flashback083\flashspec" />
       <recent name="D:\GitLab\FlashSpec\src\main\java\fr\flashback083\flashspec\Specs\GiveSpec\LegUbLevelSpec" />
       <recent name="D:\GitLab\FlashSpec\src\main\java\fr\flashback083\flashspec\Specs\YSpec" />
-      <recent name="D:\GitLab\FlashSpec\src\main\java\fr\flashback083\flashspec\Specs\EggGroupSpec" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="fr.flashback083.flashspec.Specs.TransformSpec" />
+      <recent name="fr.flashback083.flashspec.Specs.MatchSpec" />
       <recent name="fr.flashback083.flashspec.Specs" />
       <recent name="fr.flashback083.flashspec.config" />
       <recent name="fr.flashback083.flashspec.Specs.GiveSpec.evospec" />
-      <recent name="fr.flashback083.flashspec.Specs.MatchSpec" />
-      <recent name="fr.flashback083.flashspec.Specs.GiveSpec.LegUbSpec" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.FlashSpec build">

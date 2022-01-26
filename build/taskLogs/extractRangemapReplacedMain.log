@@ -1,14 +1,14 @@
-Unsupposrted library path: D:\GitLab\FlashSpec\build\classes\java\api
-Unsupposrted library path: D:\GitLab\FlashSpec\build\resources\api
+Unsupposrted library path: D:\Github\FlashSpecPublic\build\classes\java\api
+Unsupposrted library path: D:\Github\FlashSpecPublic\build\resources\api
 Symbol range map extraction starting
-Processing 94 files
-startProcessing "fr/flashback083/flashspec/FlashSpec.java" md5: a8ed814833542bf645f215eb3489af6c
+Processing 100 files
+startProcessing "fr/flashback083/flashspec/FlashSpec.java" md5: c0e03c4a1b1eedd843fd786d343d6d57
 endProcessing "fr/flashback083/flashspec/FlashSpec.java"
 
 startProcessing "fr/flashback083/flashspec/PaginationApi/PaginationApi.java" md5: 095b34e1d0ad92ffb89a56c8d5f104b1
 endProcessing "fr/flashback083/flashspec/PaginationApi/PaginationApi.java"
 
-startProcessing "fr/flashback083/flashspec/PixelmonEvent.java" md5: afe5dce3a7816f7c03f56760d048f69c
+startProcessing "fr/flashback083/flashspec/PixelmonEvent.java" md5: b4b3f8d431962e9ccabb73fe038e80c1
 endProcessing "fr/flashback083/flashspec/PixelmonEvent.java"
 
 startProcessing "fr/flashback083/flashspec/Specs/AISpec.java" md5: 97d5d86ec8ca05df3925a0c44c263966
@@ -173,11 +173,17 @@ endProcessing "fr/flashback083/flashspec/Specs/MatchSpec/MovesSpec.java"
 startProcessing "fr/flashback083/flashspec/Specs/MatchSpec/SpawnerSpec.java" md5: dac999e5590dcf65578cf7c5f1e6c986
 endProcessing "fr/flashback083/flashspec/Specs/MatchSpec/SpawnerSpec.java"
 
+startProcessing "fr/flashback083/flashspec/Specs/MatchSpec/isAlolan.java" md5: ccea9c8cd39e949aa3e9039612c33571
+endProcessing "fr/flashback083/flashspec/Specs/MatchSpec/isAlolan.java"
+
 startProcessing "fr/flashback083/flashspec/Specs/MatchSpec/isBossSpec.java" md5: 0b41bf1f1141964d3dbd4904d13ba66f
 endProcessing "fr/flashback083/flashspec/Specs/MatchSpec/isBossSpec.java"
 
 startProcessing "fr/flashback083/flashspec/Specs/MatchSpec/isEnumSpeciesSpec.java" md5: c3a6be60c1431db710c2333a8a027694
 endProcessing "fr/flashback083/flashspec/Specs/MatchSpec/isEnumSpeciesSpec.java"
+
+startProcessing "fr/flashback083/flashspec/Specs/MatchSpec/isGalar.java" md5: 1a96b45819beb8e5995f06bfb5544e90
+endProcessing "fr/flashback083/flashspec/Specs/MatchSpec/isGalar.java"
 
 startProcessing "fr/flashback083/flashspec/Specs/MatchSpec/isHA.java" md5: d6a4a46031976a9261addafcaecd6eac
 endProcessing "fr/flashback083/flashspec/Specs/MatchSpec/isHA.java"
@@ -227,6 +233,9 @@ endProcessing "fr/flashback083/flashspec/Specs/ShinyChanceSpec.java"
 startProcessing "fr/flashback083/flashspec/Specs/SpecialTextureSpec.java" md5: 33b2a489200d9a576128171e2640e93b
 endProcessing "fr/flashback083/flashspec/Specs/SpecialTextureSpec.java"
 
+startProcessing "fr/flashback083/flashspec/Specs/StatusEffectSpec.java" md5: 4f9fa31ce6378078afb8285042e3c853
+endProcessing "fr/flashback083/flashspec/Specs/StatusEffectSpec.java"
+
 startProcessing "fr/flashback083/flashspec/Specs/TextureSpec.java" md5: bb33a2b12baa06e397824ae6c0a91d16
 endProcessing "fr/flashback083/flashspec/Specs/TextureSpec.java"
 
@@ -248,11 +257,8 @@ endProcessing "fr/flashback083/flashspec/Specs/YSpec/YChangeSpec.java"
 startProcessing "fr/flashback083/flashspec/Specs/YSpec/YRangeSpec.java" md5: 4197e93b4ecd89dc4617e2282be7104e
 endProcessing "fr/flashback083/flashspec/Specs/YSpec/YRangeSpec.java"
 
-startProcessing "fr/flashback083/flashspec/Task.java" md5: 2d47f413209b1471a9f0b345b9d663df
-endProcessing "fr/flashback083/flashspec/Task.java"
-
-startProcessing "fr/flashback083/flashspec/TimerApi.java" md5: 101f2a5113e7208cdd35dc4ea8791425
-endProcessing "fr/flashback083/flashspec/TimerApi.java"
+startProcessing "fr/flashback083/flashspec/Specs/canCatchSpec.java" md5: f3fc041639bdd6f1301f9c1efa3b289e
+endProcessing "fr/flashback083/flashspec/Specs/canCatchSpec.java"
 
 startProcessing "fr/flashback083/flashspec/cmds/CatchSpecCmd.java" md5: 8f78e447338b294a3ef3470da8c37a60
 endProcessing "fr/flashback083/flashspec/cmds/CatchSpecCmd.java"
@@ -260,13 +266,13 @@ endProcessing "fr/flashback083/flashspec/cmds/CatchSpecCmd.java"
 startProcessing "fr/flashback083/flashspec/cmds/FlashSpecCallback.java" md5: 2b371f2333a47b1cbc5f25ae48b8d14c
 endProcessing "fr/flashback083/flashspec/cmds/FlashSpecCallback.java"
 
-startProcessing "fr/flashback083/flashspec/cmds/FlashSpecCmd.java" md5: 33684741b4529f61248c41933d732f06
+startProcessing "fr/flashback083/flashspec/cmds/FlashSpecCmd.java" md5: 5f3cb78b52e0cb102f37dd8c55afcd02
 endProcessing "fr/flashback083/flashspec/cmds/FlashSpecCmd.java"
 
 startProcessing "fr/flashback083/flashspec/config/ChatColor.java" md5: 7aa9730400fa07cf22525f887587ebc6
 endProcessing "fr/flashback083/flashspec/config/ChatColor.java"
 
-startProcessing "fr/flashback083/flashspec/config/Config.java" md5: b8ee54278183c869ecd0224ffb4313df
+startProcessing "fr/flashback083/flashspec/config/Config.java" md5: d0ceb9c15078addb0549a2fbb9244218
 endProcessing "fr/flashback083/flashspec/config/Config.java"
 
 startProcessing "fr/flashback083/flashspec/config/Functions.java" md5: 84ed8979a70f25fc0b72e4d99456008b
@@ -278,9 +284,21 @@ endProcessing "fr/flashback083/flashspec/config/GsonUtils.java"
 startProcessing "fr/flashback083/flashspec/config/GsonUtilsSpecGroup.java" md5: e26e7745bc20274b60dbea1a5661e393
 endProcessing "fr/flashback083/flashspec/config/GsonUtilsSpecGroup.java"
 
-startProcessing "fr/flashback083/flashspec/config/Lang.java" md5: 8dc53f271062429c652848c9e7fa9237
+startProcessing "fr/flashback083/flashspec/config/Lang.java" md5: ca0587f845e0126676e3415b1997a9e1
 endProcessing "fr/flashback083/flashspec/config/Lang.java"
 
 startProcessing "fr/flashback083/flashspec/config/SpecGroup.java" md5: d8b5680c29946cb87d01d1a124d8c7fe
 endProcessing "fr/flashback083/flashspec/config/SpecGroup.java"
+
+startProcessing "fr/flashback083/flashspec/utils/PokeSpecie.java" md5: 17a4852cfcf2b84d1ee807adcf2733cf
+endProcessing "fr/flashback083/flashspec/utils/PokeSpecie.java"
+
+startProcessing "fr/flashback083/flashspec/utils/PosInfo.java" md5: 8fe1354577129a1f7a510a743da5ab97
+endProcessing "fr/flashback083/flashspec/utils/PosInfo.java"
+
+startProcessing "fr/flashback083/flashspec/utils/Task.java" md5: abbb85ffa7b72a056605134e81a6b118
+endProcessing "fr/flashback083/flashspec/utils/Task.java"
+
+startProcessing "fr/flashback083/flashspec/utils/TimerApi.java" md5: 2b334febcd1de184baada8d885e694da
+endProcessing "fr/flashback083/flashspec/utils/TimerApi.java"
 

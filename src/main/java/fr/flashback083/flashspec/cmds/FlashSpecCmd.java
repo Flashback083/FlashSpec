@@ -5,13 +5,15 @@ import com.pixelmonmod.pixelmon.Pixelmon;
 import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
 import com.pixelmonmod.pixelmon.api.pokemon.PokemonSpec;
 import com.pixelmonmod.pixelmon.enums.EnumSpecies;
+import com.pixelmonmod.pixelmon.enums.forms.IEnumForm;
 import com.pixelmonmod.pixelmon.storage.PlayerPartyStorage;
 import com.pixelmonmod.pixelmon.util.helpers.CollectionHelper;
 import fr.flashback083.flashspec.FlashSpec;
+import fr.flashback083.flashspec.utils.PokeSpecie;
+import fr.flashback083.flashspec.utils.PosInfo;
 import fr.flashback083.flashspec.config.Config;
 import fr.flashback083.flashspec.config.Lang;
 import net.minecraft.command.CommandBase;
-import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommand;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.server.MinecraftServer;
@@ -26,6 +28,7 @@ import java.util.Collections;
 import java.util.List;
 
 import static fr.flashback083.flashspec.FlashSpec.getPokeSpecGroup;
+import static fr.flashback083.flashspec.FlashSpec.getPos;
 import static fr.flashback083.flashspec.config.GsonUtilsSpecGroup.getSpecGroupList;
 
 public class FlashSpecCmd extends CommandBase implements ICommand
@@ -48,7 +51,8 @@ public class FlashSpecCmd extends CommandBase implements ICommand
 	public String getUsage(@Nonnull ICommandSender sender) {
 		return "§c/flashspec reload\n"
                 +"§c/flashspec debug\n"
-                +"§c/flashspec give <player> <groupname> [specs]";
+                +"§c/flashspec give <player> <groupname> [specs]\n"
+                +"§c/flashspec spawn <groupname> [specs] [-player:name -world:name -x:XX -y:YY -z:ZZ]";
 				
 	}
 
@@ -75,12 +79,24 @@ public class FlashSpecCmd extends CommandBase implements ICommand
 				cfgnormal.save();
 			}
 			cfgnormal.load();
+            boolean allowRegionalRegion = cfgnormal.getCategory("General").get("allowRegionalFormSpec").getBoolean();
             getPokeSpecGroup.clear();
             getSpecGroupList().forEach((name, spec) -> {
-                List<Pokemon> pokemonList = Lists.newArrayList();
+                List<PokeSpecie> pokemonList = Lists.newArrayList();
                 for (EnumSpecies value : EnumSpecies.values()) {
+                    if (allowRegionalRegion){
+                        for (IEnumForm possibleForm : value.getPossibleForms(false)) {
+                            if(possibleForm.isRegionalForm()){
+                                Pokemon pokemon = Pixelmon.pokemonFactory.create(value);
+                                pokemon.setForm(possibleForm);
+                                if (new PokemonSpec(spec).matches(pokemon)){
+                                    pokemonList.add(new PokeSpecie(value,pokemon.getForm()));
+                                }
+                            }
+                        }
+                    }
                     if (new PokemonSpec(spec).matches(Pixelmon.pokemonFactory.create(value))){
-                        pokemonList.add(Pixelmon.pokemonFactory.create(value));
+                        pokemonList.add(new PokeSpecie(value,-1));
                     }
                 }
                 getPokeSpecGroup.put(name,pokemonList);
@@ -91,7 +107,7 @@ public class FlashSpecCmd extends CommandBase implements ICommand
 				FlashSpec.logger.info("[FlashSpec] List spec " + iSpecType.getKeys().get(0));
 				FlashSpec.logger.info("[FlashSpec] List spec class " + iSpecType.getSpecClass().getCanonicalName());
 			});
-		}else if (args.length >= 4 && args[0].equalsIgnoreCase("give")){
+		}else if (args.length >= 3 && args[0].equalsIgnoreCase("give")){
             List<String> arg = Lists.newArrayList(args);
             arg.remove(0);
             String player = arg.get(0);
@@ -104,24 +120,51 @@ public class FlashSpecCmd extends CommandBase implements ICommand
                 sender.sendMessage(new TextComponentString("§cNo group found with this name!"));
                 return;
             }
-            List<Pokemon> list = getPokeSpecGroup.get(arg.get(0));
+            List<PokeSpecie> list = getPokeSpecGroup.get(arg.get(0));
             if (list.size()<1){
                 sender.sendMessage(new TextComponentString("§cNo pokemon available in this group"));
                 return;
             }
-            Pokemon randompoke = CollectionHelper.getRandomElement(list);
+            PokeSpecie randomSpecie = CollectionHelper.getRandomElement(list);
+            Pokemon randompoke = Pixelmon.pokemonFactory.create(randomSpecie.getSpecies());
+            randompoke.setForm(randomSpecie.getForm());
             arg.remove(0);
             new PokemonSpec(String.join(" ", arg)).apply(randompoke);
-            if (randompoke == null){
+            /*if (randompoke == null){
                 sender.sendMessage(new TextComponentString("§cCan't create the pokemon!"));
                 return;
-            }
+            }*/
             PlayerPartyStorage pps = Pixelmon.storageManager.getParty(server.getPlayerList().getPlayerByUsername(player));
             if (pps.add(randompoke)){
                 sender.sendMessage(new TextComponentString("§aPokemon given!"));
             }else{
                 sender.sendMessage(new TextComponentString("§cError when give the pokemon..."));
             }
+        }else if (args.length >= 2 && args[0].equalsIgnoreCase("spawn")){
+            //flashspec spawn <groupname> [specs] [-player:name -world:name -x:XX -y:YY -z:ZZ]";
+            List<String> arg = Lists.newArrayList(args);
+            arg.remove(0);
+            if (!getPokeSpecGroup.containsKey(arg.get(0))){
+                sender.sendMessage(new TextComponentString("§cNo group found with this name!"));
+                return;
+            }
+            List<PokeSpecie> list = getPokeSpecGroup.get(arg.get(0));
+            if (list.size()<1){
+                sender.sendMessage(new TextComponentString("§cNo pokemon available in this group"));
+                return;
+            }
+            PokeSpecie randomSpecie = CollectionHelper.getRandomElement(list);
+            Pokemon randompoke = Pixelmon.pokemonFactory.create(randomSpecie.getSpecies());
+            randompoke.setForm(randomSpecie.getForm());
+            arg.remove(0);
+            new PokemonSpec(String.join(" ", arg)).apply(randompoke);
+            /*if (randompoke == null){
+                sender.sendMessage(new TextComponentString("§cCan't create the pokemon!"));
+                return;
+            }*/
+            PosInfo pos = getPos(sender,server,arg);
+            randompoke.getOrSpawnPixelmon(pos.getWorld(),pos.getPosX(), pos.getPosY(), pos.getPosZ());
+            sender.sendMessage(new TextComponentString("§aPokemon spawned at pos :" + pos.getWorld().getWorldInfo().getWorldName() + " x:" + pos.getPosX() + " y:"+pos.getPosY()+ " z:" + pos.getPosZ()));
         }
 		else {
 			sender.sendMessage(new TextComponentString(getUsage(sender)));

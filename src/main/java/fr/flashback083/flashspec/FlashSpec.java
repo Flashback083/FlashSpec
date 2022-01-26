@@ -8,6 +8,7 @@ import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
 import com.pixelmonmod.pixelmon.api.pokemon.PokemonSpec;
 import com.pixelmonmod.pixelmon.api.pokemon.SpecFlag;
 import com.pixelmonmod.pixelmon.enums.EnumSpecies;
+import com.pixelmonmod.pixelmon.enums.forms.IEnumForm;
 import fr.flashback083.flashspec.Specs.*;
 import fr.flashback083.flashspec.Specs.EvsSpec.*;
 import fr.flashback083.flashspec.Specs.GiveSpec.LegUbSpec.LegSpec;
@@ -33,8 +34,13 @@ import fr.flashback083.flashspec.cmds.FlashSpecCmd;
 import fr.flashback083.flashspec.config.Config;
 import fr.flashback083.flashspec.config.Lang;
 import fr.flashback083.flashspec.config.SpecGroup;
+import fr.flashback083.flashspec.utils.PokeSpecie;
+import fr.flashback083.flashspec.utils.PosInfo;
+import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.world.World;
+import net.minecraft.world.WorldServer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.FMLCommonHandler;
@@ -66,7 +72,7 @@ public class FlashSpec {
 
     public static final String MOD_ID = "flashspec";
     public static final String MOD_NAME = "FlashSpec";
-    public static final String VERSION = "2.7.1";
+    public static final String VERSION = "2.8.0";
 
 
     public static File speclist;
@@ -105,7 +111,7 @@ public class FlashSpec {
     @Mod.Instance(MOD_ID)
     public static FlashSpec INSTANCE;
 
-    public static HashMap<String,List<Pokemon>> getPokeSpecGroup = new HashMap<>();
+    public static HashMap<String,List<PokeSpecie>> getPokeSpecGroup = new HashMap<>();
 
     /**
      * This is the first initialization event. Register tile entities here.
@@ -359,6 +365,17 @@ public class FlashSpec {
 
         PokemonSpec.extraSpecTypes.add(new CountBreedSpec(null));
 
+        PokemonSpec.extraSpecTypes.add(new StatusEffectSpec(Lists.newArrayList("status"), null));
+
+        PokemonSpec.extraSpecTypes.add(new isGalar(false));
+
+        PokemonSpec.extraSpecTypes.add(new isAlolan(false));
+
+        PokemonSpec.extraSpecTypes.add(new SpecFlag("forceCatch"));
+
+        PokemonSpec.extraSpecTypes.add(new canCatchSpec(Lists.newArrayList("canCatch"), null));
+
+
         if (config.getCategory("General").get("specflags").getStringList().length>0){
             ArrayList<String> list = Lists.newArrayList(config.getCategory("General").get("specflags").getStringList());
             list.forEach(spec -> {
@@ -380,13 +397,25 @@ public class FlashSpec {
 
     @Mod.EventHandler
     public void postinit(FMLPostInitializationEvent event) {
-        loadleg1();
+        Configuration cfgnormal = FlashSpec.config;
+        boolean allowRegionalRegion = cfgnormal.getCategory("General").get("allowRegionalFormSpec").getBoolean();
         getPokeSpecGroup.clear();
         getSpecGroupList().forEach((name, spec) -> {
-            List<Pokemon> pokemonList = Lists.newArrayList();
+            List<PokeSpecie> pokemonList = Lists.newArrayList();
             for (EnumSpecies value : EnumSpecies.values()) {
+                if (allowRegionalRegion){
+                    for (IEnumForm possibleForm : value.getPossibleForms(false)) {
+                        if(possibleForm.isRegionalForm()){
+                            Pokemon pokemon = Pixelmon.pokemonFactory.create(value);
+                            pokemon.setForm(possibleForm);
+                            if (new PokemonSpec(spec).matches(pokemon)){
+                                pokemonList.add(new PokeSpecie(value,pokemon.getForm()));
+                            }
+                        }
+                    }
+                }
                 if (new PokemonSpec(spec).matches(Pixelmon.pokemonFactory.create(value))){
-                    pokemonList.add(Pixelmon.pokemonFactory.create(value));
+                    pokemonList.add(new PokeSpecie(value,-1));
                 }
             }
             getPokeSpecGroup.put(name,pokemonList);
@@ -411,48 +440,35 @@ public class FlashSpec {
         return server;
     }
 
-    private void loadleg1(){
-        for (EnumSpecies p : EnumSpecies.LEGENDARY_ENUMS){
-            if (p.getGeneration() == 1){
-                leg1.add(p.getPokemonName());
-            }else if (p.getGeneration() == 2){
-                leg2.add(p.getPokemonName());
-            }else if (p.getGeneration() == 3){
-                leg3.add(p.getPokemonName());
-            }else if (p.getGeneration() == 4){
-                leg4.add(p.getPokemonName());
-            }else if (p.getGeneration() == 5){
-                leg5.add(p.getPokemonName());
-            }else if (p.getGeneration() == 6){
-                leg6.add(p.getPokemonName());
-            }else if (p.getGeneration() == 7){
-                leg7.add(p.getPokemonName());
-            }else if (p.getGeneration() ==8){
-                leg8.add(p.getPokemonName());
+    public static PosInfo getPos(ICommandSender sender, MinecraftServer server, List<String> args){
+        World world = sender.getEntityWorld();
+        int posX = sender.getPosition().getX();
+        int posY = sender.getPosition().getY();
+        int posZ = sender.getPosition().getZ();
+        for (String arg : args) {
+            if (arg.startsWith("-player:")){
+                String playername = arg.replace("-player:", "");
+                if (Lists.newArrayList(server.getPlayerList().getOnlinePlayerNames()).contains(playername)){
+                    EntityPlayerMP player = server.getPlayerList().getPlayerByUsername(playername);
+                    assert player != null;
+                    return new PosInfo(player.getEntityWorld(),player.getPosition().getX(),player.getPosition().getY(),player.getPosition().getZ());
+                }
+            }else if (arg.startsWith("-world:")){
+                String worldname = arg.replace("-world:", "");
+                for (WorldServer worldServer : server.worlds) {
+                    if (worldServer.getWorldInfo().getWorldName().equalsIgnoreCase(worldname)){
+                        world = worldServer;
+                    }
+                }
+            }else if (arg.startsWith("-x:")){
+                posX = Integer.parseInt(arg.replaceAll("-x:",""));
+            }else if (arg.startsWith("-y:")){
+                posY = Integer.parseInt(arg.replaceAll("-y:",""));
+            }else if (arg.startsWith("-z:")){
+                posZ = Integer.parseInt(arg.replaceAll("-z:",""));
             }
         }
-        /*EnumSpecies.legendaries.forEach(s -> {
-            EnumSpecies p = EnumSpecies.getFromNameAnyCaseNoTranslate(s);
-            if (p != null){
-                if (p.getGeneration() == 1){
-                    leg1.add(p.getPokemonName());
-                }else if (p.getGeneration() == 2){
-                    leg2.add(p.getPokemonName());
-                }else if (p.getGeneration() == 3){
-                    leg3.add(p.getPokemonName());
-                }else if (p.getGeneration() == 4){
-                    leg4.add(p.getPokemonName());
-                }else if (p.getGeneration() == 5){
-                    leg5.add(p.getPokemonName());
-                }else if (p.getGeneration() == 6){
-                    leg6.add(p.getPokemonName());
-                }else if (p.getGeneration() == 7){
-                    leg7.add(p.getPokemonName());
-                }else if (p.getGeneration() ==8){
-                    leg8.add(p.getPokemonName());
-                }
-            }
-        });*/
+        return new PosInfo(world,posX,posY,posZ);
     }
 
 }
